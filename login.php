@@ -1,14 +1,19 @@
 <?php
-$host = 'localhost';
-$db = 'college-data';
-$user = 'root';
-$pass = '';
-$conn = new mysqli($host, $user, $pass, $db);
+// Prevent caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
 
-if (isset($_POST['uid']) && isset($_POST['upass'])) {
+$conn = new mysqli('localhost', 'root', '', 'college-data');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$error = "";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['uid'], $_POST['upass'])) {
     $uid = $_POST['uid'];
     $password = $_POST['upass'];
-    $stmt = $conn->prepare('SELECT * FROM users WHERE uid = ?');
+    $stmt = $conn->prepare('SELECT upass FROM users WHERE uid = ?');
     $stmt->bind_param('s', $uid);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -18,12 +23,12 @@ if (isset($_POST['uid']) && isset($_POST['upass'])) {
             session_start();
             $_SESSION['uid'] = $uid;
             header('Location: welcome.php');
-            exit();
+            exit;
         } else {
-            echo "<script>alert('Invalid Password');</script>";
+            $error = "Invalid password.";
         }
     } else {
-        echo "<script>alert('User not found');</script>";
+        $error = "User not found.";
     }
     $stmt->close();
 }
@@ -31,23 +36,31 @@ if (isset($_POST['uid']) && isset($_POST['upass'])) {
 $conn->close();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <title>Login | Vignan College</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <form class="form-box" action="login.php" method="post">
             <h2>Welcome Back</h2>
-            <input type="text" placeholder="UserId" name="uid" required />
-            <input type="password" placeholder="Password" name="upass" required />
+            <?php if ($error) { ?>
+                <p class="error"><?php echo htmlspecialchars($error); ?></p>
+            <?php } ?>
+            <input type="text" placeholder="UserId" name="uid" required>
+            <input type="password" placeholder="Password" name="upass" required>
             <button type="submit">Login</button>
         </form>
     </div>

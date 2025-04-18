@@ -10,7 +10,7 @@
 <body>
     Hello, <?php session_start();
     echo $_SESSION['uid']; ?>!<br>
-    <a href="logout.php">Logout</a><br>
+    <a href="login.php">Logout</a><br>
 </body>
 
 </html>

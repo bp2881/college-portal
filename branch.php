@@ -266,89 +266,89 @@
     <script>
         const books = {
             BSH: [
-                { title: "Engineering Mathematics", url: "pdfs/bsh/math.pdf" },
-                { title: "Engineering Physics", url: "pdfs/bsh/physics.pdf" },
-                { title: "Technical English", url: "pdfs/bsh/english.pdf" }
+                { title: "Engineering Mathematics", url: "books/bsh/math.pdf" },
+                { title: "Engineering Physics", url: "books/bsh/physics.pdf" },
+                { title: "Technical English", url: "books/bsh/english.pdf" }
             ],
             CSE: [
-                { year: 2, title: "Data Structures", url: "pdfs/cse_2/ds.pdf" },
-                { year: 2, title: "Object-Oriented Programming", url: "pdfs/cse_2/oop.pdf" },
-                { year: 3, title: "Operating Systems", url: "pdfs/cse_3/os.pdf" },
-                { year: 3, title: "Database Management Systems", url: "pdfs/cse_3/dbms.pdf" },
-                { year: 4, title: "Machine Learning", url: "pdfs/cse_4/ml.pdf" },
-                { year: 4, title: "Cloud Computing", url: "pdfs/cse_4/cloud.pdf" }
+                { year: 2, title: "Data Structures", url: "books/cse/2/ds.pdf" },
+                { year: 2, title: "Object-Oriented Programming", url: "books/cse/2/oop.pdf" },
+                { year: 3, title: "Operating Systems", url: "books/cse/3/os.pdf" },
+                { year: 3, title: "Database Management Systems", url: "books/cse/3/dbms.pdf" },
+                { year: 4, title: "Machine Learning", url: "books/cse/4/ml.pdf" },
+                { year: 4, title: "Cloud Computing", url: "books/cse/4/cloud.pdf" }
             ],
             ECE: [
-                { year: 2, title: "Digital Electronics", url: "pdfs/ece_2/digital.pdf" },
-                { year: 2, title: "Circuit Theory", url: "pdfs/ece_2/circuit.pdf" },
-                { year: 3, title: "Signals and Systems", url: "pdfs/ece_3/signals.pdf" },
-                { year: 3, title: "Microprocessors", url: "pdfs/ece_3/micro.pdf" },
-                { year: 4, title: "VLSI Design", url: "pdfs/ece_4/vlsi.pdf" },
-                { year: 4, title: "Wireless Communication", url: "pdfs/ece_4/wireless.pdf" }
+                { year: 2, title: "Digital Electronics", url: "books/ece_2/digital.pdf" },
+                { year: 2, title: "Circuit Theory", url: "books/ece_2/circuit.pdf" },
+                { year: 3, title: "Signals and Systems", url: "books/ece_3/signals.pdf" },
+                { year: 3, title: "Microprocessors", url: "books/ece_3/micro.pdf" },
+                { year: 4, title: "VLSI Design", url: "books/ece_4/vlsi.pdf" },
+                { year: 4, title: "Wireless Communication", url: "books/ece_4/wireless.pdf" }
             ],
             EEE: [
-                { year: 2, title: "Electrical Circuits", url: "pdfs/eee_2/circuits.pdf" },
-                { year: 2, title: "Electromagnetic Fields", url: "pdfs/eee_2/emf.pdf" },
-                { year: 3, title: "Power Electronics", url: "pdfs/eee_3/power_elec.pdf" },
-                { year: 3, title: "Control Systems", url: "pdfs/eee_3/control.pdf" },
-                { year: 4, title: "High Voltage Engineering", url: "pdfs/eee_4/high_voltage.pdf" },
-                { year: 4, title: "Renewable Energy", url: "pdfs/eee_4/renewable.pdf" }
+                { year: 2, title: "Electrical Circuits", url: "books/eee_2/circuits.pdf" },
+                { year: 2, title: "Electromagnetic Fields", url: "books/eee_2/emf.pdf" },
+                { year: 3, title: "Power Electronics", url: "books/eee_3/power_elec.pdf" },
+                { year: 3, title: "Control Systems", url: "books/eee_3/control.pdf" },
+                { year: 4, title: "High Voltage Engineering", url: "books/eee_4/high_voltage.pdf" },
+                { year: 4, title: "Renewable Energy", url: "books/eee_4/renewable.pdf" }
             ],
             CE: [
-                { year: 2, title: "Strength of Materials", url: "pdfs/ce_2/som.pdf" },
-                { year: 2, title: "Fluid Mechanics", url: "pdfs/ce_2/fluid.pdf" },
-                { year: 3, title: "Structural Analysis", url: "pdfs/ce_3/structures.pdf" },
-                { year: 3, title: "Geotechnical Engineering", url: "pdfs/ce_3/geotech.pdf" },
-                { year: 4, title: "Construction Management", url: "pdfs/ce_4/construction.pdf" },
-                { year: 4, title: "Environmental Engineering", url: "pdfs/ce_4/env.pdf" }
+                { year: 2, title: "Strength of Materials", url: "books/ce_2/som.pdf" },
+                { year: 2, title: "Fluid Mechanics", url: "books/ce_2/fluid.pdf" },
+                { year: 3, title: "Structural Analysis", url: "books/ce_3/structures.pdf" },
+                { year: 3, title: "Geotechnical Engineering", url: "books/ce_3/geotech.pdf" },
+                { year: 4, title: "Construction Management", url: "books/ce_4/construction.pdf" },
+                { year: 4, title: "Environmental Engineering", url: "books/ce_4/env.pdf" }
             ],
             MECH: [
-                { year: 2, title: "Thermodynamics", url: "pdfs/mech_2/thermo.pdf" },
-                { year: 2, title: "Mechanics of Solids", url: "pdfs/mech_2/solids.pdf" },
-                { year: 3, title: "Machine Design", url: "pdfs/mech_3/design.pdf" },
-                { year: 3, title: "Heat Transfer", url: "pdfs/mech_3/heat.pdf" },
-                { year: 4, title: "CAD/CAM", url: "pdfs/mech_4/cadcam.pdf" },
-                { year: 4, title: "Robotics", url: "pdfs/mech_4/robotics.pdf" }
+                { year: 2, title: "Thermodynamics", url: "books/mech_2/thermo.pdf" },
+                { year: 2, title: "Mechanics of Solids", url: "books/mech_2/solids.pdf" },
+                { year: 3, title: "Machine Design", url: "books/mech_3/design.pdf" },
+                { year: 3, title: "Heat Transfer", url: "books/mech_3/heat.pdf" },
+                { year: 4, title: "CAD/CAM", url: "books/mech_4/cadcam.pdf" },
+                { year: 4, title: "Robotics", url: "books/mech_4/robotics.pdf" }
             ],
             EIE: [
-                { year: 2, title: "Instrumentation", url: "pdfs/eie_2/instru.pdf" },
-                { year: 2, title: "Sensors", url: "pdfs/eie_2/sensors.pdf" },
-                { year: 3, title: "Process Control", url: "pdfs/eie_3/process.pdf" },
-                { year: 3, title: "Biomedical Instrumentation", url: "pdfs/eie_3/biomed.pdf" },
-                { year: 4, title: "Industrial Automation", url: "pdfs/eie_4/automation.pdf" },
-                { year: 4, title: "Advanced Control Systems", url: "pdfs/eie_4/advanced.pdf" }
+                { year: 2, title: "Instrumentation", url: "books/eie_2/instru.pdf" },
+                { year: 2, title: "Sensors", url: "books/eie_2/sensors.pdf" },
+                { year: 3, title: "Process Control", url: "books/eie_3/process.pdf" },
+                { year: 3, title: "Biomedical Instrumentation", url: "books/eie_3/biomed.pdf" },
+                { year: 4, title: "Industrial Automation", url: "books/eie_4/automation.pdf" },
+                { year: 4, title: "Advanced Control Systems", url: "books/eie_4/advanced.pdf" }
             ],
             IT: [
-                { year: 2, title: "Computer Networks", url: "pdfs/it_2/networks.pdf" },
-                { year: 2, title: "Web Technologies", url: "pdfs/it_2/web.pdf" },
-                { year: 3, title: "Software Engineering", url: "pdfs/it_3/software.pdf" },
-                { year: 3, title: "Cyber Security", url: "pdfs/it_3/security.pdf" },
-                { year: 4, title: "Cloud Computing", url: "pdfs/it_4/cloud.pdf" },
-                { year: 4, title: "Big Data Analytics", url: "pdfs/it_4/bigdata.pdf" }
+                { year: 2, title: "Computer Networks", url: "books/it_2/networks.pdf" },
+                { year: 2, title: "Web Technologies", url: "books/it_2/web.pdf" },
+                { year: 3, title: "Software Engineering", url: "books/it_3/software.pdf" },
+                { year: 3, title: "Cyber Security", url: "books/it_3/security.pdf" },
+                { year: 4, title: "Cloud Computing", url: "books/it_4/cloud.pdf" },
+                { year: 4, title: "Big Data Analytics", url: "books/it_4/bigdata.pdf" }
             ],
             CSE_AIML: [
-                { year: 2, title: "Python Programming", url: "pdfs/cse_aiml_2/python.pdf" },
-                { year: 2, title: "Mathematics for AI", url: "pdfs/cse_aiml_2/math.pdf" },
-                { year: 3, title: "Machine Learning Basics", url: "pdfs/cse_aiml_3/ml_basics.pdf" },
-                { year: 3, title: "Deep Learning", url: "pdfs/cse_aiml_3/deep.pdf" },
-                { year: 4, title: "Natural Language Processing", url: "pdfs/cse_aiml_4/nlp.pdf" },
-                { year: 4, title: "AI Ethics", url: "pdfs/cse_aiml_4/ethics.pdf" }
+                { year: 2, title: "Python Programming", url: "books/cse_aiml_2/python.pdf" },
+                { year: 2, title: "Mathematics for AI", url: "books/cse_aiml_2/math.pdf" },
+                { year: 3, title: "Machine Learning Basics", url: "books/cse_aiml_3/ml_basics.pdf" },
+                { year: 3, title: "Deep Learning", url: "books/cse_aiml_3/deep.pdf" },
+                { year: 4, title: "Natural Language Processing", url: "books/cse_aiml_4/nlp.pdf" },
+                { year: 4, title: "AI Ethics", url: "books/cse_aiml_4/ethics.pdf" }
             ],
             CSE_DS: [
-                { year: 2, title: "Statistics", url: "pdfs/cse_ds_2/stats.pdf" },
-                { year: 2, title: "Data Structures", url: "pdfs/cse_ds_2/ds.pdf" },
-                { year: 3, title: "Data Mining", url: "pdfs/cse_ds_3/mining.pdf" },
-                { year: 3, title: "Machine Learning", url: "pdfs/cse_ds_3/ml.pdf" },
-                { year: 4, title: "Big Data", url: "pdfs/cse_ds_4/bigdata.pdf" },
-                { year: 4, title: "Data Visualization", url: "pdfs/cse_ds_4/vis.pdf" }
+                { year: 2, title: "Statistics", url: "books/cse_ds_2/stats.pdf" },
+                { year: 2, title: "Data Structures", url: "books/cse_ds_2/ds.pdf" },
+                { year: 3, title: "Data Mining", url: "books/cse_ds_3/mining.pdf" },
+                { year: 3, title: "Machine Learning", url: "books/cse_ds_3/ml.pdf" },
+                { year: 4, title: "Big Data", url: "books/cse_ds_4/bigdata.pdf" },
+                { year: 4, title: "Data Visualization", url: "books/cse_ds_4/vis.pdf" }
             ],
             AIDS: [
-                { year: 2, title: "Introduction to AI", url: "pdfs/aids_2/ai_intro.pdf" },
-                { year: 2, title: "Data Science Basics", url: "pdfs/aids_2/ds_basics.pdf" },
-                { year: 3, title: "AI Algorithms", url: "pdfs/aids_3/ai_algo.pdf" },
-                { year: 3, title: "Data Analysis", url: "pdfs/aids_3/analysis.pdf" },
-                { year: 4, title: "Advanced AI", url: "pdfs/aids_4/advanced_ai.pdf" },
-                { year: 4, title: "Big Data Applications", url: "pdfs/aids_4/bigdata_app.pdf" }
+                { year: 2, title: "Introduction to AI", url: "books/aids_2/ai_intro.pdf" },
+                { year: 2, title: "Data Science Basics", url: "books/aids_2/ds_basics.pdf" },
+                { year: 3, title: "AI Algorithms", url: "books/aids_3/ai_algo.pdf" },
+                { year: 3, title: "Data Analysis", url: "books/aids_3/analysis.pdf" },
+                { year: 4, title: "Advanced AI", url: "books/aids_4/advanced_ai.pdf" },
+                { year: 4, title: "Big Data Applications", url: "books/aids_4/bigdata_app.pdf" }
             ]
         };
 

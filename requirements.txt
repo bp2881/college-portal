@@ -1,3 +1,3 @@
-python-mysql-connector
-requests
+mysql-python-connector
 BeautifulSoup4
+selenium

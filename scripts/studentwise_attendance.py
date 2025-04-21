@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
+import time
 
+st = time.time()
 options = webdriver.ChromeOptions()
 prefs = {
     "profile.managed_default_content_settings.images": 2  # Disable images
@@ -72,3 +74,5 @@ except Exception as e:
 
 finally:
     driver.quit()
+    print("Driver closed.")
+    print("Time taken:", time.time() - st)

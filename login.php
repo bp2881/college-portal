@@ -8,20 +8,24 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 $error = "";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['uid'], $_POST['upass'])) {
-    $uid = $_POST['uid'];
-    $password = $_POST['upass'];
-    $stmt = $conn->prepare('SELECT upass FROM users WHERE uid = ?');
-    $stmt->bind_param('s', $uid);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'], $_POST['pass'])) {
+    $email = $_POST['email'];
+    $password = $_POST['pass'];
+    $stmt = $conn->prepare('SELECT pass FROM student WHERE email = ?');
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+    $stmt->bind_param('s', $email);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if (password_verify($password, $row['upass'])) {
+        if (password_verify($password, $row['pass'])) {
             session_start();
-            $_SESSION['uid'] = $uid;
+            $_SESSION['email'] = $email;
             header('Location: welcome.php');
             exit;
         } else {
@@ -59,8 +63,8 @@ $conn->close();
             <?php if ($error) { ?>
                 <p class="error"><?php echo htmlspecialchars($error); ?></p>
             <?php } ?>
-            <input type="text" placeholder="UserId" name="uid" required>
-            <input type="password" placeholder="Password" name="upass" required>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="pass" required>
             <button type="submit">Login</button>
         </form>
     </div>

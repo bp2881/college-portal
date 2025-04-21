@@ -9,8 +9,10 @@
 
 <body>
     Hello, <?php session_start();
-    echo $_SESSION['uid']; ?>!<br>
-    <a href="login.php">Logout</a><br>
+    echo $_SESSION['pass']; ?>!<br>
+    <form action="https://google.com">
+        <input type="submit" value="Go to Google" />
+    </form>
 </body>
 
 </html>

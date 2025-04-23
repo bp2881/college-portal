@@ -1,0 +1,92 @@
+{
+    "roll_no": "23891A0549",
+    "student_name": "Name",
+    "course": "",
+    "semester": "",
+    "attendance_dates": {
+        "from": "2025-01-20",
+        "to": "2025-04-23"
+    },
+    "tables": [
+        [
+            [
+                "23891A0549",
+                "PRANAV BAIRY",
+                "CSE",
+                "2",
+                "A",
+                "20-02-2000",
+                "20-02-2003"
+            ]
+        ],
+        [
+            [
+                "DM",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "BEFA",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "OS",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "DBMS",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "SE",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "OS LAB",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "DBMS LAB",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "NODE JS",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "COI",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "REAL TIME PROJECT",
+                "0",
+                "--",
+                "--"
+            ],
+            [
+                "CRT",
+                "0",
+                "--",
+                "--"
+            ]
+        ]
+    ],
+    "average_attendance_percentage": "No valid percentages found in the second table."
+}

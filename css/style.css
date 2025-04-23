@@ -1,68 +1,3 @@
-/* style.css */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  width: 100%;
-  max-width: 400px;
-  padding: 30px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-.form-box h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: #667eea;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #5a67d8;
-}
-
-p {
-  margin-top: 16px;
-  font-size: 14px;
-}
-
-a {
-  color: #667eea;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 :root {
   --primary: #2e3192;
   --secondary: #1b9aaa;
@@ -79,10 +14,10 @@ a:hover {
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
   background: var(--light);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Navbar */
@@ -125,6 +60,16 @@ body {
   cursor: pointer;
   color: var(--dark);
 }
+.college-name {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--dark);
+}
+.right-space {
+  width: 40px;
+}
 
 /* Hero Section */
 .hero {
@@ -143,25 +88,28 @@ body {
   z-index: 1;
 }
 
-/* Card (Login / Attendance Form) */
-.login-card {
+/* Login Card */
+.login-card,
+.container {
   position: relative;
   z-index: 2;
-  background: var(--light);
+  background: #fff;
   padding: 2.5rem;
   border-radius: calc(var(--radius) * 2);
   width: 360px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-.login-card h1 {
+.login-card h1,
+.form-box h2 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
   color: var(--primary);
 }
 
-/* Inputs */
-.input-group {
+/* Input Fields */
+.input-group,
+input {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -172,6 +120,7 @@ body {
   color: var(--dark);
 }
 .input-group input,
+input,
 .input-group select {
   width: 100%;
   padding: 0.7rem 1rem;
@@ -196,7 +145,7 @@ body {
   padding-right: 2.5rem;
 }
 
-/* Password toggle icon */
+/* Password toggle */
 .password .toggle-icon {
   position: absolute;
   top: 55%;
@@ -207,7 +156,8 @@ body {
   color: #555;
 }
 
-/* Button */
+/* Buttons */
+button,
 button[type="submit"] {
   width: 100%;
   padding: 0.75rem;
@@ -218,36 +168,54 @@ button[type="submit"] {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.4s;
+  transition: background 0.3s ease;
 }
+button:hover,
 button[type="submit"]:hover {
   background: linear-gradient(135deg, var(--secondary), var(--primary));
 }
 
-/* Footer Text */
-.login-card p {
+/* Links & Footer */
+.login-card p,
+p {
   margin-top: 1rem;
   font-size: 0.875rem;
   color: var(--dark);
 }
-.login-card a {
+.login-card a,
+a {
   color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }
-.login-card a:hover {
+.login-card a:hover,
+a:hover {
   text-decoration: underline;
 }
-
-/* Footer Bar */
 footer {
   position: absolute;
   bottom: 1rem;
   width: 100%;
   text-align: center;
-  color: #fff;
   font-size: 0.875rem;
+  color: #555;
   z-index: 2;
+}
+
+/* Dashboard Section */
+.dashboard-content {
+  margin-top: 80px;
+  padding: 2rem;
+  text-align: center;
+}
+.dashboard-content h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.dashboard-content p {
+  font-size: 1rem;
+  color: var(--dark);
 }
 
 /* Responsive Nav */

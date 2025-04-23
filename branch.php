@@ -248,7 +248,7 @@
     </header>
 
     <nav>
-        <a href="index.php">Home</a>
+        <a href="books.php"><img src="./images/arrow_left.png" alt="<-"></a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -403,7 +403,7 @@
                 bookList.innerHTML = `
                     <p class="error-message">
                         Invalid branch or no resources available.
-                        <a href="index.php">Return to Home</a>
+                        <a href="books.php">Return to Home</a>
                     </p>
                 `;
             }

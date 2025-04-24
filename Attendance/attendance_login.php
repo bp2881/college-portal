@@ -71,7 +71,6 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
   <style>
-    /* Error message styling */
     .error {
       color: #d32f2f;
       font-size: 0.9rem;
@@ -106,7 +105,6 @@ $conn->close();
 </head>
 
 <body>
-  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
       <img src="./images/vignan_logo.png" alt="Vignan Logo">
@@ -121,7 +119,6 @@ $conn->close();
     </nav>
   </header>
 
-  <!-- Hero + Login -->
   <section class="hero">
     <div class="overlay"></div>
     <div class="login-card">
@@ -149,20 +146,6 @@ $conn->close();
   <footer>
     © 2025 Vignan Institute of Technology & Science. All rights reserved.
   </footer>
-
-  <script>
-    function togglePassword() {
-      const passwordField = document.getElementById('upass');
-      const toggleIcon = document.querySelector('.toggle-icon');
-      if (passwordField.type === 'password') {
-        passwordField.type = 'text';
-        toggleIcon.textContent = '🙈';
-      } else {
-        passwordField.type = 'password';
-        toggleIcon.textContent = '👁️';
-      }
-    }
-  </script>
 </body>
 
 </html>

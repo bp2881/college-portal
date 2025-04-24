@@ -2,7 +2,7 @@
 // Database connection details
 $servername = "localhost";
 $username = "root";
-$password = ""; // your DB password
+$password = "";
 $dbname = "college-data";
 
 // Create connection

@@ -13,6 +13,15 @@ from_date = sys.argv[2]
 to_date = sys.argv[3]
 
 st = time.time()
+# remove file if it exists
+try:
+    with open("C:\\xampp\\htdocs\\college-portal\\attendance_data.json", "r") as json_file:
+        data = json.load(json_file)
+        if data.get("roll_no") == roll_no and data.get("attendance_dates", {}).get("from") == from_date and data.get("attendance_dates", {}).get("to") == to_date:
+            print(f"Data already exists for Roll No: {roll_no}, From: {from_date}, To: {to_date}")
+            sys.exit(0)
+except FileNotFoundError:
+    pass
 
 # Setup headless Chrome browser
 options = webdriver.ChromeOptions()
@@ -99,7 +108,7 @@ except Exception as e:
 
 finally:
     driver.quit()
-    with open("attendance_data.json", "w") as json_file:
+    with open("C:\\xampp\\htdocs\\college-portal\\attendance_data.json", "w") as json_file:
         json.dump(attendance_data, json_file, indent=4)
     et = time.time()
     print(f"Execution time: {et - st:.2f} seconds")

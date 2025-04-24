@@ -12,8 +12,6 @@ if (
   exit();
 }
 
-// Include DB config if required (optional)
-// require_once 'config.php';
 
 // Refresh session time
 $_SESSION['login_time'] = time();
@@ -23,6 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['roll_number'], $_POST[
   $roll_number = $_POST['roll_number'];
   $from_date = $_POST['from_date'];
   $to_date = $_POST['to_date'];
+  $year = substr($from_date, 0, 4);
+  $month = substr($from_date, 5, 2);
+  $day = substr($from_date, 8, 2);
+  $from_date = $day . "-" . $month . "-" . $year;
+  $year = substr($to_date, 0, 4);
+  $month = substr($to_date, 5, 2);
+  $day = substr($to_date, 8, 2);
+  $to_date = $day . "-" . $month . "-" . $year;
+  $from_date = substr($from_date, 0, 10);
+  $to_date = substr($to_date, 0, 10);
+
 
   // Redirect to the report page with URL parameters
   header('Location: studentwise_report.php?roll_number=' . urlencode($roll_number) . '&from_date=' . urlencode($from_date) . '&to_date=' . urlencode($to_date));

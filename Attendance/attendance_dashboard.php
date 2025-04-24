@@ -35,7 +35,7 @@ $_SESSION['login_time'] = time();
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="student_wise.php">Student-Wise Attendance</a></li>
-        <li><a href="class-attendance.php">Class-Wise Attendance</a></li>
+        <li><a href="class_wise.php">Class-Wise Attendance</a></li>
         <li><a href="attendance_logout.php">Logout</a></li>
       </ul>
     </nav>

@@ -14,12 +14,27 @@ if (
 // Refresh session time
 $_SESSION['login_time'] = time();
 
-// Receive GET parameters
-$branch = $_GET['branch'] ?? 'N/A';
-$year = $_GET['year'] ?? 'N/A';
-$section = $_GET['section'] ?? 'N/A';
-$from_date = $_GET['from_date'] ?? '';
-$to_date = $_GET['to_date'] ?? '';
+$fdt = isset($_GET['from_date']) ? filter_var($_GET['from_date'], FILTER_SANITIZE_STRING) : '';
+$tdt = isset($_GET['to_date']) ? filter_var($_GET['to_date'], FILTER_SANITIZE_STRING) : '';
+$branch = isset($_GET['branch']) ? filter_var($_GET['branch'], FILTER_SANITIZE_STRING) : '';
+$year = isset($_GET['year']) ? filter_var($_GET['year'], FILTER_SANITIZE_STRING) : '';
+$section = isset($_GET['section']) ? filter_var($_GET['section'], FILTER_SANITIZE_STRING) : '';
+$pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\classwise_attendance.py";
+$command = "python $pythonScript $branch $fdt $tdt $year $section";
+$output = shell_exec($command);
+
+$jsonFile = "C:\\xampp\\htdocs\\college-portal\\class_attendance_data.json";
+$data = [];
+if (file_exists($jsonFile)) {
+  $json = file_get_contents($jsonFile);
+  $data = json_decode($json, true);
+  if (json_last_error() !== JSON_ERROR_NONE) {
+    $data = [];
+    $error = "Error decoding JSON: " . json_last_error_msg();
+  }
+} else {
+  $error = "JSON file not found.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +48,7 @@ $to_date = $_GET['to_date'] ?? '';
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f0f4f8;">
   <div
     style="text-align: center; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <img src="vignan logo.png" alt="College Logo" width="80">
+    <img src="./images/vignan_logo.png" alt="College Logo" width="80">
     <h1 style="color: #d62828; margin: 10px 0;">VIGNAN INSTITUTE OF TECHNOLOGY AND SCIENCE</h1>
     <p style="margin: 5px 0;">Near Ramoji Film City, Deshmukhi Village, Pochampally Mandal, Yadadri Bhuvanagiri Dist.
     </p>
@@ -54,8 +69,8 @@ $to_date = $_GET['to_date'] ?? '';
       <strong>Year:</strong> <?= htmlspecialchars($year) ?>&nbsp;&nbsp;&nbsp;
       <strong>Sec:</strong> <?= htmlspecialchars($section) ?>
     </p>
-    <p><strong>From:</strong> <?= htmlspecialchars($from_date) ?>&nbsp;&nbsp;&nbsp;
-      <strong>To:</strong> <?= htmlspecialchars($to_date) ?>
+    <p><strong>From:</strong> <?= htmlspecialchars($fdt) ?>&nbsp;&nbsp;&nbsp;
+      <strong>To:</strong> <?= htmlspecialchars($tdt) ?>
     </p>
   </div>
 
@@ -67,27 +82,46 @@ $to_date = $_GET['to_date'] ?? '';
           <th rowspan="2">S.No.</th>
           <th rowspan="2">H.T No.</th>
           <th rowspan="2">Student Name</th>
-          <th colspan="11">Number of Hours Conducted</th>
-          <th rowspan="2">CRT</th>
+          <?php
+          // Automatically fetch unique subjects from the first student
+          $subjects = [];
+          if (!empty($data['students'][0]['subjects'])) {
+            $subjects = array_keys($data['students'][0]['subjects']);
+          }
+          $colspan = count($subjects);
+          ?>
+          <th colspan="<?= $colspan ?>">Number of Hours Conducted</th>
           <th rowspan="2">Total</th>
           <th rowspan="2">Percentage (%)</th>
         </tr>
         <tr style="background-color: #f77f00; color: white;">
-          <th>DM</th>
-          <th>BEFA</th>
-          <th>OS</th>
-          <th>DBMS</th>
-          <th>SE</th>
-          <th>OS LAB</th>
-          <th>DBMS LAB</th>
-          <th>NODE JS</th>
-          <th>COI</th>
-          <th>REAL TIME PROJECT</th>
+          <?php foreach ($subjects as $subject): ?>
+            <th><?= htmlspecialchars($subject) ?></th>
+          <?php endforeach; ?>
         </tr>
       </thead>
+
       <tbody>
-        <!-- Dynamic attendance data rows will go here -->
+        <?php if (!empty($data['students'])): ?>
+          <?php foreach ($data['students'] as $student): ?>
+            <tr>
+              <td><?= htmlspecialchars($student['sno']) ?></td>
+              <td><?= htmlspecialchars($student['htno']) ?></td>
+              <td><?= htmlspecialchars($student['name']) ?></td>
+              <?php foreach ($subjects as $subject): ?>
+                <td><?= htmlspecialchars($student['subjects'][$subject] ?? '-') ?></td>
+              <?php endforeach; ?>
+              <td><?= htmlspecialchars($student['total']) ?></td>
+              <td><?= htmlspecialchars($student['percentage']) ?></td>
+            </tr>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <tr>
+            <td colspan="<?= 4 + $colspan ?>" style="text-align: center;">No attendance data available.</td>
+          </tr>
+        <?php endif; ?>
       </tbody>
+
     </table>
   </div>
 

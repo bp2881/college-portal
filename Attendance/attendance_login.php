@@ -11,6 +11,7 @@ require_once 'config.php';
 
 // Database connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$TABLE_NAME = 'faculty_login';
 if ($conn->connect_error) {
   error_log("Connection failed: " . $conn->connect_error);
   die("An error occurred. Please try again later.");
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (empty($uid) || empty($password)) {
     $error = "Username and password are required.";
   } else {
-    $stmt = $conn->prepare("SELECT password FROM faculty_login WHERE uid = ?");
+    $stmt = $conn->prepare("SELECT password FROM $TABLE_NAME WHERE uid = ?");
     if (!$stmt) {
       error_log("Prepare failed: " . $conn->error);
       die("An error occurred. Please try again later.");

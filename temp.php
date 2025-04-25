@@ -1,37 +1,19 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "college-data";
+$env = parse_ini_file('.env');
+$MAIL_APP_ID = $env["MAIL_APP_ID"];
+$MAIL_API_KEY = $env["MAIL_API_KEY"];
+require_once('vendor/autoload.php');
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$client = new \GuzzleHttp\Client();
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$response = $client->request('POST', 'https://api.onesignal.com/notifications?c=email', [
+    'body' => '{"app_id":"$MAIL_APP_ID","email_subject":"test otp for verification","email_preheader":"string","email_body":"<html>Your Email as HTML.</html>","template_id":"string","email_from_name":"VITS","email_from_address":"pranavbairy2@gmail.com","email_sender_domain":"pranavbairy@proton.me","email_reply_to_address":"string","include_unsubscribed":true,"disable_email_click_tracking":true,"name":"string","include_aliases":"string","email_to":["string"],"included_segments":["string"],"filters":[{"field":"first_session","key":"string","relation":">","value":"1"}]}',
+    'headers' => [
+        'Authorization' => 'Key YOUR_APP_API_KEY',
+        'accept' => 'application/json',
+        'content-type' => 'application/json',
+    ],
+]);
 
-// Sample input
-$uid = 848;
-$plain_password = "vgnt";
-
-// Hash the password
-$hashed_password = password_hash($plain_password, PASSWORD_DEFAULT);
-
-// Prepare and bind
-$stmt = $conn->prepare("INSERT INTO faculty_login (uid, password) VALUES (?, ?)");
-$stmt->bind_param("is", $uid, $hashed_password);
-
-// Execute
-if ($stmt->execute()) {
-    echo "New record inserted successfully.";
-} else {
-    echo "Error: " . $stmt->error;
-}
-
-// Close connections
-$stmt->close();
-$conn->close();
+echo $response->getBody();
 ?>

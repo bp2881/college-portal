@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Student Portal</title>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			.top-line {
+				height: 4px;
+				background-color: rgb(45, 10, 162);
+				width: 100%;
+			}
+
+			.header-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 30px;
+			}
+
+			.nav-links {
+				display: flex;
+				justify-content: center;
+				margin-top: 5px;
+			}
+
+			.nav-links a {
+				color: rgb(45, 10, 162);
+				text-decoration: none;
+				margin: 0 20px;
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			.nav-links a:hover {
+				text-decoration: underline;
+			}
+
+			h1 {
+				color: rgb(45, 10, 162);
+				margin-bottom: 0;
+				font-size: 30px;
+			}
+
+			p {
+				color: rgb(45, 10, 162);
+				margin-top: 0;
+				font-size: xx-small;
+			}
+
+			.slider-container {
+				position: relative;
+				width: 100%;
+				height: 400px;
+				overflow: hidden;
+				background-color: black;
+			}
+
+			.slider {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+
+			.slide {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+				background-color: black;
+			}
+
+			.slide.active {
+				opacity: 1;
+			}
+
+			.slider-caption {
+				position: absolute;
+				bottom: 30px;
+				left: 0;
+				background: rgb(45, 10, 162);
+				color: white;
+				padding: 10px 40px 10px 20px;
+				font-size: 24px;
+				font-weight: bold;
+				clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+				border-bottom: 4px solid white;
+			}
+
+			.content-container {
+				font-family: "Pristina", cursive;
+				display: flex;
+				justify-content: space-between;
+				margin: 20px;
+				padding: 20px;
+			}
+
+			.left-half {
+				width: 48%;
+				font-size: 24px;
+				color: #2c3e50;
+				line-height: 2;
+				text-align: left;
+				padding-right: 20px;
+			}
+
+			.right-half {
+				width: 48%;
+				text-align: center;
+				background-image: url("./images/notes.jpg");
+				background-size: cover;
+				background-position: center;
+				padding: 40px;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				position: relative;
+			}
+
+			.notes-box {
+				display: inline-block;
+				background-color: rgba(255, 255, 255, 0.8);
+				padding: 10px 20px;
+				border-radius: 10px;
+				text-align: center;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+				width: auto;
+				font-size: 16px;
+			}
+
+			.notes-box:hover {
+				transform: scale(1.1);
+			}
+
+			.right-half a {
+				font-size: 36px;
+				color: rgb(45, 10, 162);
+				text-decoration: none;
+				display: block;
+				margin-bottom: 10px;
+				transition: transform 0.3s ease;
+			}
+
+			.right-half a:hover {
+				transform: scale(1.2);
+			}
+
+			.right-half p {
+				color: white;
+				font-size: 18px;
+				margin-top: 20px;
+			}
+
+			.profile-card-container {
+				display: flex;
+				justify-content: center;
+				gap: 40px;
+				flex-wrap: wrap;
+				padding: 50px 20px;
+			}
+
+			.profile-card {
+				width: 300px;
+				height: 400px;
+				background-size: cover;
+				background-position: center;
+				border-radius: 20px;
+				position: relative;
+				overflow: hidden;
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+				transition: transform 0.3s ease;
+			}
+
+			.profile-card:hover {
+				transform: translateY(-10px);
+			}
+
+			.overlay {
+				position: absolute;
+				bottom: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					to top,
+					rgba(0, 0, 0, 0.7),
+					transparent
+				);
+				color: white;
+				text-align: center;
+				padding-top: 280px;
+				transition: bottom 0.4s ease-in-out;
+			}
+
+			.profile-card:hover .overlay {
+				bottom: 0;
+			}
+
+			.overlay h2 {
+				margin: 0;
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			.overlay p {
+				margin-top: 8px;
+				font-size: 14px;
+				color: #ddd;
+			}
+
+			@media (max-width: 768px) {
+				.profile-card-container {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top-line"></div>
+		<div class="header-container">
+			<div style="display: flex; align-items: center">
+				<img
+					src="./images/vignan_logo.png"
+					alt="Vignan Logo"
+					style="height: 70px; margin-right: 10px" />
+				<div>
+					<h1 style="margin: 0">VIGNAN</h1>
+					<hr
+						style="
+							margin-left: 0%;
+							margin-right: 30%;
+							height: 3px;
+							background-color: rgb(45, 10, 162);
+							margin-top: 0%;
+						" />
+					<p style="margin-right: 30px">
+						INSTITUTE OF TECHNOLOGY AND SCIENCE
+					</p>
+				</div>
+			</div>
+			<div>
+				<div class="nav-links">
+					<a href="index.html">HOME</a>
+					<a href="about.html">About Us</a>
+					<a href="#Academics">Academics</a>
+					<a href="#Admissions">Admissions</a>
+					<a href="student_login.php">Student Login</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="slider-container">
+			<div class="slider">
+				<img
+					src="./images/student1.jpg"
+					class="slide active" />
+				<img
+					src="./images/student2.jpeg"
+					class="slide" />
+				<img
+					src="./images/student3.jpeg"
+					class="slide" />
+				<img
+					src="./images/student4.jpg"
+					class="slide" />
+				<img
+					src="./images/student5.jpg"
+					class="slide" />
+				<div class="slider-caption">Student Life</div>
+			</div>
+		</div>
+
+		<div class="content-container">
+			<div class="left-half">
+				<p style="font-size: 24px; font-family: 'Bodoni MT'">
+					Students in Vignan are not only trained for industrial
+					development, but they are also raised with a mission and
+					vision to make them frontiers of tomorrow's world. They will
+					set a standard for the forthcoming generations to become
+					innovators and global dominators.
+				</p>
+			</div>
+			<div class="right-half">
+				<a href="student_login.php">
+					<div class="notes-box">
+						<p style="font-size: 24px; color: rgb(146, 118, 246)">
+							Notes
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="profile-card-container">
+			<div
+				class="profile-card"
+				style="background-image: url('./images/nss.jpeg')">
+				<div class="overlay">
+					<br /><br /><br />
+					<h2>NSS Leader</h2>
+					<p>
+						Leader of the NSS group, dedicated to community service.
+					</p>
+				</div>
+			</div>
+			<div
+				class="profile-card"
+				style="background-image: url('./images/csi.jpeg')">
+				<div class="overlay">
+					<br /><br /><br />
+					<h2>CSI President</h2>
+					<p>President of CSI, inspiring future technologists.</p>
+				</div>
+			</div>
+			<div
+				class="profile-card"
+				style="background-image: url('./images/dean.jpeg')">
+				<div class="overlay">
+					<br /><br /><br />
+					<h2>Dean</h2>
+					<p>
+						Dean of Vignan, leading the institute towards
+						excellence.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let current = 0;
+			const slides = document.querySelectorAll(".slide");
+
+			function showSlide(index) {
+				slides.forEach((slide, i) => {
+					slide.classList.remove("active");
+					if (i === index) slide.classList.add("active");
+				});
+			}
+
+			function nextSlide() {
+				current = (current + 1) % slides.length;
+				showSlide(current);
+			}
+
+			setInterval(nextSlide, 3000);
+		</script>
+		<footer style="background-color: #f2f2f2; padding: 30px 0">
+			<div style="text-align: center; margin-bottom: 20px">
+				<h2
+					style="
+						color: blue;
+						font-family: 'Bodoni MT', serif;
+						font-size: 24px;
+					">
+					VIGNAN INSTITUTE OF TECHNOLOGY AND SCIENCE
+				</h2>
+				<hr
+					style="
+						width: 85%;
+						margin: 10px auto;
+						height: 2px;
+						background-color: blueviolet;
+						border: none;
+					" />
+			</div>
+			<div
+				style="
+					display: flex;
+					justify-content: center;
+					gap: 40px;
+					flex-wrap: wrap;
+				">
+				<a
+					href="#about"
+					style="
+						color: blue;
+						text-decoration: none;
+						font-family: 'Bodoni MT', serif;
+						font-size: 16px;
+					"
+					>About</a
+				>
+				<a
+					href="#academics"
+					style="
+						color: blue;
+						text-decoration: none;
+						font-family: 'Bodoni MT', serif;
+						font-size: 16px;
+					"
+					>Academics</a
+				>
+				<a
+					href="#admissions"
+					style="
+						color: blue;
+						text-decoration: none;
+						font-family: 'Bodoni MT', serif;
+						font-size: 16px;
+					"
+					>Admissions</a
+				>
+			</div>
+		</footer>
+	</body>
+</html>

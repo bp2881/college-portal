@@ -8,6 +8,7 @@ from googleapiclient.discovery import build
 import sys
 
 otp = sys.argv[1]
+email = str(sys.argv[2])
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 token_path = "C:\\xampp\\htdocs\\college-portal\\token.json"
@@ -52,7 +53,7 @@ def send_message(service, user_id, message):
 service = get_service()
 message = create_message(
     sender='pranavbairytempo@gmail.com',
-    to='pranavbairy2005@gmail.com',
+    to=email,
     subject='Otp for confirmation',
     message_text=f'Your otp is {otp}'
 )

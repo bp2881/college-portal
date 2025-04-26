@@ -7,18 +7,46 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
-# --- Get arguments from PHP ---
 roll_no = sys.argv[1]
 from_date = sys.argv[2]
 to_date = sys.argv[3]
-
-st = time.time()
-# remove file if it exists
 try:
-    with open("C:\\xampp\\htdocs\\college-portal\\attendance_data.json", "r") as json_file:
+    portal = sys.argv[4]
+except:
+    portal = ""
+st = time.time()
+attendance_path = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json"
+
+def db_store(attendance, roll_num):
+    import mysql.connector
+    from os import getenv
+    try:
+        mydb = mysql.connector.connect(
+            host=getenv("DB_HOST") or "localhost",  
+            user=getenv("DB_USER") or "root",       
+            password=getenv("DB_PASS") or "",       
+            database=getenv("DB_NAME") or "college_portal",
+        )
+        mycursor = mydb.cursor()
+        sql = "UPDATE student_attendance SET attendance = %s WHERE roll_num = %s"
+        mycursor.execute(sql, (attendance, roll_num))
+        mydb.commit()
+        print("Committed to database")
+    except mysql.connector.Error as err:
+        print(f"Database error: {err}")
+    finally:
+        if mydb.is_connected():
+            mycursor.close()
+            mydb.close()
+            print("Database connection closed")
+
+try:
+    with open(attendance_path, "r") as json_file:
         data = json.load(json_file)
         if data.get("roll_no") == roll_no and data.get("attendance_dates", {}).get("from") == from_date and data.get("attendance_dates", {}).get("to") == to_date:
             print(f"Data already exists for Roll No: {roll_no}, From: {from_date}, To: {to_date}")
+            if portal == "student":
+                db_store(data.get("average_attendance_percentage"), roll_no)
             sys.exit(0)
 except FileNotFoundError:
     pass
@@ -26,7 +54,7 @@ except FileNotFoundError:
 # Setup headless Chrome browser
 options = webdriver.ChromeOptions()
 options.add_argument("blink-settings=imagesEnabled=false")
-#options.add_argument("--headless")
+options.add_argument("--headless")
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--disable-extensions')
 options.add_argument('--disable-gpu')
@@ -44,6 +72,7 @@ attendance_data = {
     },
     "tables": []
 }
+global average_percentage
 
 try:
     driver.get("https://vignanits.ac.in/Attendance/Validate.php")
@@ -108,7 +137,10 @@ except Exception as e:
 
 finally:
     driver.quit()
-    with open("C:\\xampp\\htdocs\\college-portal\\attendance_data.json", "w") as json_file:
+    if portal == "student":
+        db_store(average_percentage, roll_no)
+    
+    with open(attendance_path, "w") as json_file:
         json.dump(attendance_data, json_file, indent=4)
     et = time.time()
     print(f"Execution time: {et - st:.2f} seconds")

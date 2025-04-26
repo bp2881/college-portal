@@ -4,7 +4,7 @@ $fdt = isset($_GET['from_date']) ? filter_var($_GET['from_date'], FILTER_SANITIZ
 $tdt = isset($_GET['to_date']) ? filter_var($_GET['to_date'], FILTER_SANITIZE_STRING) : '';
 
 $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-$command = "python $pythonScript $roll $fdt $tdt";
+$command = "python $pythonScript $roll $fdt $tdt attendance";
 $output = shell_exec($command);
 
 $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";
@@ -20,6 +20,8 @@ if (file_exists($jsonFile)) {
 } else {
   $error = "JSON file not found.";
 }
+// Delete json file
+unlink($jsonFile);
 ?>
 
 <!DOCTYPE html>

@@ -1,3 +1,6 @@
 mysql-python-connector
 BeautifulSoup4
 selenium
+google-auth
+google-auth-oauthlib
+google-api-python-client

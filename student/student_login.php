@@ -5,6 +5,18 @@ header("Pragma: no-cache");
 session_start();
 $error = "";
 $show_otp = false;
+$msg = "";
+
+function send_otp()
+{
+    $otp = rand(100000, 999999);
+    $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
+    $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\send_otp.py";
+    $command = "$pythonPath $pythonScript 2>&1 $otp";
+    $output = shell_exec($command);
+    return $output;
+}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
@@ -20,11 +32,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['email'] = $email;
             $_SESSION['logged_in'] = true;
             $_SESSION['login_time'] = time();
+            $msg = send_otp();
         } else {
             $error = "Invalid password.";
         }
     }
 }
+
+if (isset($_POST['resend_otp'])) {
+    if (!empty($_SESSION['email'])) {
+        $msg = send_otp();
+        $show_otp = true;
+    }
+}
+
 ?>
 
 
@@ -71,6 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h2>OTP Verification</h2>
             <input type="text" placeholder="Enter OTP" name="otp" required>
             <button type="button">Verify OTP</button>
+            <button type="submit" name="resend_otp">Resend OTP</button>
         </form>
     </div>
 </body>

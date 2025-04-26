@@ -20,30 +20,40 @@ function store_session($conn, $email, $roll_num)
 {
     // Fetching name
     $stmt = $conn->prepare("SELECT Name FROM student_login WHERE email=?");
+    if (!$stmt) {
+        error_log("Prepare failed: " . $conn->error);
+        return;
+    }
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
-    $name = $row['Name'];
+    $name = $row['Name'] ?? '';
 
     // Fetching Attendance
-    $stmt = $conn->prepare("SELECT Name FROM student_attendance WHERE roll_num=?");
+    $stmt = $conn->prepare("SELECT attendance FROM student_attendance WHERE roll_num=?");
+    if (!$stmt) {
+        error_log("Prepare failed: " . $conn->error);
+        return;
+    }
     $stmt->bind_param("s", $roll_num);
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
-    $attendance = $row['attendance'];
+    $attendance = $row['attendance'] ?? '';
 
     $new_entry = [
-        'name' => $name . '',
+        'name' => $name,
         'roll_num' => $roll_num,
         'email' => $email,
-        'attendance' => $attendance . '',
+        'attendance' => $attendance,
         'date' => date('d-m-Y'),
-        'timestamp' => date('d-m-Y H:i:s')
+        'timestamp' => date('d-m-Y H:i:s'),
+        'logged' => time(),
     ];
 
     $file = 'session.json';
+    $data = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
     $data[] = $new_entry;
     file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
 }

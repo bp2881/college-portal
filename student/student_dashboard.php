@@ -6,7 +6,7 @@ if (!isset($_SESSION['logged_in'])) {
 	exit;
 }
 
-$jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";
+$jsonFile = "C:\\xampp\\htdocs\\college-portal\\student\\session.json";
 $attendance = null;
 $error = '';
 
@@ -14,7 +14,12 @@ if (file_exists($jsonFile)) {
 	$json = file_get_contents($jsonFile);
 	$data = json_decode($json, true);
 	if (json_last_error() === JSON_ERROR_NONE) {
-		$attendance = htmlspecialchars($data['average_attendance_percentage']);
+		$logged_in = htmlspecialchars($data['logged']);
+		if ((time() - $logged_in) > 1800) {
+			unlink($jsonFile);
+			header("Location: student_login.php");
+		}
+		$attendance = htmlspecialchars($data['attendance']);
 		unlink($jsonFile);
 	} else {
 		$error = "Error decoding JSON: " . json_last_error_msg();

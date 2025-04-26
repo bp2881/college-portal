@@ -8,8 +8,7 @@ $msg = "";
 // Contains DB info
 require_once 'config.php';
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-$TABLE_NAME = 'student_login';
-
+$TABLE_NAME = "students";
 if ($conn->connect_error) {
     error_log("Connection failed: " . $conn->connect_error);
     die("An error occurred. Please try again later.");
@@ -19,7 +18,7 @@ if ($conn->connect_error) {
 function store_session($conn, $email, $roll_num)
 {
     // Fetching name
-    $stmt = $conn->prepare("SELECT Name FROM student_login WHERE email=?");
+    $stmt = $conn->prepare("SELECT Name FROM students WHERE email=?");
     if (!$stmt) {
         error_log("Prepare failed: " . $conn->error);
         return;
@@ -53,9 +52,8 @@ function store_session($conn, $email, $roll_num)
     ];
 
     $file = 'session.json';
-    $data = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
-    $data[] = $new_entry;
-    file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
+    file_put_contents($file, json_encode($new_entry, JSON_PRETTY_PRINT));
+    $conn->close();
 }
 
 function fetch_attendance($conn, $TABLE_NAME, $email)

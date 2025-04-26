@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>About Us | Vignan Institute of Technology and Science</title>
+		<!-- AOS Animation Library -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+			rel="stylesheet" />
+		<style>
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				font-family: "Arial", sans-serif;
+				background: url("/images/college_pic.jpg") no-repeat center
+					center fixed;
+				background-size: cover;
+				color: #444;
+			}
+
+			header {
+				background-color: rgba(0, 51, 102, 0.85);
+				color: white;
+				padding: 1.5rem 2rem;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				backdrop-filter: blur(4px);
+			}
+
+			.logo {
+				width: 80px;
+				height: auto;
+			}
+
+			.header-title {
+				font-size: 2.5rem;
+				margin: 0;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+
+			.container {
+				max-width: 1100px;
+				margin: 4rem auto;
+				padding: 3rem;
+				background-color: rgba(255, 255, 255, 0.95);
+				border-radius: 15px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(5px);
+				font-size: 1.1rem;
+			}
+
+			h2 {
+				color: #d71920;
+				font-size: 2rem;
+				margin-top: 1.5rem;
+				font-weight: 600;
+				letter-spacing: 1px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p,
+			li {
+				font-size: 1.2rem;
+				line-height: 1.8;
+				color: #333;
+			}
+
+			ul {
+				padding-left: 1.5rem;
+			}
+
+			.info-section {
+				background-color: #f7f7f7;
+				padding: 2rem;
+				border-radius: 10px;
+				box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+				margin-top: 3rem;
+			}
+
+			.info-section h2 {
+				color: #d71920;
+				font-size: 1.8rem;
+				text-align: left;
+				text-transform: none;
+				font-weight: 500;
+			}
+
+			.info-section p {
+				color: #555;
+				line-height: 1.8;
+			}
+
+			.leadership-section {
+				margin-top: 3rem;
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+
+			.leadership-card {
+				background-color: #fff;
+				padding: 2rem;
+				border-radius: 10px;
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+				width: 270px;
+				text-align: center;
+				margin-bottom: 2rem;
+				transition: transform 0.3s ease-in-out;
+			}
+
+			.leadership-card:hover {
+				transform: scale(1.05);
+			}
+
+			.leadership-img {
+				width: 180px;
+				height: 180px;
+				border-radius: 50%;
+				margin-bottom: 1rem;
+				border: 5px solid #003366;
+			}
+
+			.leadership-quote {
+				font-style: italic;
+				font-size: 1.1rem;
+				margin: 0 auto;
+				max-width: 700px;
+				color: #777;
+			}
+
+			.leadership-name {
+				font-weight: bold;
+				font-size: 1.2rem;
+				margin-top: 0.5rem;
+				color: #003366;
+				text-transform: uppercase;
+			}
+
+			footer {
+				background-color: rgba(0, 51, 102, 0.85);
+				color: white;
+				text-align: center;
+				padding: 1.5rem;
+				margin-top: 3rem;
+				backdrop-filter: blur(4px);
+			}
+
+			.aos-fade-in {
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+			}
+
+			.aos-fade-in[data-aos="fade-up"] {
+				opacity: 1;
+			}
+
+			.aos-fade-in[data-aos="fade-right"] {
+				opacity: 1;
+			}
+
+			.aos-fade-in[data-aos="fade-left"] {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img
+				src="/images/vignan_logo.png"
+				alt="Vignan Logo"
+				class="logo" />
+			<h1 class="header-title">
+				Vignan Institute of Technology and Science
+			</h1>
+		</header>
+
+		<div class="container">
+			<section
+				data-aos="fade-up"
+				class="info-section">
+				<h2>About Us</h2>
+				<p>
+					Vignan Institute of Technology and Science (VITS) is a
+					pioneering educational institution founded in 1999 by Dr.
+					Lavu Rathaiah. With a firm foundation in the principles of
+					excellence, the institute has grown into one of the leading
+					centers for engineering, technology, and management
+					education. VITS offers an advanced learning environment
+					where innovation and creativity meet to shape the future of
+					students.
+				</p>
+				<p>
+					Our focus on research-driven learning, modern
+					infrastructure, and industry-oriented teaching equips
+					students with skills to succeed in the global job market.
+					With over 2500 students, VITS continues to thrive in
+					preparing the next generation of leaders, innovators, and
+					professionals.
+				</p>
+			</section>
+
+			<section
+				data-aos="fade-right"
+				class="info-section">
+				<h2>Vision</h2>
+				<p>
+					To establish VITS as a world-class center of learning that
+					fosters excellence in science, technology, and innovation
+					while nurturing responsible and ethical citizens with a
+					strong sense of social awareness and global competitiveness.
+				</p>
+			</section>
+
+			<section
+				data-aos="fade-left"
+				class="info-section">
+				<h2>Mission</h2>
+				<ul>
+					<li>
+						To provide world-class academic programs and research
+						opportunities that foster intellectual curiosity,
+						problem-solving skills, and creativity.
+					</li>
+					<li>
+						To build an innovative and inclusive ecosystem that
+						nurtures entrepreneurship, leadership, and social
+						responsibility among students.
+					</li>
+					<li>
+						To create industry-academic collaborations that ensure
+						students are well-prepared for the evolving needs of the
+						job market and society.
+					</li>
+				</ul>
+			</section>
+
+			<div class="leadership-section">
+				<!-- Chairman Section -->
+				<div
+					class="leadership-card"
+					data-aos="fade-up">
+					<img
+						src="/images/chairman.jpeg"
+						alt="Chairman Dr. Lavu Rathaiah"
+						class="leadership-img" />
+					<p class="leadership-quote">
+						"At Vignan, we believe that education is the key to
+						unlocking the full potential of the individual. We are
+						committed to providing an environment where students can
+						thrive, innovate, and become leaders in their fields."
+					</p>
+					<p class="leadership-name">Dr. Lavu Rathaiah, Chairman</p>
+				</div>
+
+				<!-- Principal Section -->
+				<div
+					class="leadership-card"
+					data-aos="fade-up">
+					<img
+						src="/images/principal.jpeg"
+						alt="Principal Dr. G. Durga Sukumar"
+						class="leadership-img" />
+					<p class="leadership-quote">
+						"Vignan offers a dynamic learning environment where
+						students are encouraged to think critically and act with
+						integrity. We focus on both academic and personal
+						growth, preparing students to excel in every aspect of
+						life."
+					</p>
+					<p class="leadership-name">
+						Dr. G. Durga Sukumar, Principal
+					</p>
+				</div>
+
+				<!-- CEO Section -->
+				<div
+					class="leadership-card"
+					data-aos="fade-up">
+					<img
+						src="/images/ceo.jpg"
+						alt="CEO Mr. Shravan Boyapati"
+						class="leadership-img" />
+					<p class="leadership-quote">
+						"Our goal is to build a future-ready institution that
+						fosters collaboration, creativity, and leadership among
+						students. We aim to prepare them for the challenges of
+						tomorrow through a holistic educational approach."
+					</p>
+					<p class="leadership-name">Mr. Shravan Boyapati, CEO</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			&copy; 2025 Vignan Institute of Technology and Science. All rights
+			reserved.
+		</footer>
+
+		<!-- AOS Animation Library -->
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+				once: true,
+			});
+		</script>
+	</body>
+</html>

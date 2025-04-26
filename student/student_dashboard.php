@@ -8,19 +8,22 @@ if (!isset($_SESSION['logged_in'])) {
 
 $jsonFile = "C:\\xampp\\htdocs\\college-portal\\student\\session.json";
 $attendance = null;
+$name = null;
+$roll_number = null;
 $error = '';
 
 if (file_exists($jsonFile)) {
 	$json = file_get_contents($jsonFile);
 	$data = json_decode($json, true);
 	if (json_last_error() === JSON_ERROR_NONE) {
-		$logged_in = htmlspecialchars($data['logged']);
+		$logged_in = $data['logged'];
 		if ((time() - $logged_in) > 1800) {
 			unlink($jsonFile);
 			header("Location: student_login.php");
 		}
 		$attendance = htmlspecialchars($data['attendance']);
-		unlink($jsonFile);
+		$name = htmlspecialchars($data['name']);
+		$roll_number = htmlspecialchars($data['roll_num']);
 	} else {
 		$error = "Error decoding JSON: " . json_last_error_msg();
 	}
@@ -44,11 +47,12 @@ if (file_exists($jsonFile)) {
 
 	<?php if ($error): ?>
 		<p style="color: red;"><?php echo $error; ?></p>
-	<?php elseif ($attendance !== null): ?>
-		<h1>The attendance is <?php echo $attendance; ?>%</h1>
 	<?php else: ?>
-		<p>Attendance data is not available at the moment.</p>
+		<h1>Welcome <?php echo $name; ?> (<?php echo $roll_number; ?>) </h1>
+		<b>The attendance is <?php echo $attendance; ?>%</b>
 	<?php endif; ?>
+
+	<a href="logout.php">Logout</a>
 
 </body>
 

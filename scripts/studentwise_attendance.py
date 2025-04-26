@@ -17,6 +17,8 @@ except:
 st = time.time()
 attendance_path = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json"
 
+
+
 def db_store(attendance, roll_num):
     import mysql.connector
     from os import getenv

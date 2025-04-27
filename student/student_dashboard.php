@@ -28,7 +28,7 @@ if (file_exists($jsonFile)) {
 		$error = "Error decoding JSON: " . json_last_error_msg();
 	}
 } else {
-	header("Location: student_login.php");
+	header("Location: C:\\xampp\\htdocs\\college-portal\\student\\student_login.php");
 	$error = "JSON file not found.";
 }
 

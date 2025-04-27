@@ -7,11 +7,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
-roll_no = sys.argv[1]
-from_date = sys.argv[2]
-to_date = sys.argv[3]
+roll_no = sys.argv[2]
+from_date = sys.argv[3]
+to_date = sys.argv[4]
 try:
-    portal = sys.argv[4]
+    portal = sys.argv[5]
 except:
     portal = ""
 st = time.time()

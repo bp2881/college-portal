@@ -1,0 +1,80 @@
+{
+    "name": "Pranav",
+    "roll_num": "23891A0549",
+    "email": "pranavbairy2@gmail.com",
+    "attendance": 78.75,
+    "subjects": [
+        {
+            "subject": "DM",
+            "classes_held": "58",
+            "classes_attended": "47",
+            "percentage": "81.03"
+        },
+        {
+            "subject": "BEFA",
+            "classes_held": "54",
+            "classes_attended": "45",
+            "percentage": "83.33"
+        },
+        {
+            "subject": "OS",
+            "classes_held": "55",
+            "classes_attended": "43",
+            "percentage": "78.18"
+        },
+        {
+            "subject": "DBMS",
+            "classes_held": "52",
+            "classes_attended": "42",
+            "percentage": "80.77"
+        },
+        {
+            "subject": "SE",
+            "classes_held": "53",
+            "classes_attended": "41",
+            "percentage": "77.36"
+        },
+        {
+            "subject": "OS LAB",
+            "classes_held": "31",
+            "classes_attended": "29",
+            "percentage": "93.55"
+        },
+        {
+            "subject": "DBMS LAB",
+            "classes_held": "27",
+            "classes_attended": "24",
+            "percentage": "88.89"
+        },
+        {
+            "subject": "NODE JS",
+            "classes_held": "41",
+            "classes_attended": "36",
+            "percentage": "87.8"
+        },
+        {
+            "subject": "COI",
+            "classes_held": "6",
+            "classes_attended": "3",
+            "percentage": "50"
+        },
+        {
+            "subject": "REAL TIME PROJECT",
+            "classes_held": "0",
+            "classes_attended": "--",
+            "percentage": "--"
+        },
+        {
+            "subject": "CRT",
+            "classes_held": "53",
+            "classes_attended": "42",
+            "percentage": "79.25"
+        }
+    ],
+    "date": "27-04-2025",
+    "timestamp": "27-04-2025 18:23:57",
+    "logged": 1745771037,
+    "address": "123 Random St, Sample City, ST, 12345",
+    "contact": "123-456-7890",
+    "dob": "2000-01-15"
+}

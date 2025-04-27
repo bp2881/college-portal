@@ -1,4 +1,4 @@
-mysql-python-connector
+mysql-connector-python
 BeautifulSoup4
 selenium
 google-auth

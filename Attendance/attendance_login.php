@@ -70,7 +70,7 @@ $conn->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Attendance | Vignan ITS</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style2.css" />
   <style>
     .error {
       color: #d32f2f;
@@ -104,6 +104,14 @@ $conn->close();
     }
   </style>
 </head>
+<script>
+function togglePassword() {
+  const passwordField = document.getElementById('upass');
+  const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordField.setAttribute('type', type);
+}
+</script>
+
 
 <body>
   <header class="navbar">

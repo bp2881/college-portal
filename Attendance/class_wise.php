@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['branch'], $_POST['from
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Attendance Dashboard | Vignan ITS</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style3.css" />
 </head>
 
 <body>

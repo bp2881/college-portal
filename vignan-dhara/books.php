@@ -21,14 +21,31 @@
             background-size: 100px 100px;
         }
 
+        /* Header with flexbox to accommodate logo and centered title */
         header {
             background: linear-gradient(90deg, #ff6f61, #6b5b95);
-            /* Coral to Purple gradient */
             color: #ffffff;
             padding: 1rem 0;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Logo styling: absolute positioning at top left */
+        #logo {
+            height: 50px;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+        }
+
+        /* Centers the header title while allowing logo space */
+        .header-title {
+            flex: 1;
+            text-align: center;
         }
 
         header h1 {
@@ -38,7 +55,6 @@
 
         nav {
             background: linear-gradient(90deg, #42a5f5, #26a69a);
-            /* Blue to Teal gradient */
             padding: 0.8rem;
             text-align: center;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -58,7 +74,6 @@
 
         nav a:hover {
             color: #ffd700;
-            /* Gold hover */
         }
 
         .container {
@@ -72,7 +87,6 @@
             font-size: 2.2rem;
             margin-bottom: 2rem;
             color: #6b5b95;
-            /* Purple for title */
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         }
 
@@ -85,7 +99,6 @@
 
         .branch-card {
             background: linear-gradient(135deg, #ffffff, #e0f7fa);
-            /* Light Blue to White gradient */
             border: 1px solid #d0d0d0;
             border-radius: 10px;
             padding: 1.8rem;
@@ -99,7 +112,6 @@
         .branch-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 6px 16px rgba(107, 91, 149, 0.2), 0 2px 4px rgba(0, 0, 0, 0.06) inset;
-            /* Purple shadow */
         }
 
         .branch-card a {
@@ -116,13 +128,11 @@
 
         .branch-card a:hover {
             color: #ff6f61;
-            /* Coral hover */
             text-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
         }
 
         footer {
             background: linear-gradient(90deg, #42a5f5, #26a69a);
-            /* Blue to Teal gradient, matching nav */
             color: #ffffff;
             text-align: center;
             padding: 1.2rem;
@@ -152,6 +162,13 @@
                 font-size: 1.6rem;
             }
 
+            /* Responsive logo size for mobile */
+            #logo {
+                height: 40px;
+                top: 0.8rem;
+                left: 0.8rem;
+            }
+
             nav a {
                 margin: 0 1rem;
                 font-size: 1rem;
@@ -175,7 +192,12 @@
 
 <body>
     <header>
-        <h1>Vignan Dhara Online Portal</h1>
+        <!-- Vignan logo positioned at top left -->
+        <img id="logo" src="./images/vignan_logo.png" alt="Vignan Logo">
+        <!-- Wrapper to center the title while logo is absolute -->
+        <div class="header-title">
+            <h1>Vignan Dhara Online Portal</h1>
+        </div>
     </header>
 
     <nav>

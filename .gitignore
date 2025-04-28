@@ -5,3 +5,4 @@ class_attendance_data.json
 .env
 scripts/.env
 ./student/session.json
+student/session.json

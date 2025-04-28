@@ -19,9 +19,11 @@
             color: #424242;
             background: #f5f5f0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z8DAwMgAB//z7P8QAAgMDAwMAAAEZAN+3AAAAAElFTkSuQmCC') repeat;
             background-size: 100px 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Header with flexbox to accommodate logo and centered title */
         header {
             background: linear-gradient(90deg, #ff6f61, #6b5b95);
             color: #ffffff;
@@ -33,7 +35,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        /* Logo styling: absolute positioning at top left */
         #logo {
             height: 50px;
             position: absolute;
@@ -42,7 +43,6 @@
             z-index: 1000;
         }
 
-        /* Centers the header title while allowing logo space */
         .header-title {
             flex: 1;
             text-align: center;
@@ -80,6 +80,7 @@
             max-width: 1200px;
             margin: 2.5rem auto;
             padding: 0 1rem;
+            flex: 1;
         }
 
         .container h2 {
@@ -131,18 +132,59 @@
             text-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
         }
 
+        .about-section, .contact-section {
+            background: linear-gradient(135deg, #ffffff, #e0f7fa);
+            border: 1px solid #d0d0d0;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06) inset;
+            text-align: center;
+            animation: fadeIn 0.9s ease-out;
+        }
+
+        .about-section h3, .contact-section h3 {
+            font-size: 1.8rem;
+            color: #6b5b95;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section p, .contact-section p {
+            font-size: 1.1rem;
+            color: #424242;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-section a:hover {
+            color: #6b5b95;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto 1rem auto;
+            padding: 0 1rem;
+        }
+
         footer {
             background: linear-gradient(90deg, #42a5f5, #26a69a);
             color: #ffffff;
+            padding: 0.6rem;
             text-align: center;
-            padding: 1.2rem;
-            margin-top: 2.5rem;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         footer p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         @keyframes fadeIn {
@@ -162,7 +204,6 @@
                 font-size: 1.6rem;
             }
 
-            /* Responsive logo size for mobile */
             #logo {
                 height: 40px;
                 top: 0.8rem;
@@ -186,15 +227,29 @@
             .container h2 {
                 font-size: 1.8rem;
             }
+
+            .about-section h3, .contact-section h3 {
+                font-size: 1.6rem;
+            }
+
+            .about-section p, .contact-section p {
+                font-size: 1rem;
+            }
+
+            .contact-container {
+                margin-bottom: 0.5rem;
+            }
+
+            footer {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <!-- Vignan logo positioned at top left -->
         <img id="logo" src="./images/vignan_logo.png" alt="Vignan Logo">
-        <!-- Wrapper to center the title while logo is absolute -->
         <div class="header-title">
             <h1>Vignan Dhara Online Portal</h1>
         </div>
@@ -243,11 +298,44 @@
                 <a href="branch.php?branch=AIDS">Artificial Intelligence & Data Science (AI&DS)</a>
             </div>
         </div>
+
+        <section id="about" class="about-section">
+            <h3>About Us</h3>
+            <p>
+                Vignan Dhara Online Portal is a dedicated digital library platform designed to support the academic journey of students at Vignan University. Our mission is to provide seamless access to a comprehensive collection of educational resources, including textbooks, reference materials, and study guides, tailored to the diverse academic branches offered at the university. Whether you're pursuing Basic Sciences, Engineering, or cutting-edge fields like Artificial Intelligence and Data Science, Vignan Dhara ensures that essential learning materials are just a click away.
+            </p>
+            <p>
+                Built with a student-centric approach, this portal reflects Vignan University's commitment to fostering academic excellence and innovation. We aim to empower learners by offering an intuitive, user-friendly interface that simplifies access to resources, enabling students to focus on their studies and achieve their full potential. Explore our portal and discover the wealth of knowledge at your fingertips!
+            </p>
+        </section>
+    </div>
+
+    <div class="contact-container">
+        <section id="contact" class="contact-section">
+            <h3>Contact Us</h3>
+            <p><a href="mailto:library@vignan.ac.in">library@vignan.ac.in</a></p>
+            <p><a href="tel:+918632123456">+91 863 212 3456</a></p>
+            <p>Vignan University, Guntur, AP, India</p>
+        </section>
     </div>
 
     <footer>
         <p>© 2025 Vignan Dhara Library. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

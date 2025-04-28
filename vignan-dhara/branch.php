@@ -190,6 +190,13 @@
             box-shadow: 0 8px 20px rgba(66, 165, 245, 0.4);
         }
 
+        .resource-box.highlighted {
+            background: linear-gradient(45deg, #0288d1, #00695c);
+            color: #ffd700;
+            box-shadow: 0 8px 20px rgba(66, 165, 245, 0.6);
+            transform: scale(1.05);
+        }
+
         .nested-box-container {
             display: flex;
             justify-content: center;
@@ -220,6 +227,13 @@
             color: #ff8c00;
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 8px 20px rgba(66, 165, 245, 0.4);
+        }
+
+        .nested-resource-box.highlighted {
+            background: linear-gradient(45deg, #0288d1, #00695c);
+            color: #ffd700;
+            box-shadow: 0 8px 20px rgba(66, 165, 245, 0.6);
+            transform: scale(1.05);
         }
 
         .resource-content {
@@ -410,7 +424,7 @@
                 ]
             },
             CSE: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Data Structures", url: "books/cse/2/ds.pdf" }
                     ],
@@ -418,7 +432,17 @@
                         { title: "Object-Oriented Programming", url: "books/cse/2/oop.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Operating Systems", url: "books/cse/3/os.pdf" },
+                        { title: "Database Management Systems", url: "books/cse/3/dbms.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Machine Learning", url: "books/cse/4/ml.pdf" },
+                        { title: "Cloud Computing", url: "books/cse/4/cloud.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Operating Systems", url: "books/cse/3/os.pdf" },
                         { title: "Database Management Systems", url: "books/cse/3/dbms.pdf" }
@@ -430,7 +454,7 @@
                 }
             },
             ECE: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Digital Electronics", url: "books/ece_2/digital.pdf" }
                     ],
@@ -438,7 +462,17 @@
                         { title: "Circuit Theory", url: "books/ece_2/circuit.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Signals and Systems", url: "books/ece_3/signals.pdf" },
+                        { title: "Microprocessors", url: "books/ece_3/micro.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "VLSI Design", url: "books/ece_4/vlsi.pdf" },
+                        { title: "Wireless Communication", url: "books/ece_4/wireless.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Signals and Systems", url: "books/ece_3/signals.pdf" },
                         { title: "Microprocessors", url: "books/ece_3/micro.pdf" }
@@ -450,7 +484,7 @@
                 }
             },
             EEE: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Electrical Circuits", url: "books/eee_2/circuits.pdf" }
                     ],
@@ -458,7 +492,17 @@
                         { title: "Electromagnetic Fields", url: "books/eee_2/emf.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Power Electronics", url: "books/eee_3/power_elec.pdf" },
+                        { title: "Control Systems", url: "books/eee_3/control.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "High Voltage Engineering", url: "books/eee_4/high_voltage.pdf" },
+                        { title: "Renewable Energy", url: "books/eee_4/renewable.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Power Electronics", url: "books/eee_3/power_elec.pdf" },
                         { title: "Control Systems", url: "books/eee_3/control.pdf" }
@@ -470,7 +514,7 @@
                 }
             },
             CE: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Strength of Materials", url: "books/ce_2/som.pdf" }
                     ],
@@ -478,7 +522,17 @@
                         { title: "Fluid Mechanics", url: "books/ce_2/fluid.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Structural Analysis", url: "books/ce_3/structures.pdf" },
+                        { title: "Geotechnical Engineering", url: "books/ce_3/geotech.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Construction Management", url: "books/ce_4/construction.pdf" },
+                        { title: "Environmental Engineering", url: "books/ce_4/env.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Structural Analysis", url: "books/ce_3/structures.pdf" },
                         { title: "Geotechnical Engineering", url: "books/ce_3/geotech.pdf" }
@@ -490,7 +544,7 @@
                 }
             },
             MECH: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Thermodynamics", url: "books/mech_2/thermo.pdf" }
                     ],
@@ -498,7 +552,17 @@
                         { title: "Mechanics of Solids", url: "books/mech_2/solids.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Machine Design", url: "books/mech_3/design.pdf" },
+                        { title: "Heat Transfer", url: "books/mech_3/heat.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "CAD/CAM", url: "books/mech_4/cadcam.pdf" },
+                        { title: "Robotics", url: "books/mech_4/robotics.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Machine Design", url: "books/mech_3/design.pdf" },
                         { title: "Heat Transfer", url: "books/mech_3/heat.pdf" }
@@ -510,7 +574,7 @@
                 }
             },
             EIE: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Instrumentation", url: "books/eie_2/instru.pdf" }
                     ],
@@ -518,7 +582,17 @@
                         { title: "Sensors", url: "books/eie_2/sensors.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Process Control", url: "books/eie_3/process.pdf" },
+                        { title: "Biomedical Instrumentation", url: "books/eie_3/biomed.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Industrial Automation", url: "books/eie_4/automation.pdf" },
+                        { title: "Advanced Control Systems", url: "books/eie_4/advanced.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Process Control", url: "books/eie_3/process.pdf" },
                         { title: "Biomedical Instrumentation", url: "books/eie_3/biomed.pdf" }
@@ -530,7 +604,7 @@
                 }
             },
             IT: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Computer Networks", url: "books/it_2/networks.pdf" }
                     ],
@@ -538,7 +612,17 @@
                         { title: "Web Technologies", url: "books/it_2/web.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Software Engineering", url: "books/it_3/software.pdf" },
+                        { title: "Cyber Security", url: "books/it_3/security.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Cloud Computing", url: "books/it_4/cloud.pdf" },
+                        { title: "Big Data Analytics", url: "books/it_4/bigdata.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Software Engineering", url: "books/it_3/software.pdf" },
                         { title: "Cyber Security", url: "books/it_3/security.pdf" }
@@ -550,7 +634,7 @@
                 }
             },
             CSE_AIML: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Python Programming", url: "books/cse_aiml_2/python.pdf" }
                     ],
@@ -558,7 +642,17 @@
                         { title: "Mathematics for AI", url: "books/cse_aiml_2/math.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Machine Learning Basics", url: "books/cse_aiml_3/ml_basics.pdf" },
+                        { title: "Deep Learning", url: "books/cse_aiml_3/deep.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Natural Language Processing", url: "books/cse_aiml_4/nlp.pdf" },
+                        { title: "AI Ethics", url: "books/cse_aiml_4/ethics.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Machine Learning Basics", url: "books/cse_aiml_3/ml_basics.pdf" },
                         { title: "Deep Learning", url: "books/cse_aiml_3/deep.pdf" }
@@ -570,7 +664,7 @@
                 }
             },
             CSE_DS: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Statistics", url: "books/cse_ds_2/stats.pdf" }
                     ],
@@ -578,7 +672,17 @@
                         { title: "Data Structures", url: "books/cse_ds_2/ds.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "Data Mining", url: "books/cse_ds_3/mining.pdf" },
+                        { title: "Machine Learning", url: "books/cse_ds_3/ml.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Big Data", url: "books/cse_ds_4/bigdata.pdf" },
+                        { title: "Data Visualization", url: "books/cse_ds_4/vis.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "Data Mining", url: "books/cse_ds_3/mining.pdf" },
                         { title: "Machine Learning", url: "books/cse_ds_3/ml.pdf" }
@@ -590,7 +694,7 @@
                 }
             },
             AIDS: {
-                'year-1': {
+                'year-2': {
                     'sem-1': [
                         { title: "Introduction to AI", url: "books/aids_2/ai_intro.pdf" }
                     ],
@@ -598,7 +702,17 @@
                         { title: "Data Science Basics", url: "books/aids_2/ds_basics.pdf" }
                     ]
                 },
-                'year-2': {
+                'year-3': {
+                    'sem-1': [
+                        { title: "AI Algorithms", url: "books/aids_3/ai_algo.pdf" },
+                        { title: "Data Analysis", url: "books/aids_3/analysis.pdf" }
+                    ],
+                    'sem-2': [
+                        { title: "Advanced AI", url: "books/aids_4/advanced_ai.pdf" },
+                        { title: "Big Data Applications", url: "books/aids_4/bigdata_app.pdf" }
+                    ]
+                },
+                'year-4': {
                     'sem-1': [
                         { title: "AI Algorithms", url: "books/aids_3/ai_algo.pdf" },
                         { title: "Data Analysis", url: "books/aids_3/analysis.pdf" }
@@ -661,6 +775,9 @@
                             const content = document.getElementById(period);
                             const isActive = content.classList.contains('active');
 
+                            boxes.forEach(b => b.classList.remove('highlighted'));
+                            box.classList.add('highlighted');
+
                             document.querySelectorAll('.resource-content').forEach(c => {
                                 c.classList.remove('active');
                             });
@@ -675,48 +792,51 @@
                 } else {
                     const boxContainer = document.createElement('div');
                     boxContainer.className = 'box-container';
-                    const years = ['year-1', 'year-2'];
-                    const yearLabels = ['Year 1', 'Year 2'];
-                    boxContainer.innerHTML = `
-                        <div class="resource-box" data-period="${years[0]}">${yearLabels[0]}</div>
-                        <div class="resource-box" data-period="${years[1]}">${yearLabels[1]}</div>
-                    `;
+                    const years = ['year-2', 'year-3', 'year-4'];
+                    const yearLabels = ['Year 2', 'Year 3', 'Year 4'];
+                    boxContainer.innerHTML = years
+                        .map((year, index) => `<div class="resource-box" data-period="${year}">${yearLabels[index]}</div>`)
+                        .join('');
                     bookList.appendChild(boxContainer);
 
                     years.forEach(year => {
-                        const contentDiv = document.createElement('div');
-                        contentDiv.className = 'resource-content';
-                        contentDiv.id = year;
-                        const nestedBoxContainer = document.createElement('div');
-                        nestedBoxContainer.className = 'nested-box-container';
-                        const semesters = ['sem-1', 'sem-2'];
-                        const semLabels = ['Semester 1', 'Semester 2'];
-                        nestedBoxContainer.innerHTML = `
-                            <div class="nested-resource-box" data-sem="${year}-sem-1">${semLabels[0]}</div>
-                            <div class="nested-resource-box" data-sem="${year}-sem-2">${semLabels[1]}</div>
-                        `;
-                        contentDiv.appendChild(nestedBoxContainer);
+                        if (books[branch][year]) {
+                            const contentDiv = document.createElement('div');
+                            contentDiv.className = 'resource-content';
+                            contentDiv.id = year;
+                            const nestedBoxContainer = document.createElement('div');
+                            nestedBoxContainer.className = 'nested-box-container';
+                            const semesters = ['sem-1َّ', 'sem-2'];
+                            const semLabels = ['Semester 1', 'Semester 2'];
+                            nestedBoxContainer.innerHTML = `
+                                <div class="nested-resource-box" data-sem="${year}-sem-1">${semLabels[0]}</div>
+                                <div class="nested-resource-box" data-sem="${year}-sem-2">${semLabels[1]}</div>
+                            `;
+                            contentDiv.appendChild(nestedBoxContainer);
 
-                        semesters.forEach(sem => {
-                            const nestedContentDiv = document.createElement('div');
-                            nestedContentDiv.className = 'nested-resource-content';
-                            nestedContentDiv.id = `${year}-${sem}`;
-                            const semList = document.createElement('div');
-                            semList.className = 'book-list';
-                            books[branch][year][sem].forEach(book => {
-                                const bookItem = document.createElement('div');
-                                bookItem.className = 'book-item';
-                                bookItem.innerHTML = `
-                                    <span>${book.title}</span>
-                                    <a href="${book.url}" target="_blank">Download PDF</a>
-                                `;
-                                semList.appendChild(bookItem);
+                            semesters.forEach(sem => {
+                                if (books[branch][year][sem]) {
+                                    const nestedContentDiv = document.createElement('div');
+                                    nestedContentDiv.className = 'nested-resource-content';
+                                    nestedContentDiv.id = `${year}-${sem}`;
+                                    const semList = document.createElement('div');
+                                    semList.className = 'book-list';
+                                    books[branch][year][sem].forEach(book => {
+                                        const bookItem = document.createElement('div');
+                                        bookItem.className = 'book-item';
+                                        bookItem.innerHTML = `
+                                            <span>${book.title}</span>
+                                            <a href="${book.url}" target="_blank">Download PDF</a>
+                                        `;
+                                        semList.appendChild(bookItem);
+                                    });
+                                    nestedContentDiv.appendChild(semList);
+                                    contentDiv.appendChild(nestedContentDiv);
+                                }
                             });
-                            nestedContentDiv.appendChild(semList);
-                            contentDiv.appendChild(nestedContentDiv);
-                        });
 
-                        bookList.appendChild(contentDiv);
+                            bookList.appendChild(contentDiv);
+                        }
                     });
 
                     const yearBoxes = document.querySelectorAll('.resource-box');
@@ -724,7 +844,10 @@
                         box.addEventListener('click', () => {
                             const year = box.getAttribute('data-period');
                             const content = document.getElementById(year);
-                            const isActive = content.classList.contains('active');
+                            const isActive = content && content.classList.contains('active');
+
+                            yearBoxes.forEach(b => b.classList.remove('highlighted'));
+                            box.classList.add('highlighted');
 
                             document.querySelectorAll('.resource-content').forEach(c => {
                                 c.classList.remove('active');
@@ -733,7 +856,7 @@
                                 c.classList.remove('active');
                             });
 
-                            if (!isActive) {
+                            if (content && !isActive) {
                                 requestAnimationFrame(() => {
                                     content.classList.add('active');
                                 });
@@ -746,14 +869,19 @@
                         box.addEventListener('click', () => {
                             const sem = box.getAttribute('data-sem');
                             const content = document.getElementById(sem);
-                            const isActive = content.classList.contains('active');
+                            const isActive = content && content.classList.contains('active');
 
                             const year = sem.split('-')[0] + '-' + sem.split('-')[1];
+                            document.querySelectorAll(`#${year} .nested-resource-box`).forEach(c => {
+                                c.classList.remove('highlighted');
+                            });
+                            box.classList.add('highlighted');
+
                             document.querySelectorAll(`#${year} .nested-resource-content`).forEach(c => {
                                 c.classList.remove('active');
                             });
 
-                            if (!isActive) {
+                            if (content && !isActive) {
                                 requestAnimationFrame(() => {
                                     content.classList.add('active');
                                 });

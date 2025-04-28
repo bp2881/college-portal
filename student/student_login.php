@@ -475,7 +475,7 @@ if (isset($_POST['verify_otp'])) {
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
                     <button type="submit" name="verify_otp" class="btn-login" style="flex: 1;">Verify OTP</button>
                     <button type="submit" name="resend_otp" class="btn-login"
-                        style="flex: 1; background-color: #8b86fb;">
+                        style="flex: 1; background-color: #8b86fb;" formnovalidate>
                         Resend OTP
                     </button>
                 </div>

@@ -73,12 +73,13 @@ $subjectIcons = [
 
 <body>
     <header>
-        <div class="logo" title="University Management System">
+        <a href="../logout.php" class="logo" title="Student-Portal">
             <img src="./images/logo.png" alt="">
             <h2>V<span class="danger">I</span>TS</h2>
-        </div>
+        </a>
+
         <div class="navbar">
-            <a href="index.html" class="active">
+            <a href="index.php" class="active">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
@@ -87,12 +88,12 @@ $subjectIcons = [
                 <h3>Time Table</h3>
             </a>
             </a>
-            <a href="password.html">
+            <a href="password.php">
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
             </a>
             <a href="../logout.php">
-                <span class="material-icons-sharp" onclick="">logout</span>
+                <span class="material-icons-sharp">logout</span>
                 <h3>Logout</h3>
             </a>
         </div>
@@ -110,7 +111,7 @@ $subjectIcons = [
             <div class="profile">
                 <div class="top">
                     <div class="profile-photo">
-                        <img src="./images/profile-1.jpg" alt="">
+                        <img src="./images/profile-1.png" alt="">
                     </div>
                     <div class="info">
                         <p>Welcome, <b><?php echo $name; ?></b> </p>

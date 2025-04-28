@@ -6,3 +6,4 @@ class_attendance_data.json
 scripts/.env
 ./student/session.json
 student/session.json
+class_attendance_data.json

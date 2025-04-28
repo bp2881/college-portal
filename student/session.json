@@ -6,15 +6,15 @@
     "subjects": [
         {
             "subject": "DM",
-            "classes_held": "58",
-            "classes_attended": "47",
-            "percentage": "81.03"
+            "classes_held": "59",
+            "classes_attended": "48",
+            "percentage": "81.36"
         },
         {
             "subject": "BEFA",
-            "classes_held": "54",
-            "classes_attended": "45",
-            "percentage": "83.33"
+            "classes_held": "55",
+            "classes_attended": "46",
+            "percentage": "83.64"
         },
         {
             "subject": "OS",
@@ -24,15 +24,15 @@
         },
         {
             "subject": "DBMS",
-            "classes_held": "52",
-            "classes_attended": "42",
-            "percentage": "80.77"
+            "classes_held": "54",
+            "classes_attended": "44",
+            "percentage": "81.48"
         },
         {
             "subject": "SE",
-            "classes_held": "53",
-            "classes_attended": "41",
-            "percentage": "77.36"
+            "classes_held": "54",
+            "classes_attended": "42",
+            "percentage": "77.78"
         },
         {
             "subject": "OS LAB",
@@ -66,14 +66,14 @@
         },
         {
             "subject": "CRT",
-            "classes_held": "53",
-            "classes_attended": "42",
-            "percentage": "79.25"
+            "classes_held": "55",
+            "classes_attended": "44",
+            "percentage": "80"
         }
     ],
-    "date": "27-04-2025",
-    "timestamp": "27-04-2025 18:23:57",
-    "logged": 1745771037,
+    "date": "28-04-2025",
+    "timestamp": "28-04-2025 14:48:44",
+    "logged": 1745844524,
     "address": "123 Random St, Sample City, ST, 12345",
     "contact": "123-456-7890",
     "dob": "2000-01-15"

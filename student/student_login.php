@@ -126,7 +126,7 @@ function fetch_attendance($conn, $TABLE_NAME, $email)
 
     $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
     $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-    $command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt");
+    $command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt student");
 
     $output = shell_exec($command);
     if ($output === null) {
@@ -218,7 +218,7 @@ if (isset($_POST['verify_otp'])) {
         $row = $result->fetch_assoc();
         $stmt->close();
 
-        if ($row && password_verify($password, $row['password'])) {
+        if ($row && (password_verify($password, $row['password']))) {
             session_regenerate_id(true);
             $_SESSION['email'] = $email;
             $_SESSION['logged_in'] = true;

@@ -3,8 +3,9 @@ $roll = isset($_GET['roll_number']) ? filter_var($_GET['roll_number'], FILTER_SA
 $fdt = isset($_GET['from_date']) ? filter_var($_GET['from_date'], FILTER_SANITIZE_STRING) : '';
 $tdt = isset($_GET['to_date']) ? filter_var($_GET['to_date'], FILTER_SANITIZE_STRING) : '';
 
+$pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
 $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-$command = "python $pythonScript $roll $fdt $tdt attendance";
+$command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt");
 $output = shell_exec($command);
 
 $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";

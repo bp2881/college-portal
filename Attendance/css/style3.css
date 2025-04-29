@@ -1,181 +1,183 @@
 /* Reset and Basics */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #003366;
-    padding: 0.8rem 2rem;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .logo img {
-    height: 50px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  padding: 0.8rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #ffcc00;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .nav-menu ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-  }
-  
-  .nav-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu ul li a:hover {
-    color: #ffcc00;
-  }
-  
-  /* Mobile menu */
-  .menu-toggle {
     display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .nav-menu ul {
-      display: none;
-      flex-direction: column;
-      background: #003366;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      border-radius: 10px;
-      padding: 1rem;
-    }
-  
-    .nav-menu ul.open {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('../images/attendance_bg.jpg') no-repeat center center/cover;
-    padding: 2rem;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 51, 102, 0.6);
-    z-index: 1;
-  }
-  
-  /* Login Card */
-  .login-card {
-    position: relative;
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    z-index: 2;
-    text-align: center;
-  }
-  
-  .login-card h1 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #003366;
-  }
-  
-  /* Form Elements */
-  form {
-    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    min-width: 200px;
-  }
-  
-  .input-group label {
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #003366;
-  }
-  
-  .input-group select,
-  .input-group input[type="date"] {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #f9f9f9;
-  }
-  
-  .input-group select:focus,
-  .input-group input[type="date"]:focus {
-    border-color: #003366;
-    outline: none;
-  }
-  
-  /* Submit Button */
-  button[type="submit"] {
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 0.9rem 2rem;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
-  }
-  
-  button[type="submit"]:hover {
-    background: #e65c00;
-  }
-  
-  /* Footer */
-  footer {
     background: #003366;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 1rem;
   }
-  
+
+  .nav-menu ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Class-Wise Page Container */
+.classwise-container {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Filter Form Layout */
+.classwise-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #003366;
+}
+
+.input-group select,
+.input-group input[type="date"] {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+}
+
+.input-group select:focus,
+.input-group input[type="date"]:focus {
+  border-color: #003366;
+  outline: none;
+}
+
+/* Submit Button */
+.classwise-form button[type="submit"] {
+  grid-column: span 2;
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  justify-self: center;
+}
+
+.classwise-form button[type="submit"]:hover {
+  background: #e65c00;
+}
+
+/* Table or Result Section */
+.attendance-results {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+}
+
+.attendance-results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-results th,
+.attendance-results td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.attendance-results th {
+  background: #003366;
+  color: white;
+}
+
+.attendance-results tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}

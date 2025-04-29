@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2025 at 05:37 PM
+-- Generation Time: Apr 29, 2025 at 03:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -38,9 +38,9 @@ CREATE TABLE `faculty_login` (
 --
 
 INSERT INTO `faculty_login` (`sno`, `uid`, `password`) VALUES
-(1, 840, 'vgnt'),
-(2, 848, 'vgnt'),
-(3, 111, 'vgnt');
+(1, 840, '2719a550f73189360552'),
+(2, 848, '$2y$10$mQYUEwrSy4wyz'),
+(3, 111, '$2y$10$N6AjMp8I4JROz');
 
 -- --------------------------------------------------------
 
@@ -55,19 +55,23 @@ CREATE TABLE `students` (
   `roll_num` varchar(50) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `sem_start` date DEFAULT NULL,
-  `year` int(11) DEFAULT NULL
+  `year` int(11) DEFAULT NULL,
+  `branch` varchar(100) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`sno`, `email`, `password`, `roll_num`, `Name`, `sem_start`, `year`) VALUES
-(1, 'pranavbairy2@gmail.com', '$2y$10$3RYb9Ou9uwFLxKs97Pf78.PcxEtkZypyRBrD4R7q7iNHXX0kWXB6e', '23891A0549', 'Pranav', '2025-01-10', 2),
-(2, 'ushashankvarma12@gmail.com', '$2y$10$8PGzQuh4kawHp4pISPxb/..BcVB3hNqNHaskWKnvo/Aw.IblsTcQW', '23891A0558', 'Shashank', '2025-01-10', 2),
-(3, 'deveshrayudu@gmail.com', '$2y$10$BaQA7IcleWjTAYlb0bJh..PU.c4TNlOhBoExY4/34Looqjoiz4kD.', '23891A0512', 'Devesh', '2025-01-10', 2),
-(4, 'aakashjarubula117@gmail.com', '$2y$10$R/DaIMCplqrJ4w14Pps5l.ruKHJoy7wiXagVOFb3/NhBrrmlb04r.', '23891A0522', 'Aakash', '2025-01-10', 2),
-(5, 'pallechandureddy1@gmail.com', '$2y$10$SJ53jfzzhIik6TufwHFwsOSE/RJ4GrwPjrhCnuEhYfGGXB/SH87XG', '23891A0540', 'Chandu', '2025-01-10', 2);
+INSERT INTO `students` (`sno`, `email`, `password`, `roll_num`, `Name`, `sem_start`, `year`, `branch`, `dob`, `contact`, `address`) VALUES
+(1, 'pranavbairy2@gmail.com', '$2y$10$3PaaRxPnqe.UQvjbOzTMSugQKZoJwWjHILTDg0LMsF4dt54pguUXq', '23891A0549', 'Pranav', '2025-01-10', 2, 'CSE', '2000-01-15', '123-456-7890', '123 Random St, Sample City, ST, 12345'),
+(2, 'ushashankvarma12@gmail.com', '366ef40f179d1d0170e5a8125378fe8bb0ad211aae42fa84ecac52043d1b57d1', '23891A0558', 'Shashank', '2025-01-10', 2, 'CSE', '2000-01-15', '123-456-7890', '123 Random St, Sample City, ST, 12345'),
+(3, 'deveshrayudu@gmail.com', '56ace5712d1ae6d531dad9df0b75e3229db1bb67a702c78aaea49722413afe54', '23891A0512', 'Devesh', '2025-01-10', 2, 'CSE', '2000-01-15', '123-456-7890', '123 Random St, Sample City, ST, 12345'),
+(4, 'aakashjarubula117@gmail.com', 'c2e704bd75778efc11506833bc94821064b327e13a5a80369e9217de13069d14', '23891A0522', 'Aakash', '2025-01-10', 2, 'CSE', '2000-01-15', '123-456-7890', '123 Random St, Sample City, ST, 12345'),
+(5, 'pallechandureddy1@gmail.com', '3cd85744068f75ac8e984c0ce6e7275b3477d3f24d4a452ecc46b7a73d9d4993', '23891A0540', 'Chandu', '2025-01-10', 2, 'CSE', '2000-01-15', '123-456-7890', '123 Random St, Sample City, ST, 12345');
 
 --
 -- Triggers `students`
@@ -101,9 +105,9 @@ CREATE TABLE `student_attendance` (
 --
 
 INSERT INTO `student_attendance` (`roll_num`, `attendance`) VALUES
-('23891A0549', 78.75),
+('23891A0549', 80.37),
 ('23891A0558', 81.94),
-('23891A0512', 78.5),
+('23891A0512', 80.596),
 ('23891A0522', 88),
 ('23891A0540', 95.5);
 

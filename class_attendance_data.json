@@ -4,7 +4,7 @@
   "section": "A",
   "attendance_dates": {
     "from": "20-01-2025",
-    "to": "28-04-2025"
+    "to": "29-04-2025"
   },
   "students": [
     {
@@ -22,10 +22,10 @@
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "346",
-      "percentage": "79.18"
+      "total": "349",
+      "percentage": "79.32"
     },
     {
       "sno": "2",
@@ -42,10 +42,10 @@
         "NODE JS": "29",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "37"
+        "CRT": "40"
       },
-      "total": "328",
-      "percentage": "75.06"
+      "total": "331",
+      "percentage": "75.23"
     },
     {
       "sno": "3",
@@ -62,10 +62,10 @@
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "382",
-      "percentage": "87.41"
+      "total": "385",
+      "percentage": "87.5"
     },
     {
       "sno": "4",
@@ -85,7 +85,7 @@
         "CRT": "46"
       },
       "total": "352",
-      "percentage": "80.55"
+      "percentage": "80"
     },
     {
       "sno": "5",
@@ -102,10 +102,10 @@
         "NODE JS": "38",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "50"
       },
-      "total": "365",
-      "percentage": "83.52"
+      "total": "368",
+      "percentage": "83.64"
     },
     {
       "sno": "6",
@@ -122,10 +122,10 @@
         "NODE JS": "26",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "36"
+        "CRT": "39"
       },
-      "total": "306",
-      "percentage": "70.02"
+      "total": "309",
+      "percentage": "70.23"
     },
     {
       "sno": "7",
@@ -142,10 +142,10 @@
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "391",
-      "percentage": "89.47"
+      "total": "394",
+      "percentage": "89.55"
     },
     {
       "sno": "8",
@@ -162,10 +162,10 @@
         "NODE JS": "29",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "305",
-      "percentage": "69.79"
+      "total": "308",
+      "percentage": "70"
     },
     {
       "sno": "9",
@@ -182,10 +182,10 @@
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "371",
-      "percentage": "84.9"
+      "total": "374",
+      "percentage": "85"
     },
     {
       "sno": "10",
@@ -205,7 +205,7 @@
         "CRT": "47"
       },
       "total": "377",
-      "percentage": "86.27"
+      "percentage": "85.68"
     },
     {
       "sno": "11",
@@ -222,10 +222,10 @@
         "NODE JS": "27",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "46"
       },
-      "total": "365",
-      "percentage": "83.52"
+      "total": "368",
+      "percentage": "83.64"
     },
     {
       "sno": "12",
@@ -245,7 +245,7 @@
         "CRT": "46"
       },
       "total": "361",
-      "percentage": "82.61"
+      "percentage": "82.05"
     },
     {
       "sno": "13",
@@ -262,10 +262,10 @@
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "44"
+        "CRT": "47"
       },
-      "total": "394",
-      "percentage": "90.16"
+      "total": "397",
+      "percentage": "90.23"
     },
     {
       "sno": "14",
@@ -282,10 +282,10 @@
         "NODE JS": "35",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "354",
-      "percentage": "81.01"
+      "total": "357",
+      "percentage": "81.14"
     },
     {
       "sno": "15",
@@ -302,10 +302,10 @@
         "NODE JS": "39",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "46"
       },
-      "total": "322",
-      "percentage": "73.68"
+      "total": "325",
+      "percentage": "73.86"
     },
     {
       "sno": "16",
@@ -322,10 +322,10 @@
         "NODE JS": "36",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "408",
-      "percentage": "93.36"
+      "total": "411",
+      "percentage": "93.41"
     },
     {
       "sno": "17",
@@ -342,10 +342,10 @@
         "NODE JS": "37",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "41"
+        "CRT": "44"
       },
-      "total": "357",
-      "percentage": "81.69"
+      "total": "360",
+      "percentage": "81.82"
     },
     {
       "sno": "18",
@@ -362,10 +362,10 @@
         "NODE JS": "15",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "32"
+        "CRT": "35"
       },
-      "total": "199",
-      "percentage": "45.54"
+      "total": "202",
+      "percentage": "45.91"
     },
     {
       "sno": "19",
@@ -382,10 +382,10 @@
         "NODE JS": "34",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "43"
       },
-      "total": "344",
-      "percentage": "78.72"
+      "total": "347",
+      "percentage": "78.86"
     },
     {
       "sno": "20",
@@ -402,10 +402,10 @@
         "NODE JS": "37",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "38"
       },
-      "total": "333",
-      "percentage": "76.2"
+      "total": "336",
+      "percentage": "76.36"
     },
     {
       "sno": "21",
@@ -422,10 +422,10 @@
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "38"
       },
-      "total": "340",
-      "percentage": "77.8"
+      "total": "343",
+      "percentage": "77.95"
     },
     {
       "sno": "22",
@@ -445,7 +445,7 @@
         "CRT": "46"
       },
       "total": "360",
-      "percentage": "82.38"
+      "percentage": "81.82"
     },
     {
       "sno": "23",
@@ -462,10 +462,10 @@
         "NODE JS": "32",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "32"
+        "CRT": "35"
       },
-      "total": "317",
-      "percentage": "72.54"
+      "total": "320",
+      "percentage": "72.73"
     },
     {
       "sno": "24",
@@ -485,7 +485,7 @@
         "CRT": "51"
       },
       "total": "362",
-      "percentage": "82.84"
+      "percentage": "82.27"
     },
     {
       "sno": "25",
@@ -502,10 +502,10 @@
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "55"
       },
-      "total": "415",
-      "percentage": "94.97"
+      "total": "418",
+      "percentage": "95"
     },
     {
       "sno": "26",
@@ -522,10 +522,10 @@
         "NODE JS": "36",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "379",
-      "percentage": "86.73"
+      "total": "382",
+      "percentage": "86.82"
     },
     {
       "sno": "27",
@@ -542,10 +542,10 @@
         "NODE JS": "39",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "45"
+        "CRT": "48"
       },
-      "total": "367",
-      "percentage": "83.98"
+      "total": "370",
+      "percentage": "84.09"
     },
     {
       "sno": "28",
@@ -562,10 +562,10 @@
         "NODE JS": "38",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "43"
       },
-      "total": "384",
-      "percentage": "87.87"
+      "total": "387",
+      "percentage": "87.95"
     },
     {
       "sno": "29",
@@ -585,7 +585,7 @@
         "CRT": "37"
       },
       "total": "330",
-      "percentage": "75.51"
+      "percentage": "75"
     },
     {
       "sno": "30",
@@ -602,10 +602,10 @@
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "55"
       },
-      "total": "400",
-      "percentage": "91.53"
+      "total": "403",
+      "percentage": "91.59"
     },
     {
       "sno": "31",
@@ -622,10 +622,10 @@
         "NODE JS": "29",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "38"
       },
-      "total": "305",
-      "percentage": "69.79"
+      "total": "308",
+      "percentage": "70"
     },
     {
       "sno": "32",
@@ -642,10 +642,10 @@
         "NODE JS": "35",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "50"
       },
-      "total": "401",
-      "percentage": "91.76"
+      "total": "404",
+      "percentage": "91.82"
     },
     {
       "sno": "33",
@@ -662,10 +662,10 @@
         "NODE JS": "34",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "366",
-      "percentage": "83.75"
+      "total": "369",
+      "percentage": "83.86"
     },
     {
       "sno": "34",
@@ -682,10 +682,10 @@
         "NODE JS": "40",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "45"
+        "CRT": "48"
       },
-      "total": "362",
-      "percentage": "82.84"
+      "total": "365",
+      "percentage": "82.95"
     },
     {
       "sno": "35",
@@ -705,7 +705,7 @@
         "CRT": "41"
       },
       "total": "337",
-      "percentage": "77.12"
+      "percentage": "76.59"
     },
     {
       "sno": "36",
@@ -722,10 +722,10 @@
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "368",
-      "percentage": "84.21"
+      "total": "371",
+      "percentage": "84.32"
     },
     {
       "sno": "37",
@@ -742,10 +742,10 @@
         "NODE JS": "27",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "50"
       },
-      "total": "344",
-      "percentage": "78.72"
+      "total": "347",
+      "percentage": "78.86"
     },
     {
       "sno": "38",
@@ -762,10 +762,10 @@
         "NODE JS": "27",
         "COI": "1",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "41"
       },
-      "total": "288",
-      "percentage": "65.9"
+      "total": "291",
+      "percentage": "66.14"
     },
     {
       "sno": "39",
@@ -782,10 +782,10 @@
         "NODE JS": "30",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "48"
+        "CRT": "51"
       },
-      "total": "363",
-      "percentage": "83.07"
+      "total": "366",
+      "percentage": "83.18"
     },
     {
       "sno": "40",
@@ -802,10 +802,10 @@
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "50"
       },
-      "total": "333",
-      "percentage": "76.2"
+      "total": "336",
+      "percentage": "76.36"
     },
     {
       "sno": "41",
@@ -822,10 +822,10 @@
         "NODE JS": "30",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "48"
+        "CRT": "51"
       },
-      "total": "355",
-      "percentage": "81.24"
+      "total": "358",
+      "percentage": "81.36"
     },
     {
       "sno": "42",
@@ -842,10 +842,10 @@
         "NODE JS": "37",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "38"
       },
-      "total": "331",
-      "percentage": "75.74"
+      "total": "334",
+      "percentage": "75.91"
     },
     {
       "sno": "43",
@@ -862,10 +862,10 @@
         "NODE JS": "30",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "303",
-      "percentage": "69.34"
+      "total": "306",
+      "percentage": "69.55"
     },
     {
       "sno": "44",
@@ -882,10 +882,10 @@
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "51"
+        "CRT": "54"
       },
-      "total": "397",
-      "percentage": "90.85"
+      "total": "400",
+      "percentage": "90.91"
     },
     {
       "sno": "45",
@@ -902,10 +902,10 @@
         "NODE JS": "40",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "44"
+        "CRT": "47"
       },
-      "total": "351",
-      "percentage": "80.32"
+      "total": "354",
+      "percentage": "80.45"
     },
     {
       "sno": "46",
@@ -922,10 +922,10 @@
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "51"
+        "CRT": "54"
       },
-      "total": "404",
-      "percentage": "92.45"
+      "total": "407",
+      "percentage": "92.5"
     },
     {
       "sno": "47",
@@ -942,10 +942,10 @@
         "NODE JS": "31",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "50"
       },
-      "total": "367",
-      "percentage": "83.98"
+      "total": "370",
+      "percentage": "84.09"
     },
     {
       "sno": "48",
@@ -962,10 +962,10 @@
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "381",
-      "percentage": "87.19"
+      "total": "384",
+      "percentage": "87.27"
     },
     {
       "sno": "49",
@@ -982,10 +982,10 @@
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "44"
+        "CRT": "47"
       },
-      "total": "359",
-      "percentage": "82.15"
+      "total": "362",
+      "percentage": "82.27"
     },
     {
       "sno": "50",
@@ -1002,10 +1002,10 @@
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "44"
+        "CRT": "47"
       },
-      "total": "320",
-      "percentage": "73.23"
+      "total": "323",
+      "percentage": "73.41"
     },
     {
       "sno": "51",
@@ -1022,10 +1022,10 @@
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "368",
-      "percentage": "84.21"
+      "total": "371",
+      "percentage": "84.32"
     },
     {
       "sno": "52",
@@ -1042,10 +1042,10 @@
         "NODE JS": "34",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "375",
-      "percentage": "85.81"
+      "total": "378",
+      "percentage": "85.91"
     },
     {
       "sno": "53",
@@ -1062,10 +1062,10 @@
         "NODE JS": "39",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "389",
-      "percentage": "89.02"
+      "total": "392",
+      "percentage": "89.09"
     },
     {
       "sno": "54",
@@ -1082,10 +1082,10 @@
         "NODE JS": "37",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "52"
       },
-      "total": "395",
-      "percentage": "90.39"
+      "total": "398",
+      "percentage": "90.45"
     },
     {
       "sno": "55",
@@ -1102,10 +1102,10 @@
         "NODE JS": "32",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "42"
       },
-      "total": "311",
-      "percentage": "71.17"
+      "total": "314",
+      "percentage": "71.36"
     },
     {
       "sno": "56",
@@ -1125,7 +1125,7 @@
         "CRT": "40"
       },
       "total": "333",
-      "percentage": "76.2"
+      "percentage": "75.68"
     },
     {
       "sno": "57",
@@ -1142,10 +1142,10 @@
         "NODE JS": "32",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "33"
+        "CRT": "36"
       },
-      "total": "312",
-      "percentage": "71.4"
+      "total": "315",
+      "percentage": "71.59"
     },
     {
       "sno": "58",
@@ -1165,7 +1165,7 @@
         "CRT": "40"
       },
       "total": "355",
-      "percentage": "81.24"
+      "percentage": "80.68"
     },
     {
       "sno": "59",
@@ -1185,7 +1185,7 @@
         "CRT": "38"
       },
       "total": "371",
-      "percentage": "84.9"
+      "percentage": "84.32"
     },
     {
       "sno": "60",
@@ -1205,7 +1205,7 @@
         "CRT": "48"
       },
       "total": "400",
-      "percentage": "91.53"
+      "percentage": "90.91"
     },
     {
       "sno": "61",
@@ -1225,7 +1225,7 @@
         "CRT": "40"
       },
       "total": "315",
-      "percentage": "72.08"
+      "percentage": "71.59"
     },
     {
       "sno": "62",
@@ -1242,10 +1242,10 @@
         "NODE JS": "35",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "46"
       },
-      "total": "376",
-      "percentage": "86.04"
+      "total": "379",
+      "percentage": "86.14"
     },
     {
       "sno": "63",
@@ -1262,10 +1262,10 @@
         "NODE JS": "38",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "41"
       },
-      "total": "322",
-      "percentage": "73.68"
+      "total": "325",
+      "percentage": "73.86"
     },
     {
       "sno": "64",
@@ -1282,10 +1282,10 @@
         "NODE JS": "39",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "49"
       },
-      "total": "368",
-      "percentage": "84.21"
+      "total": "371",
+      "percentage": "84.32"
     },
     {
       "sno": "65",
@@ -1302,10 +1302,10 @@
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "55"
       },
-      "total": "419",
-      "percentage": "95.88"
+      "total": "422",
+      "percentage": "95.91"
     },
     {
       "sno": "66",
@@ -1322,10 +1322,10 @@
         "NODE JS": "27",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "43"
       },
-      "total": "312",
-      "percentage": "71.4"
+      "total": "315",
+      "percentage": "71.59"
     },
     {
       "sno": "67",
@@ -1342,10 +1342,10 @@
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "32"
+        "CRT": "35"
       },
-      "total": "334",
-      "percentage": "76.43"
+      "total": "337",
+      "percentage": "76.59"
     },
     {
       "sno": "68",
@@ -1362,10 +1362,10 @@
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "36"
+        "CRT": "39"
       },
-      "total": "339",
-      "percentage": "77.57"
+      "total": "342",
+      "percentage": "77.73"
     },
     {
       "sno": "69",
@@ -1385,7 +1385,7 @@
         "CRT": "39"
       },
       "total": "333",
-      "percentage": "76.2"
+      "percentage": "75.68"
     },
     {
       "sno": "70",
@@ -1402,10 +1402,10 @@
         "NODE JS": "32",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "30"
+        "CRT": "33"
       },
-      "total": "312",
-      "percentage": "71.4"
+      "total": "315",
+      "percentage": "71.59"
     }
   ]
 }

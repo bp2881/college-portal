@@ -3,7 +3,6 @@ credentials.json
 attendance_data.json
 .env
 scripts/.env
-./student/session.json
-student/session.json
+/student/session.json
 class_attendance_data.json
-./vignan-dhara/books/*
+/vignan-dhara/books

@@ -4,7 +4,7 @@
   "section": "A",
   "attendance_dates": {
     "from": "20-01-2025",
-    "to": "29-04-2025"
+    "to": "26-04-2025"
   },
   "students": [
     {
@@ -12,60 +12,60 @@
       "htno": "23891A0501",
       "name": "ADDEPALLI GEETHA SUPRIYA",
       "subjects": {
-        "DM": "46",
-        "BEFA": "43",
+        "DM": "45",
+        "BEFA": "42",
         "OS": "42",
-        "DBMS": "39",
-        "SE": "42",
+        "DBMS": "37",
+        "SE": "41",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "37"
       },
-      "total": "349",
-      "percentage": "79.32"
+      "total": "339",
+      "percentage": "78.84"
     },
     {
       "sno": "2",
       "htno": "23891A0502",
       "name": "AITHAGONI SAHITHI GOUD",
       "subjects": {
-        "DM": "45",
-        "BEFA": "41",
+        "DM": "44",
+        "BEFA": "40",
         "OS": "42",
-        "DBMS": "39",
-        "SE": "42",
+        "DBMS": "37",
+        "SE": "41",
         "OS LAB": "26",
         "DBMS LAB": "21",
         "NODE JS": "29",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "35"
       },
-      "total": "331",
-      "percentage": "75.23"
+      "total": "321",
+      "percentage": "74.65"
     },
     {
       "sno": "3",
       "htno": "23891A0503",
       "name": "ALUGUBELLY ANITHA",
       "subjects": {
-        "DM": "53",
-        "BEFA": "49",
+        "DM": "52",
+        "BEFA": "48",
         "OS": "45",
-        "DBMS": "46",
-        "SE": "43",
+        "DBMS": "44",
+        "SE": "42",
         "OS LAB": "26",
         "DBMS LAB": "27",
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "44"
       },
-      "total": "385",
-      "percentage": "87.5"
+      "total": "375",
+      "percentage": "87.21"
     },
     {
       "sno": "4",
@@ -85,67 +85,67 @@
         "CRT": "46"
       },
       "total": "352",
-      "percentage": "80"
+      "percentage": "81.86"
     },
     {
       "sno": "5",
       "htno": "23891A0505",
       "name": "ARRABOTHU RUSHITHA",
       "subjects": {
-        "DM": "51",
-        "BEFA": "47",
+        "DM": "50",
+        "BEFA": "46",
         "OS": "44",
-        "DBMS": "45",
-        "SE": "45",
+        "DBMS": "43",
+        "SE": "44",
         "OS LAB": "26",
         "DBMS LAB": "18",
         "NODE JS": "38",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "50"
+        "CRT": "45"
       },
-      "total": "368",
-      "percentage": "83.64"
+      "total": "358",
+      "percentage": "83.26"
     },
     {
       "sno": "6",
       "htno": "23891A0506",
       "name": "BAKARAM SHIVA KUMAR REDDY",
       "subjects": {
-        "DM": "39",
-        "BEFA": "38",
+        "DM": "38",
+        "BEFA": "37",
         "OS": "41",
-        "DBMS": "37",
-        "SE": "38",
+        "DBMS": "35",
+        "SE": "37",
         "OS LAB": "28",
         "DBMS LAB": "21",
         "NODE JS": "26",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "34"
       },
-      "total": "309",
-      "percentage": "70.23"
+      "total": "299",
+      "percentage": "69.53"
     },
     {
       "sno": "7",
       "htno": "23891A0507",
       "name": "BOMMADI RAKSHITHA",
       "subjects": {
-        "DM": "53",
-        "BEFA": "50",
+        "DM": "52",
+        "BEFA": "49",
         "OS": "46",
-        "DBMS": "47",
-        "SE": "45",
+        "DBMS": "45",
+        "SE": "44",
         "OS LAB": "28",
         "DBMS LAB": "26",
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "394",
-      "percentage": "89.55"
+      "total": "384",
+      "percentage": "89.3"
     },
     {
       "sno": "8",
@@ -162,30 +162,30 @@
         "NODE JS": "29",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "39"
       },
-      "total": "308",
-      "percentage": "70"
+      "total": "305",
+      "percentage": "70.93"
     },
     {
       "sno": "9",
       "htno": "23891A0509",
       "name": "DAKURI MEGHANA",
       "subjects": {
-        "DM": "51",
-        "BEFA": "47",
+        "DM": "50",
+        "BEFA": "46",
         "OS": "47",
-        "DBMS": "42",
-        "SE": "43",
+        "DBMS": "40",
+        "SE": "42",
         "OS LAB": "25",
         "DBMS LAB": "27",
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "44"
       },
-      "total": "374",
-      "percentage": "85"
+      "total": "364",
+      "percentage": "84.65"
     },
     {
       "sno": "10",
@@ -205,87 +205,87 @@
         "CRT": "47"
       },
       "total": "377",
-      "percentage": "85.68"
+      "percentage": "87.67"
     },
     {
       "sno": "11",
       "htno": "23891A0511",
       "name": "DEVARAKONDA YASHA SRI",
       "subjects": {
-        "DM": "49",
-        "BEFA": "45",
+        "DM": "48",
+        "BEFA": "44",
         "OS": "47",
-        "DBMS": "47",
-        "SE": "47",
+        "DBMS": "45",
+        "SE": "46",
         "OS LAB": "31",
         "DBMS LAB": "24",
         "NODE JS": "27",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "41"
       },
-      "total": "368",
-      "percentage": "83.64"
+      "total": "358",
+      "percentage": "83.26"
     },
     {
       "sno": "12",
       "htno": "23891A0512",
       "name": "DEVESH RAYUDU",
       "subjects": {
-        "DM": "49",
-        "BEFA": "45",
+        "DM": "48",
+        "BEFA": "44",
         "OS": "44",
-        "DBMS": "43",
-        "SE": "41",
+        "DBMS": "41",
+        "SE": "40",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "38",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "44"
       },
-      "total": "361",
-      "percentage": "82.05"
+      "total": "354",
+      "percentage": "82.33"
     },
     {
       "sno": "13",
       "htno": "23891A0513",
       "name": "DONTHIREDDY RAKSHITHA",
       "subjects": {
-        "DM": "53",
-        "BEFA": "49",
+        "DM": "52",
+        "BEFA": "48",
         "OS": "50",
-        "DBMS": "47",
-        "SE": "46",
+        "DBMS": "45",
+        "SE": "45",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "42"
       },
-      "total": "397",
-      "percentage": "90.23"
+      "total": "387",
+      "percentage": "90"
     },
     {
       "sno": "14",
       "htno": "23891A0514",
       "name": "GAJJELA LIKITHA REDDY",
       "subjects": {
-        "DM": "49",
-        "BEFA": "44",
+        "DM": "48",
+        "BEFA": "43",
         "OS": "42",
-        "DBMS": "43",
-        "SE": "43",
+        "DBMS": "41",
+        "SE": "42",
         "OS LAB": "29",
         "DBMS LAB": "24",
         "NODE JS": "35",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "37"
       },
-      "total": "357",
-      "percentage": "81.14"
+      "total": "347",
+      "percentage": "80.7"
     },
     {
       "sno": "15",
@@ -302,170 +302,170 @@
         "NODE JS": "39",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "43"
       },
-      "total": "325",
-      "percentage": "73.86"
+      "total": "322",
+      "percentage": "74.88"
     },
     {
       "sno": "16",
       "htno": "23891A0516",
       "name": "GORIGE SOWMYA",
       "subjects": {
-        "DM": "54",
-        "BEFA": "51",
+        "DM": "53",
+        "BEFA": "50",
         "OS": "53",
-        "DBMS": "51",
-        "SE": "50",
+        "DBMS": "49",
+        "SE": "49",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "36",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "411",
-      "percentage": "93.41"
+      "total": "401",
+      "percentage": "93.26"
     },
     {
       "sno": "17",
       "htno": "23891A0517",
       "name": "GUNTAKA SAI DHANUSH REDDY",
       "subjects": {
-        "DM": "45",
-        "BEFA": "45",
+        "DM": "44",
+        "BEFA": "44",
         "OS": "44",
-        "DBMS": "42",
-        "SE": "44",
+        "DBMS": "40",
+        "SE": "43",
         "OS LAB": "31",
         "DBMS LAB": "23",
         "NODE JS": "37",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "44"
+        "CRT": "39"
       },
-      "total": "360",
-      "percentage": "81.82"
+      "total": "350",
+      "percentage": "81.4"
     },
     {
       "sno": "18",
       "htno": "23891A0518",
       "name": "GUNTI CHARAN",
       "subjects": {
-        "DM": "25",
-        "BEFA": "27",
+        "DM": "24",
+        "BEFA": "26",
         "OS": "18",
-        "DBMS": "24",
-        "SE": "29",
+        "DBMS": "23",
+        "SE": "28",
         "OS LAB": "17",
         "DBMS LAB": "8",
         "NODE JS": "15",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "30"
       },
-      "total": "202",
-      "percentage": "45.91"
+      "total": "193",
+      "percentage": "44.88"
     },
     {
       "sno": "19",
       "htno": "23891A0519",
       "name": "GURRAM VANI",
       "subjects": {
-        "DM": "47",
-        "BEFA": "42",
+        "DM": "46",
+        "BEFA": "41",
         "OS": "43",
-        "DBMS": "41",
-        "SE": "42",
+        "DBMS": "39",
+        "SE": "41",
         "OS LAB": "26",
         "DBMS LAB": "24",
         "NODE JS": "34",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "38"
       },
-      "total": "347",
-      "percentage": "78.86"
+      "total": "337",
+      "percentage": "78.37"
     },
     {
       "sno": "20",
       "htno": "23891A0520",
       "name": "GUTHA REVANTH",
       "subjects": {
-        "DM": "42",
-        "BEFA": "43",
+        "DM": "41",
+        "BEFA": "42",
         "OS": "40",
-        "DBMS": "38",
-        "SE": "40",
+        "DBMS": "36",
+        "SE": "39",
         "OS LAB": "28",
         "DBMS LAB": "27",
         "NODE JS": "37",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "33"
       },
-      "total": "336",
-      "percentage": "76.36"
+      "total": "326",
+      "percentage": "75.81"
     },
     {
       "sno": "21",
       "htno": "23891A0521",
       "name": "ITHARAJU THRISHA",
       "subjects": {
-        "DM": "45",
-        "BEFA": "39",
+        "DM": "44",
+        "BEFA": "38",
         "OS": "49",
-        "DBMS": "37",
-        "SE": "41",
+        "DBMS": "35",
+        "SE": "40",
         "OS LAB": "25",
         "DBMS LAB": "24",
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "33"
       },
-      "total": "343",
-      "percentage": "77.95"
+      "total": "333",
+      "percentage": "77.44"
     },
     {
       "sno": "22",
       "htno": "23891A0522",
       "name": "JARUBULA AAKASH",
       "subjects": {
-        "DM": "47",
-        "BEFA": "46",
+        "DM": "46",
+        "BEFA": "45",
         "OS": "48",
-        "DBMS": "43",
-        "SE": "45",
+        "DBMS": "41",
+        "SE": "44",
         "OS LAB": "28",
         "DBMS LAB": "19",
         "NODE JS": "37",
         "COI": "1",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "44"
       },
-      "total": "360",
-      "percentage": "81.82"
+      "total": "353",
+      "percentage": "82.09"
     },
     {
       "sno": "23",
       "htno": "23891A0523",
       "name": "KADAM SHIVA SHANKAR",
       "subjects": {
-        "DM": "44",
-        "BEFA": "39",
+        "DM": "43",
+        "BEFA": "38",
         "OS": "39",
-        "DBMS": "42",
-        "SE": "37",
+        "DBMS": "40",
+        "SE": "36",
         "OS LAB": "25",
         "DBMS LAB": "24",
         "NODE JS": "32",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "30"
       },
-      "total": "320",
-      "percentage": "72.73"
+      "total": "310",
+      "percentage": "72.09"
     },
     {
       "sno": "24",
@@ -485,607 +485,607 @@
         "CRT": "51"
       },
       "total": "362",
-      "percentage": "82.27"
+      "percentage": "84.19"
     },
     {
       "sno": "25",
       "htno": "23891A0525",
       "name": "KAMMARA NAGA KANVITHA",
       "subjects": {
-        "DM": "56",
-        "BEFA": "52",
+        "DM": "55",
+        "BEFA": "51",
         "OS": "52",
-        "DBMS": "50",
-        "SE": "50",
+        "DBMS": "48",
+        "SE": "49",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "55"
+        "CRT": "50"
       },
-      "total": "418",
-      "percentage": "95"
+      "total": "408",
+      "percentage": "94.88"
     },
     {
       "sno": "26",
       "htno": "23891A0526",
       "name": "KANDALA POOJA",
       "subjects": {
-        "DM": "51",
-        "BEFA": "47",
+        "DM": "50",
+        "BEFA": "46",
         "OS": "52",
-        "DBMS": "45",
-        "SE": "46",
+        "DBMS": "43",
+        "SE": "45",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "36",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "37"
       },
-      "total": "382",
-      "percentage": "86.82"
+      "total": "372",
+      "percentage": "86.51"
     },
     {
       "sno": "27",
       "htno": "23891A0527",
       "name": "KANDATI PRAVALIKA REDDY",
       "subjects": {
-        "DM": "49",
-        "BEFA": "47",
+        "DM": "48",
+        "BEFA": "46",
         "OS": "46",
-        "DBMS": "41",
-        "SE": "46",
+        "DBMS": "39",
+        "SE": "45",
         "OS LAB": "25",
         "DBMS LAB": "24",
         "NODE JS": "39",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "48"
+        "CRT": "43"
       },
-      "total": "370",
-      "percentage": "84.09"
+      "total": "360",
+      "percentage": "83.72"
     },
     {
       "sno": "28",
       "htno": "23891A0528",
       "name": "KOMIRELLI ABHINAV  REDDY",
       "subjects": {
-        "DM": "51",
-        "BEFA": "49",
+        "DM": "50",
+        "BEFA": "48",
         "OS": "50",
-        "DBMS": "47",
-        "SE": "47",
+        "DBMS": "45",
+        "SE": "46",
         "OS LAB": "30",
         "DBMS LAB": "26",
         "NODE JS": "38",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "38"
       },
-      "total": "387",
-      "percentage": "87.95"
+      "total": "377",
+      "percentage": "87.67"
     },
     {
       "sno": "29",
       "htno": "23891A0529",
       "name": "KOYAGOORA VENU",
       "subjects": {
-        "DM": "44",
-        "BEFA": "43",
+        "DM": "43",
+        "BEFA": "42",
         "OS": "40",
-        "DBMS": "40",
-        "SE": "38",
+        "DBMS": "38",
+        "SE": "37",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "33",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "37"
+        "CRT": "35"
       },
-      "total": "330",
-      "percentage": "75"
+      "total": "323",
+      "percentage": "75.12"
     },
     {
       "sno": "30",
       "htno": "23891A0530",
       "name": "M V S LAKSHMI DEEPTHI",
       "subjects": {
-        "DM": "55",
-        "BEFA": "51",
+        "DM": "54",
+        "BEFA": "50",
         "OS": "52",
-        "DBMS": "47",
-        "SE": "48",
+        "DBMS": "45",
+        "SE": "47",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "55"
+        "CRT": "50"
       },
-      "total": "403",
-      "percentage": "91.59"
+      "total": "393",
+      "percentage": "91.4"
     },
     {
       "sno": "31",
       "htno": "23891A0531",
       "name": "MADIREDDY MANIVARDHAN REDDY",
       "subjects": {
-        "DM": "38",
-        "BEFA": "39",
+        "DM": "37",
+        "BEFA": "38",
         "OS": "36",
-        "DBMS": "37",
-        "SE": "39",
+        "DBMS": "35",
+        "SE": "38",
         "OS LAB": "28",
         "DBMS LAB": "20",
         "NODE JS": "29",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "33"
       },
-      "total": "308",
-      "percentage": "70"
+      "total": "298",
+      "percentage": "69.3"
     },
     {
       "sno": "32",
       "htno": "23891A0532",
       "name": "MAHANKALI NEHA",
       "subjects": {
-        "DM": "54",
-        "BEFA": "50",
+        "DM": "53",
+        "BEFA": "49",
         "OS": "51",
-        "DBMS": "52",
-        "SE": "49",
+        "DBMS": "50",
+        "SE": "48",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "35",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "50"
+        "CRT": "45"
       },
-      "total": "404",
-      "percentage": "91.82"
+      "total": "394",
+      "percentage": "91.63"
     },
     {
       "sno": "33",
       "htno": "23891A0533",
       "name": "MALREDDY SATWIK REDDY",
       "subjects": {
-        "DM": "46",
-        "BEFA": "43",
+        "DM": "45",
+        "BEFA": "42",
         "OS": "48",
-        "DBMS": "42",
-        "SE": "51",
+        "DBMS": "40",
+        "SE": "50",
         "OS LAB": "25",
         "DBMS LAB": "24",
         "NODE JS": "34",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "369",
-      "percentage": "83.86"
+      "total": "359",
+      "percentage": "83.49"
     },
     {
       "sno": "34",
       "htno": "23891A0534",
       "name": "MANCHUKONDA MITHIL",
       "subjects": {
-        "DM": "49",
-        "BEFA": "45",
+        "DM": "48",
+        "BEFA": "44",
         "OS": "46",
-        "DBMS": "44",
-        "SE": "40",
+        "DBMS": "42",
+        "SE": "39",
         "OS LAB": "28",
         "DBMS LAB": "23",
         "NODE JS": "40",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "48"
+        "CRT": "43"
       },
-      "total": "365",
-      "percentage": "82.95"
+      "total": "355",
+      "percentage": "82.56"
     },
     {
       "sno": "35",
       "htno": "23891A0535",
       "name": "MOGILI SHIVA MANOJ",
       "subjects": {
-        "DM": "43",
-        "BEFA": "43",
+        "DM": "42",
+        "BEFA": "42",
         "OS": "43",
-        "DBMS": "41",
-        "SE": "41",
+        "DBMS": "39",
+        "SE": "40",
         "OS LAB": "25",
         "DBMS LAB": "27",
         "NODE JS": "29",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "41"
+        "CRT": "39"
       },
-      "total": "337",
-      "percentage": "76.59"
+      "total": "330",
+      "percentage": "76.74"
     },
     {
       "sno": "36",
       "htno": "23891A0536",
       "name": "MUDIREDDY SREEJA REDDY",
       "subjects": {
-        "DM": "50",
-        "BEFA": "48",
+        "DM": "49",
+        "BEFA": "47",
         "OS": "42",
-        "DBMS": "48",
-        "SE": "42",
+        "DBMS": "46",
+        "SE": "41",
         "OS LAB": "29",
         "DBMS LAB": "21",
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "371",
-      "percentage": "84.32"
+      "total": "361",
+      "percentage": "83.95"
     },
     {
       "sno": "37",
       "htno": "23891A0537",
       "name": "MUNDE PRASAD",
       "subjects": {
-        "DM": "47",
-        "BEFA": "45",
+        "DM": "46",
+        "BEFA": "44",
         "OS": "33",
-        "DBMS": "46",
-        "SE": "39",
+        "DBMS": "44",
+        "SE": "38",
         "OS LAB": "27",
         "DBMS LAB": "27",
         "NODE JS": "27",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "50"
+        "CRT": "45"
       },
-      "total": "347",
-      "percentage": "78.86"
+      "total": "337",
+      "percentage": "78.37"
     },
     {
       "sno": "38",
       "htno": "23891A0538",
       "name": "NAMPALLY MOKSHITH REDDY",
       "subjects": {
-        "DM": "40",
-        "BEFA": "36",
+        "DM": "39",
+        "BEFA": "35",
         "OS": "38",
-        "DBMS": "31",
-        "SE": "38",
+        "DBMS": "29",
+        "SE": "37",
         "OS LAB": "22",
         "DBMS LAB": "17",
         "NODE JS": "27",
         "COI": "1",
         "REAL TIME PROJECT": "0",
-        "CRT": "41"
+        "CRT": "36"
       },
-      "total": "291",
-      "percentage": "66.14"
+      "total": "281",
+      "percentage": "65.35"
     },
     {
       "sno": "39",
       "htno": "23891A0539",
       "name": "NANDALURU POOJA REDDY",
       "subjects": {
-        "DM": "48",
-        "BEFA": "46",
+        "DM": "47",
+        "BEFA": "45",
         "OS": "47",
-        "DBMS": "46",
-        "SE": "41",
+        "DBMS": "44",
+        "SE": "40",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "30",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "51"
+        "CRT": "46"
       },
-      "total": "366",
-      "percentage": "83.18"
+      "total": "356",
+      "percentage": "82.79"
     },
     {
       "sno": "40",
       "htno": "23891A0540",
       "name": "NANDINENI TANAY REDDY",
       "subjects": {
-        "DM": "45",
-        "BEFA": "42",
+        "DM": "44",
+        "BEFA": "41",
         "OS": "43",
-        "DBMS": "39",
-        "SE": "42",
+        "DBMS": "37",
+        "SE": "41",
         "OS LAB": "22",
         "DBMS LAB": "17",
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "50"
+        "CRT": "45"
       },
-      "total": "336",
-      "percentage": "76.36"
+      "total": "326",
+      "percentage": "75.81"
     },
     {
       "sno": "41",
       "htno": "23891A0541",
       "name": "PAGIDIMARRI SHIVA",
       "subjects": {
-        "DM": "48",
-        "BEFA": "44",
+        "DM": "47",
+        "BEFA": "43",
         "OS": "44",
-        "DBMS": "43",
-        "SE": "47",
+        "DBMS": "41",
+        "SE": "46",
         "OS LAB": "25",
         "DBMS LAB": "20",
         "NODE JS": "30",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "51"
+        "CRT": "46"
       },
-      "total": "358",
-      "percentage": "81.36"
+      "total": "348",
+      "percentage": "80.93"
     },
     {
       "sno": "42",
       "htno": "23891A0542",
       "name": "PALLE CHANDU",
       "subjects": {
-        "DM": "43",
-        "BEFA": "42",
+        "DM": "42",
+        "BEFA": "41",
         "OS": "44",
-        "DBMS": "39",
-        "SE": "40",
+        "DBMS": "37",
+        "SE": "39",
         "OS LAB": "28",
         "DBMS LAB": "18",
         "NODE JS": "37",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "33"
       },
-      "total": "334",
-      "percentage": "75.91"
+      "total": "324",
+      "percentage": "75.35"
     },
     {
       "sno": "43",
       "htno": "23891A0543",
       "name": "PAPPU SAI RAM",
       "subjects": {
-        "DM": "40",
-        "BEFA": "38",
+        "DM": "39",
+        "BEFA": "37",
         "OS": "33",
-        "DBMS": "39",
-        "SE": "34",
+        "DBMS": "37",
+        "SE": "33",
         "OS LAB": "23",
         "DBMS LAB": "21",
         "NODE JS": "30",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "37"
       },
-      "total": "306",
-      "percentage": "69.55"
+      "total": "296",
+      "percentage": "68.84"
     },
     {
       "sno": "44",
       "htno": "23891A0544",
       "name": "PEESARI VARSHITHA",
       "subjects": {
-        "DM": "54",
-        "BEFA": "50",
+        "DM": "53",
+        "BEFA": "49",
         "OS": "47",
-        "DBMS": "48",
-        "SE": "47",
+        "DBMS": "46",
+        "SE": "46",
         "OS LAB": "31",
         "DBMS LAB": "26",
         "NODE JS": "38",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "54"
+        "CRT": "49"
       },
-      "total": "400",
-      "percentage": "90.91"
+      "total": "390",
+      "percentage": "90.7"
     },
     {
       "sno": "45",
       "htno": "23891A0545",
       "name": "PENTAREDDY RUHIN",
       "subjects": {
-        "DM": "47",
-        "BEFA": "42",
+        "DM": "46",
+        "BEFA": "41",
         "OS": "44",
-        "DBMS": "45",
-        "SE": "43",
+        "DBMS": "43",
+        "SE": "42",
         "OS LAB": "22",
         "DBMS LAB": "21",
         "NODE JS": "40",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "42"
       },
-      "total": "354",
-      "percentage": "80.45"
+      "total": "344",
+      "percentage": "80"
     },
     {
       "sno": "46",
       "htno": "23891A0546",
       "name": "PONUGOTI SHARANYA",
       "subjects": {
-        "DM": "55",
-        "BEFA": "51",
+        "DM": "54",
+        "BEFA": "50",
         "OS": "51",
-        "DBMS": "50",
-        "SE": "49",
+        "DBMS": "48",
+        "SE": "48",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "54"
+        "CRT": "49"
       },
-      "total": "407",
-      "percentage": "92.5"
+      "total": "397",
+      "percentage": "92.33"
     },
     {
       "sno": "47",
       "htno": "23891A0547",
       "name": "POREDDY HEMANTH REDDY",
       "subjects": {
-        "DM": "49",
-        "BEFA": "44",
+        "DM": "48",
+        "BEFA": "43",
         "OS": "43",
-        "DBMS": "49",
-        "SE": "47",
+        "DBMS": "47",
+        "SE": "46",
         "OS LAB": "31",
         "DBMS LAB": "23",
         "NODE JS": "31",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "50"
+        "CRT": "45"
       },
-      "total": "370",
-      "percentage": "84.09"
+      "total": "360",
+      "percentage": "83.72"
     },
     {
       "sno": "48",
       "htno": "23891A0548",
       "name": "POREDDY RAKSHITHA REDDY",
       "subjects": {
-        "DM": "52",
-        "BEFA": "48",
+        "DM": "51",
+        "BEFA": "47",
         "OS": "48",
-        "DBMS": "41",
-        "SE": "47",
+        "DBMS": "39",
+        "SE": "46",
         "OS LAB": "22",
         "DBMS LAB": "27",
         "NODE JS": "41",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "384",
-      "percentage": "87.27"
+      "total": "374",
+      "percentage": "86.98"
     },
     {
       "sno": "49",
       "htno": "23891A0549",
       "name": "PRANAV BAIRY",
       "subjects": {
-        "DM": "48",
-        "BEFA": "46",
+        "DM": "47",
+        "BEFA": "45",
         "OS": "43",
-        "DBMS": "44",
-        "SE": "42",
+        "DBMS": "42",
+        "SE": "41",
         "OS LAB": "29",
         "DBMS LAB": "24",
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "42"
       },
-      "total": "362",
-      "percentage": "82.27"
+      "total": "352",
+      "percentage": "81.86"
     },
     {
       "sno": "50",
       "htno": "23891A0550",
       "name": "RAGAM DEVENDERNADH",
       "subjects": {
-        "DM": "43",
-        "BEFA": "44",
+        "DM": "42",
+        "BEFA": "43",
         "OS": "39",
-        "DBMS": "35",
-        "SE": "42",
+        "DBMS": "33",
+        "SE": "41",
         "OS LAB": "25",
         "DBMS LAB": "12",
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "47"
+        "CRT": "42"
       },
-      "total": "323",
-      "percentage": "73.41"
+      "total": "313",
+      "percentage": "72.79"
     },
     {
       "sno": "51",
       "htno": "23891A0551",
       "name": "RAMARAJU BRUHATHI",
       "subjects": {
-        "DM": "49",
-        "BEFA": "46",
+        "DM": "48",
+        "BEFA": "45",
         "OS": "46",
-        "DBMS": "46",
-        "SE": "43",
+        "DBMS": "44",
+        "SE": "42",
         "OS LAB": "31",
         "DBMS LAB": "22",
         "NODE JS": "36",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "44"
       },
-      "total": "371",
-      "percentage": "84.32"
+      "total": "361",
+      "percentage": "83.95"
     },
     {
       "sno": "52",
       "htno": "23891A0552",
       "name": "RAPOLU SAI BHARGAVI",
       "subjects": {
-        "DM": "49",
-        "BEFA": "46",
+        "DM": "48",
+        "BEFA": "45",
         "OS": "45",
-        "DBMS": "47",
-        "SE": "48",
+        "DBMS": "45",
+        "SE": "47",
         "OS LAB": "31",
         "DBMS LAB": "24",
         "NODE JS": "34",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "44"
       },
-      "total": "378",
-      "percentage": "85.91"
+      "total": "368",
+      "percentage": "85.58"
     },
     {
       "sno": "53",
       "htno": "23891A0553",
       "name": "SIRI REDDY DEPA",
       "subjects": {
-        "DM": "51",
-        "BEFA": "49",
+        "DM": "50",
+        "BEFA": "48",
         "OS": "51",
-        "DBMS": "47",
-        "SE": "49",
+        "DBMS": "45",
+        "SE": "48",
         "OS LAB": "31",
         "DBMS LAB": "21",
         "NODE JS": "39",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "44"
       },
-      "total": "392",
-      "percentage": "89.09"
+      "total": "382",
+      "percentage": "88.84"
     },
     {
       "sno": "54",
       "htno": "23891A0554",
       "name": "SRINITHA SIDDENKI",
       "subjects": {
-        "DM": "54",
-        "BEFA": "52",
+        "DM": "53",
+        "BEFA": "51",
         "OS": "48",
-        "DBMS": "49",
-        "SE": "48",
+        "DBMS": "47",
+        "SE": "47",
         "OS LAB": "28",
         "DBMS LAB": "24",
         "NODE JS": "37",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "52"
+        "CRT": "47"
       },
-      "total": "398",
-      "percentage": "90.45"
+      "total": "388",
+      "percentage": "90.23"
     },
     {
       "sno": "55",
@@ -1102,170 +1102,170 @@
         "NODE JS": "32",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "42"
+        "CRT": "39"
       },
-      "total": "314",
-      "percentage": "71.36"
+      "total": "311",
+      "percentage": "72.33"
     },
     {
       "sno": "56",
       "htno": "23891A0556",
       "name": "SURVI GOPINATH",
       "subjects": {
-        "DM": "43",
-        "BEFA": "42",
+        "DM": "42",
+        "BEFA": "41",
         "OS": "42",
-        "DBMS": "44",
-        "SE": "41",
+        "DBMS": "42",
+        "SE": "40",
         "OS LAB": "25",
         "DBMS LAB": "26",
         "NODE JS": "28",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "38"
       },
-      "total": "333",
-      "percentage": "75.68"
+      "total": "326",
+      "percentage": "75.81"
     },
     {
       "sno": "57",
       "htno": "23891A0557",
       "name": "T. LEELA LAKSHMI NARASIMHA REDDY",
       "subjects": {
-        "DM": "39",
-        "BEFA": "37",
+        "DM": "38",
+        "BEFA": "36",
         "OS": "40",
-        "DBMS": "39",
-        "SE": "32",
+        "DBMS": "37",
+        "SE": "31",
         "OS LAB": "31",
         "DBMS LAB": "26",
         "NODE JS": "32",
         "COI": "3",
         "REAL TIME PROJECT": "0",
-        "CRT": "36"
+        "CRT": "31"
       },
-      "total": "315",
-      "percentage": "71.59"
+      "total": "305",
+      "percentage": "70.93"
     },
     {
       "sno": "58",
       "htno": "23891A0558",
       "name": "UDDARAJU SHASHANK VARMA",
       "subjects": {
-        "DM": "47",
-        "BEFA": "44",
+        "DM": "46",
+        "BEFA": "43",
         "OS": "45",
-        "DBMS": "44",
-        "SE": "46",
+        "DBMS": "42",
+        "SE": "45",
         "OS LAB": "28",
         "DBMS LAB": "23",
         "NODE JS": "32",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "38"
       },
-      "total": "355",
-      "percentage": "80.68"
+      "total": "348",
+      "percentage": "80.93"
     },
     {
       "sno": "59",
       "htno": "23891A0559",
       "name": "USHKAGULA BHANU",
       "subjects": {
-        "DM": "48",
-        "BEFA": "45",
+        "DM": "47",
+        "BEFA": "44",
         "OS": "52",
-        "DBMS": "43",
-        "SE": "42",
+        "DBMS": "41",
+        "SE": "41",
         "OS LAB": "31",
         "DBMS LAB": "26",
         "NODE JS": "40",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "38"
+        "CRT": "36"
       },
-      "total": "371",
-      "percentage": "84.32"
+      "total": "364",
+      "percentage": "84.65"
     },
     {
       "sno": "60",
       "htno": "23891A0560",
       "name": "VALLAPU MANIDEEPIKA",
       "subjects": {
-        "DM": "53",
-        "BEFA": "51",
+        "DM": "52",
+        "BEFA": "50",
         "OS": "48",
-        "DBMS": "50",
-        "SE": "50",
+        "DBMS": "48",
+        "SE": "49",
         "OS LAB": "28",
         "DBMS LAB": "27",
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "48"
+        "CRT": "46"
       },
-      "total": "400",
-      "percentage": "90.91"
+      "total": "393",
+      "percentage": "91.4"
     },
     {
       "sno": "61",
       "htno": "23891A0561",
       "name": "VANGARI HARISHANKAR",
       "subjects": {
-        "DM": "41",
-        "BEFA": "35",
+        "DM": "40",
+        "BEFA": "34",
         "OS": "45",
-        "DBMS": "39",
-        "SE": "41",
+        "DBMS": "37",
+        "SE": "40",
         "OS LAB": "28",
         "DBMS LAB": "20",
         "NODE JS": "24",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "40"
+        "CRT": "38"
       },
-      "total": "315",
-      "percentage": "71.59"
+      "total": "308",
+      "percentage": "71.63"
     },
     {
       "sno": "62",
       "htno": "23891A0562",
       "name": "VARKALA ARCHANA",
       "subjects": {
-        "DM": "49",
-        "BEFA": "45",
+        "DM": "48",
+        "BEFA": "44",
         "OS": "49",
-        "DBMS": "47",
-        "SE": "47",
+        "DBMS": "45",
+        "SE": "46",
         "OS LAB": "28",
         "DBMS LAB": "27",
         "NODE JS": "35",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "46"
+        "CRT": "41"
       },
-      "total": "379",
-      "percentage": "86.14"
+      "total": "369",
+      "percentage": "85.81"
     },
     {
       "sno": "63",
       "htno": "23891A0563",
       "name": "VEDULLAPALLI KOUSHIK",
       "subjects": {
-        "DM": "44",
-        "BEFA": "42",
+        "DM": "43",
+        "BEFA": "41",
         "OS": "38",
-        "DBMS": "39",
-        "SE": "33",
+        "DBMS": "37",
+        "SE": "32",
         "OS LAB": "24",
         "DBMS LAB": "24",
         "NODE JS": "38",
         "COI": "2",
         "REAL TIME PROJECT": "0",
-        "CRT": "41"
+        "CRT": "36"
       },
-      "total": "325",
-      "percentage": "73.86"
+      "total": "315",
+      "percentage": "73.26"
     },
     {
       "sno": "64",
@@ -1282,30 +1282,30 @@
         "NODE JS": "39",
         "COI": "4",
         "REAL TIME PROJECT": "0",
-        "CRT": "49"
+        "CRT": "46"
       },
-      "total": "371",
-      "percentage": "84.32"
+      "total": "368",
+      "percentage": "85.58"
     },
     {
       "sno": "65",
       "htno": "24895A0501",
       "name": "MAJJIGA CHANDRA ANEESH MOHAN",
       "subjects": {
-        "DM": "57",
-        "BEFA": "52",
+        "DM": "56",
+        "BEFA": "51",
         "OS": "53",
-        "DBMS": "51",
-        "SE": "51",
+        "DBMS": "49",
+        "SE": "50",
         "OS LAB": "31",
         "DBMS LAB": "27",
         "NODE JS": "39",
         "COI": "6",
         "REAL TIME PROJECT": "0",
-        "CRT": "55"
+        "CRT": "50"
       },
-      "total": "422",
-      "percentage": "95.91"
+      "total": "412",
+      "percentage": "95.81"
     },
     {
       "sno": "66",
@@ -1322,70 +1322,70 @@
         "NODE JS": "27",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "43"
+        "CRT": "40"
       },
-      "total": "315",
-      "percentage": "71.59"
+      "total": "312",
+      "percentage": "72.56"
     },
     {
       "sno": "67",
       "htno": "24895A0503",
       "name": "KOLUPULA SANDYA",
       "subjects": {
-        "DM": "44",
-        "BEFA": "41",
+        "DM": "43",
+        "BEFA": "40",
         "OS": "44",
-        "DBMS": "41",
-        "SE": "42",
+        "DBMS": "39",
+        "SE": "41",
         "OS LAB": "29",
         "DBMS LAB": "25",
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "35"
+        "CRT": "30"
       },
-      "total": "337",
-      "percentage": "76.59"
+      "total": "327",
+      "percentage": "76.05"
     },
     {
       "sno": "68",
       "htno": "24895A0504",
       "name": "DHANAVATH GANESH",
       "subjects": {
-        "DM": "46",
-        "BEFA": "43",
+        "DM": "45",
+        "BEFA": "42",
         "OS": "46",
-        "DBMS": "43",
-        "SE": "40",
+        "DBMS": "41",
+        "SE": "39",
         "OS LAB": "28",
         "DBMS LAB": "21",
         "NODE JS": "31",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "34"
       },
-      "total": "342",
-      "percentage": "77.73"
+      "total": "332",
+      "percentage": "77.21"
     },
     {
       "sno": "69",
       "htno": "24895A0505",
       "name": "KONDAIAHGARI PRIYANKA",
       "subjects": {
-        "DM": "45",
-        "BEFA": "40",
+        "DM": "44",
+        "BEFA": "39",
         "OS": "41",
-        "DBMS": "42",
-        "SE": "40",
+        "DBMS": "40",
+        "SE": "39",
         "OS LAB": "28",
         "DBMS LAB": "20",
         "NODE JS": "33",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "39"
+        "CRT": "37"
       },
-      "total": "333",
-      "percentage": "75.68"
+      "total": "326",
+      "percentage": "75.81"
     },
     {
       "sno": "70",
@@ -1402,10 +1402,10 @@
         "NODE JS": "32",
         "COI": "5",
         "REAL TIME PROJECT": "0",
-        "CRT": "33"
+        "CRT": "30"
       },
-      "total": "315",
-      "percentage": "71.59"
+      "total": "312",
+      "percentage": "72.56"
     }
   ]
 }

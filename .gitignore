@@ -1,8 +1,7 @@
 token.json
 credentials.json
 attendance_data.json
-.env
-scripts/.env
+/scripts/.env
 /student/session.json
 class_attendance_data.json
 /vignan-dhara/books

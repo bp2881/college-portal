@@ -328,7 +328,7 @@
 
 <body>
     <header>
-        <a href="../index.html">
+        <a href="../">
             <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
         </a>
         <div class="header-title">
@@ -337,7 +337,7 @@
     </header>
 
     <nav>
-        <a href="books.php"><img src="../images/arrow_left.png" alt="<-"></a>
+        <a href="index.php"><img src="../images/arrow_left.png" alt="<-"></a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -433,7 +433,7 @@
             }
         } else {
             echo "<div class='error-message'>";
-            echo "Invalid branch or no resources available. <a href='books.php'>Return to Home</a>";
+            echo "Invalid branch or no resources available. <a href='index.php'>Return to Home</a>";
             echo "</div>";
         }
         ?>

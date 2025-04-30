@@ -179,7 +179,7 @@ function check_otp($conn, $TABLE_NAME)
             $_SESSION['otp_verified'] = true;
             error_log("OTP verified successfully for email: " . $_SESSION['email']);
             fetch_attendance($conn, $TABLE_NAME, $_SESSION['email']);
-            header("Location: ./Student-Dashboard/index.php");
+            header("Location: ./Student-Dashboard/");
             exit;
         } else {
             $error = "Incorrect OTP.";
@@ -420,7 +420,7 @@ if (isset($_POST['verify_otp'])) {
             </div>
         </div>
         <div class="nav-links">
-            <a href="/college-portal/student/student-portal.html">Back</a>
+            <a href="./">Back</a>
             <a href="student_login.php">Student Login</a>
         </div>
     </div>

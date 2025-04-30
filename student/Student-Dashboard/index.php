@@ -71,13 +71,13 @@ $subjectIcons = [
 
 <body>
     <header>
-        <a href="../logout.php" class="logo" title="Student-Portal">
+        <a href="../" class="logo" title="Student-Portal">
             <img src="./images/logo.png" alt="">
             <h2>V<span class="danger">I</span>TS</h2>
         </a>
 
         <div class="navbar">
-            <a href="index.php" class="active">
+            <a href="./" class="active">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>

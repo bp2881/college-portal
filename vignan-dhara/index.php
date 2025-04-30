@@ -189,14 +189,16 @@
 
 <body>
     <header>
-        <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
+        <a href="../">
+            <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
+        </a>
         <div class="header-title">
             <h1>Vignan Dhara Online Portal</h1>
         </div>
     </header>
 
     <nav>
-        <a href="index.php">Home</a>
+        <a href="../">Home</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>

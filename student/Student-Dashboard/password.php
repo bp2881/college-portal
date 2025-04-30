@@ -166,7 +166,7 @@ if (isset($_POST["Save"])) {
             <h2>V<span class="danger">I</span>TS</h2>
         </a>
         <div class="navbar">
-            <a href="index.php">
+            <a href="./">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>

@@ -34,8 +34,6 @@ if (file_exists($jsonFile)) {
         $contact = htmlspecialchars($data['contact']);
         $dob = htmlspecialchars($data['dob']);
         $subjects = $data['subjects'];
-    } else {
-        $error = "Error decoding JSON: " . json_last_error_msg();
     }
 } else {
     header("Location: ../student_login.php");
@@ -87,6 +85,10 @@ $subjectIcons = [
                 <span class="material-icons-sharp">today</span>
                 <h3>Time Table</h3>
             </a>
+            </a>
+            <a href="materials.php">
+                <span class="material-icons-sharp">book</span>
+                <h3>Materials</h3>
             </a>
             <a href="password.php">
                 <span class="material-icons-sharp">password</span>

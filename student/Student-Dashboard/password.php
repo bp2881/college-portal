@@ -174,6 +174,10 @@ if (isset($_POST["Save"])) {
                 <span class="material-icons-sharp">today</span>
                 <h3>Time Table</h3>
             </a>
+            <a href="materials.php">
+                <span class="material-icons-sharp">book</span>
+                <h3>Materials</h3>
+            </a>
             <a href="password.php" class="active">
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
@@ -222,5 +226,6 @@ if (isset($_POST["Save"])) {
     </div>
 
 </body>
+<script src="app.js"> </script>
 
 </html>

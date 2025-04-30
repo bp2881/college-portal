@@ -328,7 +328,9 @@
 
 <body>
     <header>
-        <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
+        <a href="../index.html">
+            <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
+        </a>
         <div class="header-title">
             <h1>Vignan Dhara Online Portal</h1>
         </div>

@@ -18,17 +18,6 @@ if ($conn->connect_error) {
 
 function store_session($conn, $email, $roll_num)
 {
-    $stmt = $conn->prepare("SELECT Name FROM students WHERE email=?");
-    $name = '';
-    if ($stmt) {
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $name = $result->fetch_assoc()['Name'] ?? '';
-        $stmt->close();
-    } else {
-        error_log("Failed to prepare statement for name fetch: " . $conn->error);
-    }
 
     $stmt = $conn->prepare("SELECT attendance FROM student_attendance WHERE roll_num=?");
     $attendance = '';
@@ -42,11 +31,15 @@ function store_session($conn, $email, $roll_num)
         error_log("Failed to prepare statement for attendance fetch: " . $conn->error);
     }
 
-    $stmt = $conn->prepare("SELECT address, contact, dob FROM students WHERE roll_num=?");
+    $stmt = $conn->prepare("SELECT Name, address, contact, dob, year, branch FROM students WHERE roll_num=?");
 
+    $name = "";
     $address = '';
     $contact = '';
     $dob = '';
+    $year = null;
+    $branch = "";
+
 
     if ($stmt) {
         $stmt->bind_param("s", $roll_num);
@@ -55,9 +48,12 @@ function store_session($conn, $email, $roll_num)
         $row = $result->fetch_assoc();
 
         if ($row) {
+            $name = $row["Name"] ?? '';
             $address = $row['address'] ?? '';
             $contact = $row['contact'] ?? '';
             $dob = $row['dob'] ?? '';
+            $year = $row['year'] ?? null;
+            $branch = $row['branch'] ?? '';
         }
 
         $stmt->close();
@@ -83,6 +79,8 @@ function store_session($conn, $email, $roll_num)
         'name' => $name,
         'roll_num' => $roll_num,
         'email' => $email,
+        'year' => $year,
+        'branch' => $branch,
         'attendance' => $attendance, // average attendance
         'subjects' => $attendanceDetails, // <-- subject-wise attendance added here
         'date' => date('d-m-Y'),

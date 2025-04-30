@@ -7,6 +7,14 @@
     <title>Vignan Dhara - Branch Resources</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        #logo {
+            height: 50px;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,33 +27,16 @@
             color: #424242;
             background: #f5f5f0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z8DAwMgAB//z7P8QAAgMDAwMAAAEZAN+3AAAAAElFTkSuQmCC') repeat;
             background-size: 100px 100px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         header {
             background: linear-gradient(90deg, #ff6f61, #6b5b95);
+            /* Coral to Purple gradient */
             color: #ffffff;
             padding: 1rem 0;
-            display: flex;
-            align-items: center;
-            position: relative;
+            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        #logo {
-            height: 50px;
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            z-index: 1000;
-        }
-
-        .header-title {
-            flex: 1;
-            text-align: center;
         }
 
         header h1 {
@@ -55,6 +46,7 @@
 
         nav {
             background: linear-gradient(90deg, #42a5f5, #26a69a);
+            /* Blue to Teal gradient */
             padding: 0.8rem;
             text-align: center;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -74,13 +66,13 @@
 
         nav a:hover {
             color: #ffd700;
+            /* Gold hover */
         }
 
         .container {
             max-width: 1200px;
             margin: 2.5rem auto;
             padding: 0 1rem;
-            flex: 1;
         }
 
         .container h2 {
@@ -88,6 +80,7 @@
             font-size: 2.2rem;
             margin-bottom: 2rem;
             color: #6b5b95;
+            /* Purple for title */
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         }
 
@@ -100,6 +93,7 @@
 
         .branch-card {
             background: linear-gradient(135deg, #ffffff, #e0f7fa);
+            /* Light Blue to White gradient */
             border: 1px solid #d0d0d0;
             border-radius: 10px;
             padding: 1.8rem;
@@ -113,6 +107,7 @@
         .branch-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 6px 16px rgba(107, 91, 149, 0.2), 0 2px 4px rgba(0, 0, 0, 0.06) inset;
+            /* Purple shadow */
         }
 
         .branch-card a {
@@ -129,59 +124,17 @@
 
         .branch-card a:hover {
             color: #ff6f61;
+            /* Coral hover */
             text-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
-        }
-
-        .about-section,
-        .contact-section {
-            background: linear-gradient(135deg, #ffffff, #e0f7fa);
-            border: 1px solid #d0d0d0;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-top: 2.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06) inset;
-            text-align: center;
-            animation: fadeIn 0.9s ease-out;
-        }
-
-        .about-section h3,
-        .contact-section h3 {
-            font-size: 1.8rem;
-            color: #6b5b95;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-section p,
-        .contact-section p {
-            font-size: 1.1rem;
-            color: #424242;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-section a {
-            color: #ff6f61;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-section a:hover {
-            color: #6b5b95;
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto 1rem auto;
-            padding: 0 1rem;
         }
 
         footer {
             background: linear-gradient(90deg, #42a5f5, #26a69a);
+            /* Blue to Teal gradient, matching nav */
             color: #ffffff;
-            padding: 0.6rem;
             text-align: center;
+            padding: 1.2rem;
+            margin-top: 2.5rem;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
@@ -230,17 +183,13 @@
             .container h2 {
                 font-size: 1.8rem;
             }
-
-            footer {
-                padding: 0.5rem;
-            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <img id="logo" src="./images/vignan_logo.png" alt="Vignan Logo">
+        <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
         <div class="header-title">
             <h1>Vignan Dhara Online Portal</h1>
         </div>
@@ -291,23 +240,23 @@
         </div>
     </div>
 
-
-    <footer>
-        <p>© 2025 Vignan Dhara Library. All rights reserved.</p>
+    <footer style="padding: 20px; background-color: #f2f2f2; font-family: Arial, sans-serif;">
+        <p style="text-align: center;">© 2025 Vignan Dhara Library. All rights reserved.</p>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div id="about" style="width: 45%;">
+                <p><b>About:</b><br>
+                    Vignan Dhara is a library where students can find their course-related materials.
+                </p>
+            </div>
+            <div id="contact" style="width: 45%; text-align: right;">
+                <p><b>Contact:</b><br>
+                    Email: info@vignandhara.edu<br>
+                    Phone: +91-12345-67890
+                </p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

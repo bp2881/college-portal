@@ -390,14 +390,14 @@
 
 <body>
     <header>
-        <img id="logo" src="./images/vignan_logo.png" alt="Vignan Logo">
+        <img id="logo" src="../images/vignan_logo.png" alt="Vignan Logo">
         <div class="header-title">
             <h1>Vignan Dhara Online Portal</h1>
         </div>
     </header>
 
     <nav>
-        <a href="books.php"><img src="./images/arrow_left.png" alt="<-"></a>
+        <a href="books.php"><img src="../images/arrow_left.png" alt="<-"></a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>

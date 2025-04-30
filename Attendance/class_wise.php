@@ -19,8 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['branch'], $_POST['from
   $from_date = substr($from_date, 0, 10);
   $to_date = substr($to_date, 0, 10);
 
-
-  // Redirect to the report page with URL parameters
   header('Location: classwise_report.php?branch=' . urlencode($branch) . '&from_date=' . urlencode($from_date) . '&to_date=' . urlencode($to_date) . '&year=' . urlencode($year) . '&section=' . urlencode($section));
   exit();
 }

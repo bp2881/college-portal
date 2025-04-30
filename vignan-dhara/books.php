@@ -132,7 +132,8 @@
             text-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
         }
 
-        .about-section, .contact-section {
+        .about-section,
+        .contact-section {
             background: linear-gradient(135deg, #ffffff, #e0f7fa);
             border: 1px solid #d0d0d0;
             border-radius: 10px;
@@ -143,14 +144,16 @@
             animation: fadeIn 0.9s ease-out;
         }
 
-        .about-section h3, .contact-section h3 {
+        .about-section h3,
+        .contact-section h3 {
             font-size: 1.8rem;
             color: #6b5b95;
             margin-bottom: 1rem;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         }
 
-        .about-section p, .contact-section p {
+        .about-section p,
+        .contact-section p {
             font-size: 1.1rem;
             color: #424242;
             line-height: 1.8;
@@ -228,18 +231,6 @@
                 font-size: 1.8rem;
             }
 
-            .about-section h3, .contact-section h3 {
-                font-size: 1.6rem;
-            }
-
-            .about-section p, .contact-section p {
-                font-size: 1rem;
-            }
-
-            .contact-container {
-                margin-bottom: 0.5rem;
-            }
-
             footer {
                 padding: 0.5rem;
             }
@@ -298,35 +289,16 @@
                 <a href="branch.php?branch=AIDS">Artificial Intelligence & Data Science (AI&DS)</a>
             </div>
         </div>
-
-        <section id="about" class="about-section">
-            <h3>About Us</h3>
-            <p>
-                Vignan Dhara Online Portal is a dedicated digital library platform designed to support the academic journey of students at Vignan University. Our mission is to provide seamless access to a comprehensive collection of educational resources, including textbooks, reference materials, and study guides, tailored to the diverse academic branches offered at the university. Whether you're pursuing Basic Sciences, Engineering, or cutting-edge fields like Artificial Intelligence and Data Science, Vignan Dhara ensures that essential learning materials are just a click away.
-            </p>
-            <p>
-                Built with a student-centric approach, this portal reflects Vignan University's commitment to fostering academic excellence and innovation. We aim to empower learners by offering an intuitive, user-friendly interface that simplifies access to resources, enabling students to focus on their studies and achieve their full potential. Explore our portal and discover the wealth of knowledge at your fingertips!
-            </p>
-        </section>
     </div>
 
-    <div class="contact-container">
-        <section id="contact" class="contact-section">
-            <h3>Contact Us</h3>
-            <p><a href="mailto:library@vignan.ac.in">library@vignan.ac.in</a></p>
-            <p><a href="tel:+918632123456">+91 863 212 3456</a></p>
-            <p>Vignan University, Guntur, AP, India</p>
-        </section>
-    </div>
 
     <footer>
         <p>© 2025 Vignan Dhara Library. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);

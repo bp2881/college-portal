@@ -3,13 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import time
 import sys
 import json
+from os import getenv
 
-st = time.time()
-
-# --- Get arguments from PHP ---
 branch = sys.argv[1]
 from_date = sys.argv[2]
 to_date = sys.argv[3]
@@ -17,8 +14,10 @@ year = sys.argv[4]
 section = sys.argv[5]
 
 json_path = "C:\\xampp\\htdocs\\college-portal\\class_attendance_data.json"
+LOGIN_ID = getenv("LOGIN_ID")
+LOGIN_PASS = getenv("LOGIN_PASS")
+URL = getenv("URL")
 
-# --- Check if data already exists ---
 try:
     with open(json_path, "r") as json_file:
         data = json.load(json_file)
@@ -40,16 +39,13 @@ options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(options=options)
 
 try:
-    # --- Login ---
-    driver.get("https://vignanits.ac.in/Attendance/Validate.php")
-    driver.find_element(By.NAME, "uname").send_keys("840")
-    driver.find_element(By.NAME, "pass").send_keys("vgnt")
+    driver.get(URL)
+    driver.find_element(By.NAME, "uname").send_keys(LOGIN_ID)
+    driver.find_element(By.NAME, "pass").send_keys(LOGIN_PASS)
     driver.find_element(By.NAME, "pass").submit()
 
-    # --- Navigate to reports page ---
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@href='Creports.php']"))).click()
 
-    # --- Wait for form and fill details ---
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "br")))
     Select(driver.find_element(By.NAME, "br")).select_by_visible_text(branch)
     Select(driver.find_element(By.NAME, "yr")).select_by_visible_text(year)
@@ -57,10 +53,8 @@ try:
     driver.find_element(By.NAME, "fdt").send_keys(from_date)
     driver.find_element(By.NAME, "tdt").send_keys(to_date)
 
-    # --- Submit the form ---
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@type='submit']"))).click()
 
-    # --- Wait for report table ---
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "table")))
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -83,7 +77,7 @@ try:
                 header_found = True
                 continue
 
-            # Skip "Number of Hours Conducted" row (comes right after header)
+            # Skip "Number of Hours Conducted" 
             if header_found and row_count_after_header == 0:
                 row_count_after_header += 1
                 continue
@@ -100,7 +94,6 @@ try:
                 }
                 student_data.append(student_dict)
 
-    # --- Save to JSON ---
     output_data = {
         "branch": branch,
         "year": year,
@@ -115,12 +108,10 @@ try:
     with open(json_path, "w") as json_out:
         json.dump(output_data, json_out, indent=2)
 
-    print(f"\n✅ Stored {len(student_data)} students with {len(subjects)} subjects in JSON")
+    print(f"\nStored {len(student_data)} students with {len(subjects)} subjects in JSON")
 
 except Exception as e:
-    print("❌ Error:", e)
+    print("Error:", e)
 
 finally:
     driver.quit()
-    et = time.time()
-    print("⏱️ Execution time:", round(et - st, 2), "seconds")

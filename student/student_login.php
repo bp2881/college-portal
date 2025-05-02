@@ -14,11 +14,9 @@ if ($conn->connect_error) {
     die("An error occurred. Please try again later.");
 }
 
-// === FUNCTIONS ===
 
 function store_session($conn, $email, $roll_num)
 {
-
     $stmt = $conn->prepare("SELECT attendance FROM student_attendance WHERE roll_num=?");
     $attendance = '';
     if ($stmt) {
@@ -60,6 +58,7 @@ function store_session($conn, $email, $roll_num)
     } else {
         error_log("Failed to prepare statement for fetching student details: " . $conn->error);
     }
+
     // Fetching attendance data
     $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";
     $jsonContent = file_get_contents($jsonFile);

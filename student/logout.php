@@ -1,5 +1,7 @@
 <?php
 $jsonFile = "C:\\xampp\\htdocs\\college-portal\\student\\session.json";
-unlink($jsonFile);
+if (file_exists($jsonFile)) {
+    unlink($jsonFile);
+}
 header("Location: ../student/");
 ?>

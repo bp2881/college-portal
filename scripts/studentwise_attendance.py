@@ -1,11 +1,12 @@
 import sys
 import json
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
+import mysql.connector
+from os import getenv
 
 roll_no = sys.argv[2]
 from_date = sys.argv[3]
@@ -14,20 +15,20 @@ try:
     portal = sys.argv[5]
 except:
     portal = ""
-st = time.time()
+
 attendance_path = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json"
 
-
+LOGIN_ID = getenv("LOGIN_ID")
+LOGIN_PASS = getenv("LOGIN_PASS")
+URL = getenv("URL")
 
 def db_store(attendance, roll_num):
-    import mysql.connector
-    from os import getenv
     try:
         mydb = mysql.connector.connect(
-            host=getenv("DB_HOST") or "localhost",  
-            user=getenv("DB_USER") or "root",       
-            password=getenv("DB_PASS") or "",       
-            database=getenv("DB_NAME") or "college_portal",
+            host=getenv("DB_HOST"),  
+            user=getenv("DB_USER"),       
+            password=getenv("DB_PASS"),       
+            database=getenv("DB_NAME"),
         )
         mycursor = mydb.cursor()
         sql = "UPDATE student_attendance SET attendance = %s WHERE roll_num = %s"
@@ -77,9 +78,9 @@ attendance_data = {
 global average_percentage
 
 try:
-    driver.get("https://vignanits.ac.in/Attendance/Validate.php")
-    driver.find_element(By.NAME, "uname").send_keys("840")
-    driver.find_element(By.NAME, "pass").send_keys("vgnt")
+    driver.get(URL)
+    driver.find_element(By.NAME, "uname").send_keys(LOGIN_ID)
+    driver.find_element(By.NAME, "pass").send_keys(LOGIN_PASS)
     driver.find_element(By.NAME, 'pass').submit()
 
     view_reports_link = WebDriverWait(driver, 10).until(

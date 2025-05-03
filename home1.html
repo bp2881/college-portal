@@ -1,165 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>VITS</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta
+			name="description"
+			content="The Gokul Global University at Sidhpur provide one of the earliest form of technical studies, which has been vital in setting up the standard of brilliance." />
+		<meta
+			name="keywords"
+			content="Gokul Global University,Collage" />
+		<meta
+			name="author"
+			content="Jaydipsinh Solanki" />
+
+		<title>Gokul Global University</title>
+
 		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="favicon_io/apple-touch-icon.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="favicon_io/favicon-32x32.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="favicon_io/favicon-16x16.png" />
-		<link
-			rel="manifest"
-			href="favicon_io/site.webmanifest" />
+			rel="stylesheet"
+			href="css/main_style.css" />
 		<link
 			rel="shortcut icon"
-			href="favicon_io/favicon.ico"
-			type="image/x-icon" />
-		<meta
-			name="theme-color"
-			content="#ffffff" />
+			href="images/vignan_logo.png" />
 	</head>
-	<style>
-		.about {
-			padding: 50px 20px;
-			text-align: center;
-			background-color: #fff;
-		}
-		.about h2 {
-			color: #1b0888;
-			margin-bottom: 40px;
-			font-size: 2rem;
-		}
-		.about-cards {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			gap: 20px;
-		}
-		.about-card {
-			background-color: #fff;
-			padding: 12px;
-			border-radius: 10px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			width: 12%;
-			text-align: center;
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-		.about-card:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-		}
-		.about-card h3 {
-			color: #1b0888;
-			font-size: 1.5rem;
-			margin-bottom: 15px;
-		}
-		.about-card p {
-			color: #333;
-			font-size: 1rem;
-			line-height: 1.5;
-		}
-	</style>
-	<hr
-		style="
-			color: blueviolet;
-			height: 0.5em;
-			background-color: blueviolet;
-		" />
-	<header></header>
-	<section class="about">
-		<h2>Why VIGNAN??</h2>
-		<div class="about-cards">
-			<div class="about-card">
-				<h3>Academics</h3>
-				<p></p>
+	<body>
+		<section class="header">
+			<nav>
+				<a href="index.html"
+					><img
+						src="images/vignan_logo.png"
+						id="logo-img"
+				/></a>
+				<h1 style="color: white; font-size: 26px">
+					Vignan Institute Of Technology and Science
+				</h1>
+
+				<div
+					class="nav-links"
+					id="navLinks">
+					<span
+						class="icon"
+						onclick="hidemenu()"
+						>&#10005;</span
+					>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="admission_page.php">Admission</a></li>
+						<li><a href="#course_call">Course</a></li>
+						<li><a href="Contact_page.html">Contact</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+					</ul>
+				</div>
+				<span
+					class="icon"
+					onclick="showmenu()"
+					>&#9776;</span
+				>
+			</nav>
+
+			<div class="text-box">
+				<p>
+					Vignan Institute Of Technology and Science provides one of
+					the earliest form of technical studies, which has been vital
+					in setting up the standard of brilliance.
+				</p>
+
+				<a
+					href="Admission_page.html"
+					class="hero-btn"
+					>Admission Open</a
+				>
 			</div>
-			<div class="about-card">
-				<h3>Placements</h3>
-				<p></p>
+		</section>
+
+		<!--Course of Collage-->
+
+		<section
+			class="course"
+			id="course_call">
+			<h1>Course Offered</h1>
+			<p>
+				We expertise the students in many Engineering fields, as follows
+			</p>
+
+			<div class="row">
+				<div class="course-col">
+					<h2>Civil Engineering (CE)</h2>
+					<p>
+						The B.Tech in Civil Engineering focuses on designing,
+						building, and maintaining infrastructure such as roads,
+						bridges, buildings, and water supply systems. Students
+						learn to address complex environmental and structural
+						challenges.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Computer Science Engineering (CSE)</h2>
+					<p>
+						The B.Tech in Computer Science Engineering focuses on
+						the design, development, and application of computer
+						systems, including software, hardware, networking, and
+						databases. It prepares students for various roles in
+						software development, data analysis, and systems
+						engineering.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Artificial Intelligence & Data Science (AI & DS)</h2>
+					<p>
+						The B.Tech in AI & Data Science focuses on developing
+						intelligent systems and utilizing advanced data analysis
+						techniques. Students gain expertise in machine learning,
+						big data analytics, neural networks, and statistical
+						modeling to solve real-world problems in diverse
+						industries.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>
+						Artificial Intelligence & Machine Learning (CSE AI&ML)
+					</h2>
+					<p>
+						The B.Tech in CSE with AI & ML focuses on building
+						intelligent systems using machine learning algorithms,
+						computer vision, natural language processing, and deep
+						learning. Students learn how to develop AI applications
+						and integrate machine learning into various industries.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>
+						Computer Science Engineering with Data Science (CSE DS)
+					</h2>
+					<p>
+						This specialization in Computer Science Engineering
+						focuses on data analysis, machine learning, and data
+						mining techniques. Students learn how to manage and
+						process big data, apply analytics, and create models to
+						derive insights for decision-making in different fields.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Electrical Engineering (EEE)</h2>
+					<p>
+						The B.Tech in Electrical Engineering covers the study of
+						electrical systems, electronics, electromagnetism, and
+						power generation. Graduates work on designing,
+						developing, and testing electrical equipment, systems,
+						and technologies.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Electronics and Communication Engineering (ECE)</h2>
+					<p>
+						This field deals with the design and development of
+						electronic systems and communication devices. B.Tech
+						students in ECE gain knowledge in circuit design, signal
+						processing, communication systems, and networking.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Electrical and Instrumentation Engineering (EIE)</h2>
+					<p>
+						B.Tech in Electrical and Instrumentation Engineering is
+						aimed at providing knowledge about electrical systems as
+						well as instrumentation techniques used for measurement,
+						control, and automation in industrial and commercial
+						settings.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Information Technology (IT)</h2>
+					<p>
+						The B.Tech in Information Technology focuses on software
+						development, databases, networking, and information
+						management. Students learn how to create and manage IT
+						systems that help businesses and organizations function
+						effectively.
+					</p>
+				</div>
+
+				<div class="course-col">
+					<h2>Mechanical Engineering (MECH)</h2>
+					<p>
+						The B.Tech in Mechanical Engineering focuses on
+						designing, analyzing, and manufacturing mechanical
+						systems and devices. Students learn thermodynamics,
+						materials science, and robotics to solve complex
+						engineering problems in manufacturing and design.
+					</p>
+				</div>
 			</div>
-			<div class="about-card">
-				<h3>Activities</h3>
-				<p></p>
+		</section>
+
+		<!--Campus Section-->
+
+		<section class="campus">
+			<h1>Our Campus</h1>
+			<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quisquam atque non voluptate</p> -->
+
+			<div class="row">
+				<div class="campus-col">
+					<img
+						src="images/cm1.jfif"
+						alt="" />
+					<div class="layer">
+						<h3>Environment</h3>
+					</div>
+				</div>
+
+				<div class="campus-col">
+					<img
+						src="images/cm2.jfif"
+						alt="" />
+					<div class="layer">
+						<h3>Community</h3>
+					</div>
+				</div>
+
+				<div class="campus-col">
+					<img
+						src="images/cm3.jfif"
+						alt="" />
+					<div class="layer">
+						<h3>Education</h3>
+					</div>
+				</div>
 			</div>
-			<div class="about-card">
-				<h3>Campus Life</h3>
-				<p></p>
+		</section>
+
+		<!--Facilities Section-->
+
+		<section class="facilities">
+			<h1>Our facilities</h1>
+			<p>Facilities provide for Students by Gokul Global University</p>
+
+			<div class="row">
+				<div class="facilities-col">
+					<img
+						src="images/canteen.jfif"
+						alt="" />
+					<h3>Canteen</h3>
+					<p>
+						The objective of the Canteen and meal service is to
+						protect by reducing the risk of foodborne illness, with
+						proper sanitary conditions.
+					</p>
+				</div>
+
+				<div class="facilities-col">
+					<img
+						src="images/auditorium.png"
+						alt="" />
+					<h3>Auditorium</h3>
+					<p>
+						The college is having a huge indoor auditorium with a
+						professionally-deployed acoustic system and a seating
+						capacity of about 200 people.
+					</p>
+				</div>
+
+				<div class="facilities-col">
+					<img
+						src="images/hostel.jfif"
+						alt="" />
+					<h3>Hostel</h3>
+					<p>
+						Hostel consists of a separate mess, administrative
+						office, warden quarter. In addition to well furnished
+						rooms.
+					</p>
+				</div>
 			</div>
-			<div class="about-card">
-				<h3>Admissions</h3>
-				<p></p>
-			</div>
-			<div class="about-card">
-				<h3>Accreditation</h3>
-				<p></p>
-			</div>
-		</div>
-	</section>
-	<footer style="background-color: #f2f2f2; padding: 30px 0">
-		<div style="text-align: center; margin-bottom: 20px">
-			<h2
-				style="
-					color: blue;
-					font-family: 'Bodoni MT', serif;
-					font-size: 24px;
-				">
-				VIGNAN INSTITUTE OF TECHNOLOGY AND SCIENCE
-			</h2>
-			<hr
-				style="
-					width: 85%;
-					margin: 10px auto;
-					height: 2px;
-					background-color: blueviolet;
-					border: none;
-				" />
-		</div>
-		<div
-			style="
-				display: flex;
-				justify-content: center;
-				gap: 40px;
-				flex-wrap: wrap;
-			">
-			<a
-				href="#about"
-				style="
-					color: blue;
-					text-decoration: none;
-					font-family: 'Bodoni MT', serif;
-					font-size: 16px;
-				"
-				>About</a
-			>
-			<a
-				href="#academics"
-				style="
-					color: blue;
-					text-decoration: none;
-					font-family: 'Bodoni MT', serif;
-					font-size: 16px;
-				"
-				>Academics</a
-			>
-			<a
-				href="#admissions"
-				style="
-					color: blue;
-					text-decoration: none;
-					font-family: 'Bodoni MT', serif;
-					font-size: 16px;
-				"
-				>Admissions</a
-			>
-		</div>
-	</footer>
+		</section>
+
+		<!--Call To Action Section-->
+
+		<section class="ctn">
+			<h1>
+				&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</h1>
+		</section>
+
+		<!--Footer-->
+		<section class="footer">
+			<h4>About Us</h4>
+			<p>
+				Vignan Institute Of Technology and Science provides one of the
+				earliest form of technical studies, which has been vital in
+				setting up the standard of brilliance.
+			</p>
+			<p id="copyright">Made By &#10084; Pasham Kiri Kiri Batch</p>
+		</section>
+
+		<!--Javascript is Start-->
+		<script src="javascript/main_script.js"></script>
+	</body>
 </html>

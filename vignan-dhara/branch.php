@@ -414,7 +414,7 @@
                                 echo "<div class='nested-resource-content' id='year-$year-$sem'>";
                                 echo "<div class='book-list'>";
                                 if (empty($files)) {
-                                    echo "<p>No files found in $semDir.</p>";
+                                    echo "<p style='color: red;'>Materials are not available yet </p>";
                                 } else {
                                     foreach ($files as $file) {
                                         echo "<div class='book-item'>";

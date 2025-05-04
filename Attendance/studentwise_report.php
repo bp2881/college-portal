@@ -5,7 +5,7 @@ $tdt = isset($_GET['to_date']) ? filter_var($_GET['to_date'], FILTER_SANITIZE_ST
 
 $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
 $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-$command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt");
+$command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt false");
 $output = shell_exec($command);
 
 $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";

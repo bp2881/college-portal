@@ -28,7 +28,6 @@ function getDocuments($basePath, $branch, $year, $semester)
     if (is_dir($dirPath)) {
         $files = scandir($dirPath);
         foreach ($files as $file) {
-            // Skip . and .. directories
             if ($file != "." && $file != "..") {
                 $filePath = $dirPath . '/' . $file;
                 $fileInfo = pathinfo($filePath);

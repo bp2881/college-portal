@@ -1,10 +1,42 @@
 <?php
 session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$name = htmlspecialchars($_POST['name']);
-	$email = htmlspecialchars($_POST['email']);
-	$phone = htmlspecialchars($_POST['phone']);
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Sanitize and store inputs
+	$name = htmlspecialchars($_POST['your_name']);
+	$email = htmlspecialchars($_POST['email_address']);
+	$phone = htmlspecialchars($_POST['phone']);
+	$gender = htmlspecialchars($_POST['gender']);
+	$dob = htmlspecialchars($_POST['dob']);
+	$course = htmlspecialchars($_POST['course']);
+	$password = htmlspecialchars($_POST['password']);
+	$confirm_password = htmlspecialchars($_POST['confirm_password']);
+
+	// Handle file upload
+	if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+		$fileTmpPath = $_FILES['file']['tmp_name'];
+		$fileName = $_FILES['file']['name'];
+		$fileSize = $_FILES['file']['size'];
+		$fileType = $_FILES['file']['type'];
+		$fileNameCmps = explode(".", $fileName);
+		$fileExtension = strtolower(end($fileNameCmps));
+
+		// Set upload directory and save
+		$uploadFileDir = './uploads/';
+		$dest_path = $uploadFileDir . $fileName;
+
+		if (!is_dir($uploadFileDir)) {
+			mkdir($uploadFileDir, 0777, true);
+		}
+
+		if (move_uploaded_file($fileTmpPath, $dest_path)) {
+			$fileUploadMessage = "File is successfully uploaded.";
+		} else {
+			$fileUploadMessage = "There was an error uploading the file.";
+		}
+	} else {
+		$fileUploadMessage = "No file uploaded or upload error.";
+	}
 }
 ?>
 
@@ -31,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<span class="icon" onclick="hidemenu()">&#10005;</span>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="Admission_page.html">Admission</a></li>
+					<li><a href="admission_page.php">Admission</a></li>
 					<li><a href="index.html#course_call">Course</a></li>
 					<li><a href="Contact_page.html">Contact</a></li>
 				</ul>
@@ -152,8 +184,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	</section>
 	<div class="none_div"></div>
 </body>
-<!-- Javascript for this Web page -->
-<script src=" https://smtpjs.com/v3/smtp.js"></script>
 <script>
 	var navLinks = document.getElementById("navLinks");
 

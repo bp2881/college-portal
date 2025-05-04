@@ -29,22 +29,18 @@ function store_session($conn, $email, $roll_num)
         error_log("Failed to prepare statement for attendance fetch: " . $conn->error);
     }
 
-    $stmt = $conn->prepare("SELECT Name, address, contact, dob, year, branch FROM students WHERE roll_num=?");
-
+    $stmt = $conn->prepare("SELECT name, address, contact, dob, year, branch FROM students WHERE roll_num=?");
     $name = "";
     $address = '';
     $contact = '';
     $dob = '';
     $year = null;
     $branch = "";
-
-
     if ($stmt) {
         $stmt->bind_param("s", $roll_num);
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
-
         if ($row) {
             $name = $row["Name"] ?? '';
             $address = $row['address'] ?? '';
@@ -53,7 +49,6 @@ function store_session($conn, $email, $roll_num)
             $year = $row['year'] ?? null;
             $branch = $row['branch'] ?? '';
         }
-
         $stmt->close();
     } else {
         error_log("Failed to prepare statement for fetching student details: " . $conn->error);
@@ -61,17 +56,48 @@ function store_session($conn, $email, $roll_num)
 
     // Fetching attendance data
     $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";
-    $jsonContent = file_get_contents($jsonFile);
 
-    $data = json_decode($jsonContent, true);
-    $attendanceDetails = [];
-    foreach ($data['tables'][1] as $subject) {
-        $attendanceDetails[] = [
-            'subject' => $subject[0],
-            'classes_held' => $subject[1],
-            'classes_attended' => $subject[2],
-            'percentage' => $subject[3]
-        ];
+    // Check if file exists before attempting to read
+    if (!file_exists($jsonFile)) {
+        error_log("Attendance data file not found: $jsonFile");
+        $attendanceDetails = [];  // Empty array if file doesn't exist
+    } else {
+        $jsonContent = file_get_contents($jsonFile);
+
+        // Check if file content is valid
+        if ($jsonContent === false) {
+            error_log("Failed to read attendance data file: $jsonFile");
+            $attendanceDetails = [];  // Empty array if file can't be read
+        } else {
+            $data = json_decode($jsonContent, true);
+
+            // Check if data was successfully decoded and has the expected structure
+            if ($data === null) {
+                error_log("Failed to decode JSON from attendance data file");
+                $attendanceDetails = [];  // Empty array if JSON is invalid
+            } else {
+                $attendanceDetails = [];
+
+                // Check if tables key exists and is an array
+                if (isset($data['tables']) && is_array($data['tables']) && isset($data['tables'][1]) && is_array($data['tables'][1])) {
+                    // Skip the header row (index 0) and only process actual subject data
+                    for ($i = 1; $i < count($data['tables'][1]); $i++) {
+                        $subject = $data['tables'][1][$i];
+                        // Make sure the subject data is complete
+                        if (isset($subject[0]) && isset($subject[1]) && isset($subject[2]) && isset($subject[3])) {
+                            $attendanceDetails[] = [
+                                'subject' => $subject[0],
+                                'classes_held' => $subject[1],
+                                'classes_attended' => $subject[2],
+                                'percentage' => $subject[3]
+                            ];
+                        }
+                    }
+                } else {
+                    error_log("Attendance data file does not have the expected structure");
+                }
+            }
+        }
     }
 
     $new_entry = [
@@ -80,8 +106,8 @@ function store_session($conn, $email, $roll_num)
         'email' => $email,
         'year' => $year,
         'branch' => $branch,
-        'attendance' => $attendance, // average attendance
-        'subjects' => $attendanceDetails, // <-- subject-wise attendance added here
+        'attendance' => $attendance,
+        'subjects' => $attendanceDetails,
         'date' => date('d-m-Y'),
         'timestamp' => date('d-m-Y H:i:s'),
         'logged' => time(),
@@ -97,7 +123,6 @@ function store_session($conn, $email, $roll_num)
         error_log("Session data successfully written to session.json: " . json_encode($new_entry));
     }
 }
-
 function fetch_attendance($conn, $TABLE_NAME, $email)
 {
     $fdt = '20-01-2025';
@@ -123,7 +148,7 @@ function fetch_attendance($conn, $TABLE_NAME, $email)
 
     $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
     $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-    $command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt student");
+    $command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt true");
 
     $output = shell_exec($command);
     if ($output === null) {

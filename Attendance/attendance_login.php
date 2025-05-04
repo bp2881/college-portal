@@ -69,7 +69,7 @@ $conn->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Attendance | Vignan ITS</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style2.css" />
+  <link rel="stylesheet" href="http://localhost/college-portal/css/style2.css" />
   <style>
     .error {
       color: #d32f2f;
@@ -115,7 +115,7 @@ $conn->close();
 <body>
   <header class="navbar">
     <div class="logo">
-      <img src="./images/vignan_logo.png" alt="Vignan Logo">
+      <img src="http://localhost/college-portal/images/vignan_logo.png" alt="Vignan Logo">
     </div>
     <div class="college-name">
       Vignan Institute of Technology and Science

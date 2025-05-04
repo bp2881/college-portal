@@ -29,7 +29,7 @@ $_SESSION['login_time'] = time();
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="./images/vignan_logo.png" alt="Vignan Logo">
+      <img src="http://localhost/college-portal/images/vignan_logo.png" alt="Vignan Logo">
     </div>
     <nav class="nav-menu">
       <ul>

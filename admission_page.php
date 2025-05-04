@@ -2,7 +2,6 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	// Sanitize and store inputs
 	$name = htmlspecialchars($_POST['your_name']);
 	$email = htmlspecialchars($_POST['email_address']);
 	$phone = htmlspecialchars($_POST['phone']);
@@ -12,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = htmlspecialchars($_POST['password']);
 	$confirm_password = htmlspecialchars($_POST['confirm_password']);
 
-	// Handle file upload
 	if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
 		$fileTmpPath = $_FILES['file']['tmp_name'];
 		$fileName = $_FILES['file']['name'];
@@ -21,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$fileNameCmps = explode(".", $fileName);
 		$fileExtension = strtolower(end($fileNameCmps));
 
-		// Set upload directory and save
 		$uploadFileDir = './uploads/';
 		$dest_path = $uploadFileDir . $fileName;
 
@@ -77,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<p>Admission form</p>
 				</div>
 
-				<!-- Admission from -->
 				<div class="r_form">
 					<form method="post" action="admission_page.php">
 						<div class="input_wrap">

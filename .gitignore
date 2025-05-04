@@ -3,3 +3,4 @@ credentials.json
 /scripts/.env
 /vignan-dhara/books
 *.json
+/uploads

@@ -22,7 +22,6 @@ if (file_exists($jsonFile)) {
   $error = "JSON file not found.";
 }
 // Delete json file
-unlink($jsonFile);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +58,7 @@ unlink($jsonFile);
   <!-- Report Title & Dates -->
   <div style="text-align: center; margin-top: 30px;">
     <h2 style="color: #264653; margin: 0;">Vignan Student Attendance Portal</h2>
-    <h3 style="margin: 8px 0;">Student Attendance Report – AY 2024‑25 I Sem.</h3>
+    <h3 style="margin: 8px 0;">Student Attendance Report – AY 2024‑25 I Sem.</h3>
     <?php if (!empty($data['attendance_dates'])): ?>
       <p style="margin: 4px 0;">
         <strong>From:</strong> <?= htmlspecialchars($data['attendance_dates']['from']) ?>
@@ -85,7 +84,17 @@ unlink($jsonFile);
       </thead>
       <tbody>
         <?php if (!empty($data['tables'][0])): ?>
-          <?php foreach ($data['tables'][0] as $row): ?>
+          <?php
+          // Skip the header row(s) - this is the key fix
+          $dataRows = array_slice($data['tables'][0], 1);
+
+          // Check if we still have header rows
+          if (!empty($dataRows) && $dataRows[0][0] === "Roll No") {
+            $dataRows = array_slice($dataRows, 1);
+          }
+
+          foreach ($dataRows as $row):
+            ?>
             <tr>
               <td><?= htmlspecialchars($row[0]) ?></td>
               <td><?= htmlspecialchars($row[1]) ?></td>
@@ -120,7 +129,17 @@ unlink($jsonFile);
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($data['tables'][1] as $subject): ?>
+          <?php
+          // Skip header row(s) for the second table too
+          $subjectRows = array_slice($data['tables'][1], 1);
+
+          // Check if we still have header rows
+          if (!empty($subjectRows) && $subjectRows[0][0] === "Subject") {
+            $subjectRows = array_slice($subjectRows, 1);
+          }
+
+          foreach ($subjectRows as $subject):
+            ?>
             <tr>
               <td><?= htmlspecialchars($subject[0]) ?></td>
               <td><?= htmlspecialchars($subject[1]) ?></td>
@@ -134,9 +153,9 @@ unlink($jsonFile);
   <?php endif; ?>
 
   <!-- Overall Attendance -->
-  <?php if (!empty($data['average_attendance_percentage'])): ?>
+  <?php if (!empty($data['calculated_percentage'])): ?>
     <p style="text-align: center; font-weight: bold; margin-top: 20px; font-size: 16px;">
-      Overall Attendance: <?= htmlspecialchars($data['average_attendance_percentage']) ?>%
+      Overall Attendance: <?= htmlspecialchars($data['calculated_percentage']) ?>%
     </p>
   <?php endif; ?>
 

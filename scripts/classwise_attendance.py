@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import sys
 import json
 from os import getenv
+from dotenv import load_dotenv
 
 branch = sys.argv[1]
 from_date = sys.argv[2]
@@ -14,6 +15,7 @@ year = sys.argv[4]
 section = sys.argv[5]
 
 json_path = "C:\\xampp\\htdocs\\college-portal\\class_attendance_data.json"
+load_dotenv()
 LOGIN_ID = getenv("LOGIN_ID")
 LOGIN_PASS = getenv("LOGIN_PASS")
 URL = getenv("URL")

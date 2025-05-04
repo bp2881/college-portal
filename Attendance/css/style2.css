@@ -1,51 +1,40 @@
 :root {
-  --primary: #2e3192;
-  --secondary: #1b9aaa;
+  --primary: #5b5ea6;  /* Adjusted primary color for header and text */
+  --secondary: #4a90e2; /* Adjusted secondary color for buttons */
   --light: #ffffff;
-  --dark: #212529;
+  --dark: #555555; /* Adjusted dark color for text */
   --radius: 12px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #888888; /* grey background like the screenshot */
+  background-color: #888888;  /* Retained the grey background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Centered vertically */
 }
 
 /* Navbar or Header */
 header {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem;
   background-color: #f8f9fa;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-header img {
-  height: 40px;
-  vertical-align: middle;
-}
 header h1 {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 2rem; /* Adjust header font size */
+  font-weight: bold; /* Font weight */
+  color: var(--primary); /* Primary color */
 }
 
 /* Login Card */
 .login-card {
-  margin-top: 60px;
-  background: #fff;
-  padding: 2.5rem;
+  margin-top: 20px; /* Adjusted margin */
+  background: var(--light);
+  padding: 2rem; /* Padding adjusted for aesthetics */
   width: 360px;
   border-radius: var(--radius);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -53,99 +42,70 @@ header h1 {
 }
 
 .login-card h2 {
-  font-size: 1.5rem;
-  color: var(--primary);
-  font-weight: 700;
+  font-size: 1.75rem; /* Updated font size */
+  color: var(--primary); /* Primary color */
   margin-bottom: 0.25rem;
 }
 
 .login-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #444;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem; /* Adjusted font size */
+  color: var(--dark); /* Dark text color */
+  margin-bottom: 1rem; /* Adjusted margin */
 }
 
+/* Input Group */
 .input-group {
-  margin-bottom: 1.2rem;
-  text-align: left;
-}
-
-.input-group label {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-  display: block;
-  color: var(--dark);
+  margin-bottom: 1.5rem; /* Increased margin */
 }
 
 .input-group input {
   width: 100%;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem; /* Increased padding for input fields */
   border: 1px solid #ccc;
   border-radius: var(--radius);
   font-size: 1rem;
-  background-color: #fff;
+  background-color: #f8f9fa; /* Light background for input fields */
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(46, 49, 146, 0.2);
-}
-
-/* Eye icon toggle */
-.input-group.password {
-  position: relative;
-}
-.input-group.password input {
-  padding-right: 2.2rem;
-}
-.input-group .toggle-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 1.1rem;
-  color: #666;
+  box-shadow: 0 0 0 2px rgba(91, 94, 166, 0.2);
 }
 
 /* Login Button */
 button,
 button[type="submit"] {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.75rem; /* Adjust button padding */
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: var(--secondary); /* Adjusted button background */
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 0.5rem;
 }
 
 button:hover {
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: #3a7fc7; /* Hover color for button */
 }
 
-/* Register link */
+/* Register Link */
 .login-card .register-link {
   margin-top: 1rem;
   font-size: 0.95rem;
 }
 
 .login-card .register-link a {
-  color: #2e3192;
+  color: var(--primary); /* Primary color for link */
   text-decoration: none;
-  font-weight: 500;
 }
 
 .login-card .register-link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Footer */
@@ -154,5 +114,5 @@ footer {
   padding: 1rem;
   text-align: center;
   font-size: 0.85rem;
-  color: #444;
+  color: var(--dark); /* Dark color for footer */
 }

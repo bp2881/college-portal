@@ -77,7 +77,7 @@ body {
 
 .login-card h1 {
   margin-bottom: 25px;
-  color: #3b3b98;
+  color: #3b3b98; /* Change to match the new header color */
   font-size: 26px;
   font-weight: 700;
 }
@@ -98,10 +98,10 @@ body {
 .input-group input[type="text"],
 .input-group input[type="date"] {
   width: 100%;
-  padding: 10px 15px;
+  padding: 12px; /* Increase padding for a better touch target */
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px; /* Increase font size for inputs */
   outline: none;
   transition: border-color 0.3s;
 }
@@ -120,12 +120,13 @@ button[type="submit"] {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s; /* Added transform transition */
   width: 100%;
 }
 
 button[type="submit"]:hover {
   background: linear-gradient(135deg, #2563eb, #0891b2);
+  transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Footer */

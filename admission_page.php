@@ -144,7 +144,7 @@ $conn->close();
 					<li><a href="index.html">Home</a></li>
 					<li><a href="admission_page.php">Admission</a></li>
 					<li><a href="index.html#course_call">Course</a></li>
-					<li><a href="Contact_page.html">Contact</a></li>
+					<li><a href="contact_page.php">Contact</a></li>
 				</ul>
 			</div>
 			<span class="icon" onclick="showmenu()">☰</span>
@@ -274,15 +274,6 @@ $conn->close();
 	</section>
 	<div class="none_div"></div>
 
-	<script>
-		var navLinks = document.getElementById("navLinks");
-		function showmenu() {
-			navLinks.style.right = "0";
-		}
-		function hidemenu() {
-			navLinks.style.right = "-200px";
-		}
-	</script>
 </body>
 
 </html>

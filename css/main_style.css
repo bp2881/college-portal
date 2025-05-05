@@ -31,8 +31,8 @@ body {
 
 /* Website Scrollerbar */
 body::-webkit-scrollbar {
-	width: 5px !important;
-	height: 5px !important;
+	width: 10px !important;
+	height: 10px !important;
 }
 body::-webkit-scrollbar-track {
 	background: #3838387c !important;
@@ -61,6 +61,7 @@ nav {
 }
 
 nav img {
+	margin-right: left;
 	width: 50px;
 	padding-right: 10px;
 }
@@ -278,40 +279,6 @@ nav img {
 	box-shadow: 3.5px 5px 15px 10px rgba(0, 0, 0, 0.308);
 }
 
-/* Call To Action */
-
-.ctn {
-	margin: 100px auto;
-	width: 80%;
-	background-image: linear-gradient(
-			rgba(255, 243, 243, 0.2),
-			rgba(255, 243, 243, 0.2)
-		),
-		url(http://localhost/college-portal/images/banner_ggu.png);
-	background-position: center;
-	background-size: cover;
-	border-radius: 10px;
-	text-align: center;
-	padding: 100px 0;
-	transition: 0.5s;
-}
-.ctn h1 {
-	color: #fff;
-	margin-bottom: 40px;
-	padding: 0;
-}
-.ctn:hover {
-	margin: 100px auto;
-	width: 80%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url(http://localhost/college-portal/images/banner_ggu.png);
-	background-position: center;
-	background-size: cover;
-	border-radius: 10px;
-	padding: 100px 0;
-	box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.664);
-}
-
 /* Footer */
 
 .footer {
@@ -384,11 +351,6 @@ nav img {
 	/* Facilities */
 	.facilities-col img:hover {
 		box-shadow: none;
-	}
-
-	/* Call To Action in Media query*/
-	.ctn h1 {
-		font-size: 24px;
 	}
 }
 

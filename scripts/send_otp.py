@@ -7,9 +7,12 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 import sys
 
-otp = sys.argv[1]
+message = sys.argv[1]
 email = str(sys.argv[2])
-
+try:
+    name = sys.argv[3]
+except:
+    name = ""
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 token_path = "C:\\xampp\\htdocs\\college-portal\\token.json"
 credentials_path = "C:\\xampp\\htdocs\\college-portal\\credentials.json"
@@ -51,10 +54,23 @@ def send_message(service, user_id, message):
 
 
 service = get_service()
+
+# Otp service
+if name == "" :
+    subject = "Otp for confirmation"
+    message = f"Your Otp is {message}"
+    to_email = email
+# Messaging service
+else:
+    subject=f'Query from {name}'
+    message = f"From {email},\n{message}"
+    to_email = "pranavbairy2@gmail.com"
+
 message = create_message(
     sender='pranavbairytempo@gmail.com',
-    to=email,
-    subject='Otp for confirmation',
-    message_text=f'Your otp is {otp}'
+    to=to_email,
+    subject=subject,
+    message_text=message
 )
+
 send_message(service, 'me', message)

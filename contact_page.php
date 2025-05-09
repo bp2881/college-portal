@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<nav>
 			<a href="index.html"><img src="images/vignan_logo.png" id="logo-img" /></a>
 			<h1 style="color: white; font-size: 26px">
-				Vignan Institute Of Technology and Science
+				Vignan Institute Of Technology & Science
 			</h1>
 
 			<div class="nav-links" id="navLinks">

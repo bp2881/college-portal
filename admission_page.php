@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Check for duplicate email before insertion
 	if (empty($errors)) {
-		$checkSql = "SELECT COUNT(*) FROM registration WHERE email = ?";
+		$checkSql = "SELECT COUNT(*) FROM registrations WHERE email = ?";
 		$checkStmt = $conn->prepare($checkSql);
 		$checkStmt->bind_param("s", $email);
 		$checkStmt->execute();
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if (empty($errors)) {
 		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO registration (name, email, phone, gender, dob, course, approved, password) VALUES (?, ?, ?, ?, ?, ?, 'no', ?)";
+		$sql = "INSERT INTO registrations (name, email, phone, gender, dob, course, approved, password) VALUES (?, ?, ?, ?, ?, ?, 0, ?)";
 		$stmt = $conn->prepare($sql);
 		if (!$stmt) {
 			$errors[] = "Database prepare error: " . $conn->error;
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					$errors[] = "Error renaming the uploaded file.";
 				}
 
-				$_SESSION['success_message'] = "Form submitted successfully! Your application number is $application_no.";
+				$_SESSION['success_message'] = "Form submitted successfully! Your application id is 10923$application_no.";
 				header("Location: admission_page.php");
 				exit();
 			} else {
@@ -137,7 +137,7 @@ $conn->close();
 	<section class="header">
 		<nav>
 			<a href="index.html"><img src="images/vignan_logo.png" id="logo-img" /></a>
-			<h1 style="color: white; font-size: 26px;">Vignan Institute Of Technology and Science</h1>
+			<h1 style="color: white; font-size: 26px;">Vignan Institute Of Technology & Science</h1>
 			<div class="nav-links" id="navLinks">
 				<span class="icon" onclick="hidemenu()">✕</span>
 				<ul>
@@ -206,14 +206,14 @@ $conn->close();
 							<label>Gender</label>
 							<div class="input_radio">
 								<div class="input_radio_item">
-									<input type="radio" id="male" name="gender" class="radio" value="male" <?php echo (isset($gender) && $gender === 'male') || !isset($gender) ? 'checked' : ''; ?> />
+									<input type="radio" id="male" name="gender" class="radio" value="Male" <?php echo (isset($gender) && $gender === 'male') || !isset($gender) ? 'checked' : ''; ?> />
 									<label for="male" class="radio_mark">
 										<ion-icon class="i" name="male-sharp"></ion-icon>
 										Male
 									</label>
 								</div>
 								<div class="input_radio_item">
-									<input type="radio" id="female" name="gender" class="radio" value="female" <?php echo (isset($gender) && $gender === 'female') ? 'checked' : ''; ?> />
+									<input type="radio" id="female" name="gender" class="radio" value="Female" <?php echo (isset($gender) && $gender === 'female') ? 'checked' : ''; ?> />
 									<label for="female" class="radio_mark">
 										<ion-icon class="i" name="female-sharp"></ion-icon>
 										Female

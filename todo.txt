@@ -1,0 +1,7 @@
+# Pranav
+1) In Main Dashboard create "application status"
+2) In admission page when submitted add a link to "application status" page
+3) Make about us navbar same as homepage nav bar
+4) Dashboard navbar whould match with the links it provides to ex. vignan dhara, student portal
+5) Add Academics in student portal Dashboard
+6) Change the behaviour of send_otp as it is sending incorrect otp form

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Student Attendance | Vignan ITS</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="./css/style2.css" />
+		<style>
+			.error {
+				color: #d32f2f;
+				font-size: 0.9rem;
+				margin-bottom: 1rem;
+				text-align: center;
+			}
+
+			/* Password input group */
+			.input-group.password {
+				position: relative;
+			}
+
+			.input-group .toggle-icon {
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+				cursor: pointer;
+				color: #555;
+				font-size: 1rem;
+				opacity: 0.6;
+				z-index: 10;
+				background: none;
+				border: none;
+				padding: 0;
+			}
+
+			.input-group.password input {
+				padding-right: 35px;
+			}
+		</style>
+	</head>
+	<script>
+		function togglePassword() {
+			const input = document.getElementById("upass");
+			const icon = document.querySelector(".toggle-icon");
+			if (input.type === "password") {
+				input.type = "text";
+				icon.textContent = "🙈";
+			} else {
+				input.type = "password";
+				icon.textContent = "👁️";
+			}
+		}
+	</script>
+
+	<body>
+		<header class="navbar">
+			<div class="logo">
+				<img
+					src="./images/vignan_logo.png"
+					alt="Vignan Logo" />
+			</div>
+			<div class="nav-header">Student Attendance Portal</div>
+			<nav class="nav-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="overlay"></div>
+			<div class="login-card">
+				<h2>LOGIN</h2>
+				<form
+					id="loginForm"
+					method="POST"
+					action="">
+					<div class="input-group">
+						<label for="uid">Username</label>
+						<input
+							id="uid"
+							name="uid"
+							type="text"
+							placeholder="Enter your username"
+							required />
+					</div>
+					<div class="input-group password">
+						<label for="upass">Password</label>
+						<input
+							id="upass"
+							name="upass"
+							type="password"
+							placeholder="Enter your password"
+							required />
+						<div class="show-password">
+							<label for="showPass">Show Password</label>
+							<input
+								type="checkbox"
+								id="showPass"
+								onclick="togglePassword()" />
+						</div>
+					</div>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			© 2025 Vignan Institute of Technology & Science. All rights
+			reserved.
+		</footer>
+	</body>
+</html>

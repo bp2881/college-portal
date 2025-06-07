@@ -5,3 +5,6 @@
 4) Dashboard navbar whould match with the links it provides to ex. vignan dhara, student portal
 5) Add Academics in student portal Dashboard
 6) Change the behaviour of send_otp as it is sending incorrect otp form
+7) Add an update functionality which updates the requirements of the project(ex. chromedriver)
+8) Correct behaviour of Attendance portal
+9) Change to different format of files

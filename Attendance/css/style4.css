@@ -1,156 +1,184 @@
 /* Reset & Base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #888; /* Matches screenshot's gray background */
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	font-family: "Poppins", sans-serif;
+	background-color: #888; /* Matches screenshot's gray background */
+	color: #333;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f8f9fa;
-  padding: 10px 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f8f9fa;
+	padding: 10px 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .navbar .logo img {
-  height: 40px;
+	height: 40px;
 }
 
 .navbar .college-name {
-  font-size: 22px;
-  font-weight: 600;
-  color: #333;
+	display: flex;
+	align-items: center;
+	font-size: 22px;
+	font-weight: 600;
+	color: #333;
 }
 
 .navbar .nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+	list-style: none;
+	display: flex;
+	gap: 20px;
 }
 
 .navbar .nav-menu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background 0.3s;
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius: 5px;
+	transition: background 0.3s;
 }
 
 .navbar .nav-menu ul li a:hover {
-  background-color: #ddd;
+	background-color: #ddd;
+}
+
+/* Hero Section - Centers the login card */
+.hero {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 20px;
+	position: relative;
+	min-height: calc(100vh - 120px); /* Adjust for navbar and footer */
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.1); /* Subtle overlay */
+	z-index: 1;
 }
 
 /* Center Form Card */
 .container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 20px;
 }
 
 .login-card {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  max-width: 450px;
-  width: 100%;
-  text-align: center;
+	position: relative;
+	z-index: 2;
+	background: #fff;
+	padding: 30px 40px;
+	border-radius: 15px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+	max-width: 450px;
+	width: 100%;
+	text-align: center;
 }
 
 .login-card h1 {
-  margin-bottom: 25px;
-  color: #3b3b98; /* Change to match the new header color */
-  font-size: 26px;
-  font-weight: 700;
+	margin-bottom: 25px;
+	color: #3b3b98; /* Change to match the new header color */
+	font-size: 26px;
+	font-weight: 700;
 }
 
 /* Form Inputs */
 .input-group {
-  margin-bottom: 20px;
-  text-align: left;
+	margin-bottom: 20px;
+	text-align: left;
 }
 
 .input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #333;
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+	color: #333;
 }
 
 .input-group input[type="text"],
 .input-group input[type="date"] {
-  width: 100%;
-  padding: 12px; /* Increase padding for a better touch target */
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px; /* Increase font size for inputs */
-  outline: none;
-  transition: border-color 0.3s;
+	width: 100%;
+	padding: 12px; /* Increase padding for a better touch target */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 16px; /* Increase font size for inputs */
+	outline: none;
+	transition: border-color 0.3s;
 }
 
 .input-group input:focus {
-  border-color: #3b82f6;
+	border-color: #3b82f6;
 }
 
 /* Submit Button */
 button[type="submit"] {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s; /* Added transform transition */
-  width: 100%;
+	background: linear-gradient(135deg, #3b82f6, #06b6d4);
+	color: #fff;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.2s; /* Added transform transition */
+	width: 100%;
 }
 
 button[type="submit"]:hover {
-  background: linear-gradient(135deg, #2563eb, #0891b2);
-  transform: scale(1.05); /* Slight scale on hover */
+	background: linear-gradient(135deg, #2563eb, #0891b2);
+	transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 15px 0;
-  background-color: #f8f9fa;
-  color: #555;
-  font-size: 14px;
+	text-align: center;
+	padding: 15px 0;
+	background-color: #f8f9fa;
+	color: #555;
+	font-size: 14px;
+	margin-top: auto; /* Push footer to bottom */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar .college-name {
-    font-size: 18px;
-  }
+	.navbar .college-name {
+		font-size: 18px;
+	}
 
-  .navbar .nav-menu ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
+	.navbar .nav-menu ul {
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 10px;
+	}
 
-  .login-card {
-    padding: 20px;
-  }
+	.login-card {
+		padding: 20px;
+		margin: 20px;
+	}
+
+	.hero {
+		min-height: calc(100vh - 140px);
+	}
 }

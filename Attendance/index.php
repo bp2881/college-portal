@@ -7,7 +7,7 @@ $timeout_duration = 1800;
 if (!isset($_SESSION['uid']) || !isset($_SESSION['logged_in']) || (time() - $_SESSION['login_time'] > $timeout_duration)) {
   session_unset();
   session_destroy();
-  header("Location: attendace_login.php?message=Session expired");
+  header("Location: attendance_login.php?message=Session expired");
   exit();
 }
 

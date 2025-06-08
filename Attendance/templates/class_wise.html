@@ -16,14 +16,23 @@
 
 	<body>
 		<!-- Navbar -->
-		<header class="navbar">
+		<nav class="navbar">
 			<div class="logo">
 				<img
 					src="./images/vignan_logo.png"
-					alt="Vignan Logo" />
+					alt="Logo" />
 			</div>
-			<a href="/college-portal/Attendance/index.php">Home</a>
-		</header>
+			<div class="college-name">
+				Vignan Institute of Technology & Science
+			</div>
+			<div class="right-space"></div>
+			<div class="nav-menu">
+				<ul>
+					<li><a href="/college-portal/Attendance">Back</a></li>
+					<li><a href="/college-portal/">Home</a></li>
+				</ul>
+			</div>
+		</nav>
 
 		<!-- Attendance Section -->
 		<section class="hero">
@@ -110,6 +119,7 @@
 								name="from_date"
 								required />
 						</div>
+						<p></p>
 
 						<div class="input-group">
 							<label for="to">To Date</label>

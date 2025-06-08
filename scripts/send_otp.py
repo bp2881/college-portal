@@ -13,9 +13,11 @@ try:
     name = sys.argv[3]
 except:
     name = ""
+
+
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
-token_path = "C:\\xampp\\htdocs\\college-portal\\token.json"
-credentials_path = "C:\\xampp\\htdocs\\college-portal\\credentials.json"
+token_path = "../token.json"
+credentials_path = "../credentials.json"
 
 def get_service():
     creds = None

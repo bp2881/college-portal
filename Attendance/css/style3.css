@@ -4,16 +4,6 @@ body {
 	font-family: Arial, sans-serif; /* Font family */
 }
 
-/* Main container for the dashboard */
-.container {
-	max-width: 800px; /* Maximum width */
-	margin: 50px auto; /* Centering the container */
-	padding: 20px; /* Padding inside the container */
-	background: white; /* White background for the form */
-	border-radius: 10px; /* Rounded corners */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
 /* Header styling */
 h1 {
 	text-align: center; /* Centered heading */
@@ -113,38 +103,97 @@ footer {
 .navbar .nav-menu ul li a:hover {
 	background-color: #ddd;
 }
+/* Hero Section - Centers the login card */
 .hero {
-	position: relative;
-	width: 100%;
-	height: calc(100vh - 60px); /* leave space for footer */
+	flex: 1;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	padding: 40px 20px;
+	position: relative;
+	min-height: calc(94vh - 140px); /* Adjust for navbar and footer */
 }
 
 .overlay {
 	position: absolute;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.1); /* Subtle overlay */
 	z-index: 1;
 }
 
-/* Login Card */
+/* Center Form Card */
+.container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 20px;
+}
+
 .login-card {
 	position: relative;
 	z-index: 2;
 	background: #fff;
-	padding: 2.5rem;
-	border-radius: calc(var(--radius) * 2);
-	width: 360px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	padding: 30px 40px;
+	border-radius: 15px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+	max-width: 450px;
+	width: 100%;
 	text-align: center;
 }
-.login-card h1,
-.login-card h2 {
-	font-size: 1.75rem;
-	margin-bottom: 1.5rem;
-	color: var(--primary);
+
+.login-card h1 {
+	margin-bottom: 25px;
+	color: #3b3b98; /* Change to match the new header color */
+	font-size: 26px;
+	font-weight: 700;
+}
+
+/* Form Inputs */
+.input-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.input-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+	color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"] {
+	width: 100%;
+	padding: 12px; /* Increase padding for a better touch target */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 16px; /* Increase font size for inputs */
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+	border-color: #3b82f6;
+}
+
+/* Submit Button */
+button[type="submit"] {
+	background: linear-gradient(135deg, #3b82f6, #06b6d4);
+	color: #fff;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.2s; /* Added transform transition */
+	width: 100%;
+}
+
+button[type="submit"]:hover {
+	background: linear-gradient(135deg, #2563eb, #0891b2);
+	transform: scale(1.05); /* Slight scale on hover */
 }
 
 .navbar a {

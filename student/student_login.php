@@ -147,8 +147,8 @@ function fetch_attendance($conn, $TABLE_NAME, $email)
     }
 
     $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
-    $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\studentwise_attendance.py";
-    $command = escapeshellcmd("$pythonPath $pythonScript 2>&1 $roll $fdt $tdt true");
+    $pythonScript = "../scripts/studentwise_attendance.py";
+    $command = escapeshellcmd("$pythonPath $pythonScript $roll $fdt $tdt true");
 
     $output = shell_exec($command);
     if ($output === null) {
@@ -169,8 +169,8 @@ function send_otp($email)
     error_log("Generated OTP for $email: $otp");
 
     $pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
-    $pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\send_otp.py";
-    $command = escapeshellcmd("$pythonPath $pythonScript $otp \"$email\" 2>&1");
+    $pythonScript = "../scripts/send_otp.py";
+    $command = escapeshellcmd("$pythonPath $pythonScript $otp \"$email\" ");
 
     error_log("Executing command: $command");
 
@@ -267,7 +267,6 @@ if (isset($_POST['verify_otp'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">

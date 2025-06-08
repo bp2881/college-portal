@@ -3,15 +3,62 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Student‑wise Attendance Report</title>
-	</head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background: #f0f4f8;
+				margin: 0;
+				padding: 20px;
+			}
 
-	<body
-		style="
-			font-family: Arial, sans-serif;
-			background: #f0f4f8;
-			margin: 0;
-			padding: 20px;
-		">
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				background: white;
+				font-size: 14px;
+				text-align: center;
+				margin-top: 30px;
+			}
+
+			th,
+			td {
+				padding: 5px;
+				border: 1px solid #ccc;
+			}
+
+			thead th {
+				background: #e63946;
+				color: white;
+			}
+
+			#subject-table thead th {
+				background: #457b9d;
+			}
+
+			.header-box {
+				position: absolute;
+				top: 20px;
+				right: 30px;
+				border: 2px solid #888;
+				padding: 10px;
+				font-weight: bold;
+				border-radius: 5px;
+				background: #fefefe;
+				font-size: 0.9rem;
+			}
+
+			.print-button {
+				padding: 8px 20px;
+				font-size: 14px;
+				border: 1px solid #343a40;
+				background: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+		</style>
+	</head>
+	<body>
 		<!-- College Header -->
 		<div
 			style="
@@ -29,29 +76,15 @@
 			<h1 style="color: #d62828; margin: 10px 0">
 				VIGNAN INSTITUTE OF TECHNOLOGY AND SCIENCE
 			</h1>
-			<p style="margin: 5px 0">
+			<p>
 				Near Ramoji Film City, Deshmukhi Village, Pochampally Mandal,
 				Yadadri Bhuvanagiri Dist.
 			</p>
-			<p style="color: #023047; font-weight: bold; margin: 5px 0">
+			<p style="color: #023047; font-weight: bold">
 				(Approved by AICTE, New Delhi, Affiliated to JNTUH, Hyderabad)
 			</p>
-			<h3 style="color: #d62828; margin: 5px 0">
-				AN AUTONOMOUS INSTITUTION
-			</h3>
-
-			<div
-				style="
-					position: absolute;
-					top: 20px;
-					right: 30px;
-					border: 2px solid #888;
-					padding: 10px;
-					font-weight: bold;
-					border-radius: 5px;
-					background: #fefefe;
-					font-size: 0.9rem;
-				">
+			<h3 style="color: #d62828">AN AUTONOMOUS INSTITUTION</h3>
+			<div class="header-box">
 				<p style="margin: 0; line-height: 1.2">
 					Eamcet Code<br />
 					<span style="color: #d62828">VGNT</span><br />
@@ -60,7 +93,7 @@
 			</div>
 		</div>
 
-		<!-- Report Title & Dates -->
+		<!-- Report Title -->
 		<div style="text-align: center; margin-top: 30px">
 			<h2 style="color: #264653; margin: 0">
 				Vignan Student Attendance Portal
@@ -68,30 +101,13 @@
 			<h3 style="margin: 8px 0">
 				Student Attendance Report – AY 2024‑25 I Sem.
 			</h3>
-			<?php if (!empty($data['attendance_dates'])): ?>
-			<p style="margin: 4px 0">
-				<strong>From:</strong>
-				<?= htmlspecialchars($data['attendance_dates']['from']) ?>
-				<strong>To:</strong>
-				<?= htmlspecialchars($data['attendance_dates']['to']) ?>
-			</p>
-			<?php endif; ?>
+			<p id="date-range"></p>
 		</div>
 
 		<!-- Attendance Table -->
-		<div style="overflow-x: auto; margin-top: 30px">
-			<table
-				border="1"
-				cellspacing="0"
-				cellpadding="5"
-				style="
-					width: 100%;
-					border-collapse: collapse;
-					background: white;
-					font-size: 14px;
-					text-align: center;
-				">
-				<thead style="background: #e63946; color: white">
+		<div style="overflow-x: auto">
+			<table id="student-table">
+				<thead>
 					<tr>
 						<th>Roll No.</th>
 						<th>Name</th>
@@ -100,37 +116,19 @@
 						<th>To Date</th>
 						<th>Year</th>
 						<th>Section</th>
-						<th>Actions</th>
 					</tr>
 				</thead>
-				<tbody id="tableBody">
-					<tr>
-						<td
-							colspan="8"
-							class="loading"></td>
-					</tr>
-				</tbody>
+				<tbody></tbody>
 			</table>
 		</div>
 
 		<!-- Subject-wise Attendance -->
-		<?php if (!empty($data['tables'][1])): ?>
-		<div style="margin-top: 30px">
+		<div>
 			<h3 style="text-align: center; color: #264653">
 				Subject-wise Attendance
 			</h3>
-			<table
-				border="1"
-				cellspacing="0"
-				cellpadding="5"
-				style="
-					width: 100%;
-					border-collapse: collapse;
-					background: white;
-					font-size: 14px;
-					text-align: center;
-				">
-				<thead style="background: #457b9d; color: white">
+			<table id="subject-table">
+				<thead>
 					<tr>
 						<th>Subject</th>
 						<th>Total Classes</th>
@@ -138,43 +136,19 @@
 						<th>Percentage</th>
 					</tr>
 				</thead>
-				<tbody>
-					<?php
-          // Skip header row(s) for the second table too
-          $subjectRows = array_slice($data['tables'][1], 1);
-
-          // Check if we still have header rows
-          if (!empty($subjectRows) && $subjectRows[0][0] === "Subject") {
-            $subjectRows = array_slice($subjectRows, 1);
-          }
-
-          foreach ($subjectRows as $subject):
-            ?>
-					<tr>
-						<td><?= htmlspecialchars($subject[0]) ?></td>
-						<td><?= htmlspecialchars($subject[1]) ?></td>
-						<td><?= htmlspecialchars($subject[2]) ?></td>
-						<td><?= htmlspecialchars($subject[3]) ?></td>
-					</tr>
-					<?php endforeach; ?>
-				</tbody>
+				<tbody></tbody>
 			</table>
 		</div>
-		<?php endif; ?>
 
 		<!-- Overall Attendance -->
-		<?php if (!empty($data['calculated_percentage'])): ?>
 		<p
+			id="overall-attendance"
 			style="
 				text-align: center;
 				font-weight: bold;
 				margin-top: 20px;
 				font-size: 16px;
-			">
-			Overall Attendance:
-			<?= htmlspecialchars($data['calculated_percentage']) ?>%
-		</p>
-		<?php endif; ?>
+			"></p>
 
 		<!-- HOD & Print -->
 		<div
@@ -184,20 +158,72 @@
 				font-size: 14px;
 				color: #343a40;
 			">
-			<p style="margin: 0 0 10px"><b>HOD</b></p>
+			<p><b>HOD</b></p>
 			<button
-				onclick="window.print()"
-				style="
-					padding: 8px 20px;
-					font-size: 14px;
-					border: 1px solid #343a40;
-					background: none;
-					border-radius: 5px;
-					cursor: pointer;
-					transition: background 0.3s;
-				">
+				class="print-button"
+				onclick="window.print()">
 				Print
 			</button>
 		</div>
+
+		<!-- JavaScript -->
+		<script>
+			fetch("/college-portal/attendance_data.json")
+				.then((response) => response.json())
+				.then((data) => {
+					// Date Range
+					const dateRange = document.getElementById("date-range");
+					if (data.attendance_dates) {
+						dateRange.innerHTML = `<strong>From:</strong> ${data.attendance_dates.from} <strong>To:</strong> ${data.attendance_dates.to}`;
+					}
+
+					// Student Info Table
+					const studentTableBody = document.querySelector(
+						"#student-table tbody"
+					);
+					if (Array.isArray(data.tables[0])) {
+						data.tables[0].forEach((row) => {
+							const tr = document.createElement("tr");
+							tr.innerHTML = `
+              <td>${row[0]}</td>
+              <td>${row[1]}</td>
+              <td>${row[2]}</td>
+              <td>${row[5]}</td>
+              <td>${row[6]}</td>
+              <td>${row[3]}</td>
+              <td>${row[4]}</td>
+            `;
+							studentTableBody.appendChild(tr);
+						});
+					}
+
+					// Subject-wise Attendance Table
+					const subjectTableBody = document.querySelector(
+						"#subject-table tbody"
+					);
+					if (Array.isArray(data.tables[1])) {
+						data.tables[1].forEach((subject) => {
+							const tr = document.createElement("tr");
+							tr.innerHTML = `
+              <td>${subject[0]}</td>
+              <td>${subject[1]}</td>
+              <td>${subject[2]}</td>
+              <td>${subject[3]}</td>
+            `;
+							subjectTableBody.appendChild(tr);
+						});
+					}
+
+					// Overall Attendance
+					const overall =
+						document.getElementById("overall-attendance");
+					if (data.average_attendance_percentage) {
+						overall.textContent = `Overall Attendance: ${data.average_attendance_percentage}%`;
+					}
+				})
+				.catch((error) => {
+					console.error("Error fetching attendance data:", error);
+				});
+		</script>
 	</body>
 </html>

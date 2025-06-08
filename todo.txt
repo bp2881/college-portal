@@ -7,4 +7,4 @@
 6) Change the behaviour of send_otp as it is sending incorrect otp form
 7) Add an update functionality which updates the requirements of the project(ex. chromedriver)
 8) Correct behaviour of Attendance portal
-9) Change to different format of files
+9) Change to different file structure

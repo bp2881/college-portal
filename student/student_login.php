@@ -54,36 +54,30 @@ function store_session($conn, $email, $roll_num)
         error_log("Failed to prepare statement for fetching student details: " . $conn->error);
     }
 
-    // Fetching attendance data
     $jsonFile = "C:\\xampp\\htdocs\\college-portal\\attendance_data.json";
 
-    // Check if file exists before attempting to read
     if (!file_exists($jsonFile)) {
         error_log("Attendance data file not found: $jsonFile");
-        $attendanceDetails = [];  // Empty array if file doesn't exist
+        $attendanceDetails = [];
     } else {
         $jsonContent = file_get_contents($jsonFile);
 
         // Check if file content is valid
         if ($jsonContent === false) {
             error_log("Failed to read attendance data file: $jsonFile");
-            $attendanceDetails = [];  // Empty array if file can't be read
+            $attendanceDetails = [];
         } else {
             $data = json_decode($jsonContent, true);
 
-            // Check if data was successfully decoded and has the expected structure
             if ($data === null) {
                 error_log("Failed to decode JSON from attendance data file");
-                $attendanceDetails = [];  // Empty array if JSON is invalid
+                $attendanceDetails = [];
             } else {
                 $attendanceDetails = [];
 
-                // Check if tables key exists and is an array
                 if (isset($data['tables']) && is_array($data['tables']) && isset($data['tables'][1]) && is_array($data['tables'][1])) {
-                    // Skip the header row (index 0) and only process actual subject data
                     for ($i = 1; $i < count($data['tables'][1]); $i++) {
                         $subject = $data['tables'][1][$i];
-                        // Make sure the subject data is complete
                         if (isset($subject[0]) && isset($subject[1]) && isset($subject[2]) && isset($subject[3])) {
                             $attendanceDetails[] = [
                                 'subject' => $subject[0],
@@ -94,7 +88,7 @@ function store_session($conn, $email, $roll_num)
                         }
                     }
                 } else {
-                    error_log("Attendance data file does not have the expected structure");
+                    error_log("Attendance data is not proper");
                 }
             }
         }

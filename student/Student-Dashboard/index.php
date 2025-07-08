@@ -102,10 +102,6 @@ $subjectIcons = [
         <div id="profile-btn">
             <span class="material-icons-sharp">person</span>
         </div>
-        <div class="theme-toggler">
-            <span class="material-icons-sharp active">light_mode</span>
-            <span class="material-icons-sharp">dark_mode</span>
-        </div>
 
     </header>
     <div class="container">

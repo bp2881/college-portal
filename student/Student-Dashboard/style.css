@@ -136,7 +136,9 @@ header .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	padding: 0 3rem;
+	padding-right: 0 12rem;
+	padding-left: 5rem;
+
 	color: var(--color-info);
 }
 header .navbar a {

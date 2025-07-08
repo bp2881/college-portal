@@ -1,19 +1,20 @@
 <?php
 session_start();
+
 function send_message($name, $email, $message)
 {
 	$pythonPath = "C:\\Users\\Pranav\\AppData\\Local\\Programs\\Python\\Python313\\python.exe";
 	$pythonScript = "C:\\xampp\\htdocs\\college-portal\\scripts\\send_otp.py";
-	$command = escapeshellcmd("$pythonPath $pythonScript \"$message\" \"$email\" \"$name\" 2>&1");
+	$command = escapeshellcmd("$pythonPath $pythonScript \"$message\" \"$email\" \"$name\"");
 	error_log("Executing command: $command");
-	$output = shell_exec($command);
+	shell_exec($command);
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) {
 		$name = $_POST["name"];
 		$email = $_POST["email"];
-		$messsage = $_POST["message"];
-		send_message($name, $email, $messsage);
+		$message = $_POST["message"];
+		send_message($name, $email, $message);
 	}
 }
 ?>
@@ -85,7 +86,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						</div>
 
 						<input type="submit" class="button" value="Send Message" />
-						<div></div>
 						<input type="reset" class="clear_ad" value="Clear" />
 					</form>
 				</div>

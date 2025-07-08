@@ -314,10 +314,6 @@ function getFileIcon($extension)
         <div id="profile-btn" style="display: none">
             <span class="material-icons-sharp">person</span>
         </div>
-        <div class="theme-toggler">
-            <span class="material-icons-sharp active">light_mode</span>
-            <span class="material-icons-sharp">dark_mode</span>
-        </div>
     </header>
 
     <main>

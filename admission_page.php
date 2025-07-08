@@ -235,9 +235,12 @@ $conn->close();
 								<i class="fa fa-caret-square-o-down" aria-hidden="true" id="icon"></i>
 								<select id="course" name="course" class="input" required>
 									<option value="">Select the Course</option>
-									<option value="bca" <?php echo (isset($course) && $course === 'bca') ? 'selected' : ''; ?>>BCA</option>
-									<option value="bscit" <?php echo (isset($course) && $course === 'bscit') ? 'selected' : ''; ?>>Bsc IT</option>
-									<option value="bscca&it" <?php echo (isset($course) && $course === 'bscca&it') ? 'selected' : ''; ?>>Bsc CA & IT</option>
+									<option value="CSE" <?php echo (isset($course) && $course === 'CSE') ? 'selected' : ''; ?>>CSE</option>
+									<option value="ECE" <?php echo (isset($course) && $course === 'ECE') ? 'selected' : ''; ?>>ECE</option>
+									<option value="EEE" <?php echo (isset($course) && $course === 'EEE') ? 'selected' : ''; ?>>EEE</option>
+									<option value="Mech" <?php echo (isset($course) && $course === 'Mech') ? 'selected' : ''; ?>>Mechanical</option>
+									<option value="Civil" <?php echo (isset($course) && $course === 'Civil') ? 'selected' : ''; ?>>Civil</option>
+									<option value="CSM" <?php echo (isset($course) && $course === 'CSM') ? 'selected' : ''; ?>>CSM</option>
 								</select>
 							</div>
 						</div>

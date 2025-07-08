@@ -16,8 +16,8 @@ except:
 
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
-token_path = "../token.json"
-credentials_path = "../credentials.json"
+token_path = "C:\\xampp\\htdocs\\college-portal\\token.json"
+credentials_path = "C:\\xampp\\htdocs\\college-portal\\credentials.json"
 
 def get_service():
     creds = None
@@ -59,7 +59,7 @@ service = get_service()
 
 # Otp service
 if name == "" :
-    subject = "Otp for confirmation"
+    subject = "Login Verification OTP"
     message = f"Your Otp is {message}"
     to_email = email
 # Messaging service

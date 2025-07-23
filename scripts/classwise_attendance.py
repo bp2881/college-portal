@@ -29,10 +29,9 @@ try:
 except FileNotFoundError:
     pass
 
-# --- Set up headless Chrome ---
 options = webdriver.ChromeOptions()
 options.add_argument("blink-settings=imagesEnabled=false")
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--disable-extensions')
 options.add_argument('--disable-gpu')

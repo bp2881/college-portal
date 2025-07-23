@@ -119,7 +119,7 @@ function store_session($conn, $email, $roll_num)
 }
 function fetch_attendance($conn, $TABLE_NAME, $email)
 {
-    $fdt = '20-01-2025';
+    $fdt = '30-06-2025';
     $tdt = date("d-m-Y");
 
     $stmt = $conn->prepare("SELECT roll_num FROM $TABLE_NAME WHERE email = ?");

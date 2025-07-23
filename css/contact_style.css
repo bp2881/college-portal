@@ -100,7 +100,7 @@ nav img {
 body {
 	min-height: 100vh;
 	width: 100%;
-	background-color: rgb(51, 20, 20);
+	background-color: rgb(75, 157, 211);
 	background-position: center;
 	background-size: cover;
 	position: relative;
@@ -109,7 +109,7 @@ body {
 :root {
 	--white: #fff;
 	--text-clr: #000024;
-	--primary: #3e2093;
+	--primary: #208293;
 	--secondary: #000008;
 	/* --secondary: #c0c1d2; */
 	--input-bg: #f1f1ff;

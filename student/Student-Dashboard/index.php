@@ -41,11 +41,11 @@ if (file_exists($jsonFile)) {
 }
 
 $subjectIcons = [
-    'DM' => 'calculate', // Discrete Mathematics
+    'DM' => 'calculate',
     'BEFA' => 'business',
-    'OS' => 'memory', // Operating System
-    'DBMS' => 'dns', // Database
-    'SE' => 'design_services', // Software Engineering
+    'OS' => 'memory',
+    'DBMS' => 'dns',
+    'SE' => 'design_services',
     'OS LAB' => 'developer_board',
     'DBMS LAB' => 'storage',
     'NODE JS' => 'code',
